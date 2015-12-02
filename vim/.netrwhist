@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/stephanos/iwoca/iwoca-django/.git'
+let g:netrw_dirhist_2='/home/stephanos/iwoca/iwoca-django/settings'
+let g:netrw_dirhist_3='/home/stephanos/iwoca/django-simple-captcha/captcha'
