@@ -9,6 +9,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
+bindkey -e
 typeset -A key
 
 key[Home]=${terminfo[khome]}
@@ -21,17 +22,19 @@ key[Left]=${terminfo[kcub1]}
 key[Right]=${terminfo[kcuf1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
+key[CtrlRight]="^[[1;5C"
+key[CtrlLeft]="^[[1;5D"
+ 
 
-[[ -n "${key[Home]}"     ]]  && bindkey  "${key[Home]}"     beginning-of-line
-[[ -n "${key[End]}"      ]]  && bindkey  "${key[End]}"      end-of-line
-[[ -n "${key[Insert]}"   ]]  && bindkey  "${key[Insert]}"   overwrite-mode
-[[ -n "${key[Delete]}"   ]]  && bindkey  "${key[Delete]}"   delete-char
-[[ -n "${key[Up]}"       ]]  && bindkey  "${key[Up]}"       history-beginning-search-backward
-[[ -n "${key[Down]}"     ]]  && bindkey  "${key[Down]}"     history-beginning-search-forward
-[[ -n "${key[Left]}"     ]]  && bindkey  "${key[Left]}"     backward-char
-[[ -n "${key[Right]}"    ]]  && bindkey  "${key[Right]}"    forward-char
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   beginning-of-buffer-or-history
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
-
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey "${key[Home]}"        beginning-of-line
+bindkey "${key[End]}"         end-of-line
+bindkey "${key[Insert]}"      overwrite-mode
+bindkey "${key[Delete]}"      delete-char
+bindkey "${key[Up]}"          history-beginning-search-backward
+bindkey "${key[Down]}"        history-beginning-search-forward
+bindkey "${key[Left]}"        backward-char
+bindkey "${key[Right]}"       forward-char
+bindkey "${key[PageUp]}"      beginning-of-buffer-or-history
+bindkey "${key[PageDown]}"    end-of-buffer-or-history
+bindkey "${key[CtrlRight]}"   forward-word
+bindkey "${key[CtrlLeft]}"    backward-word
