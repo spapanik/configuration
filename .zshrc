@@ -21,18 +21,7 @@ alias ll="ls --color -l"
 alias manage="python manage.py"
 alias grepc="grep --color=auto"
 
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;32'
-
-HISTSIZE=100000
-SAVEHIST=100000
-HISTFILE=~/.zsh_history
-
-setopt hist_expire_dups_first
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt inc_append_history
-setopt share_history
+source .zsh/history.zsh
 
 typeset -A key
 
