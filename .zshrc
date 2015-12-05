@@ -1,8 +1,4 @@
-source .zsh/git.zsh
-
 autoload colors; colors;
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
-
 setopt auto_cd
 setopt multios
 setopt cdablevarS
@@ -15,18 +11,6 @@ else
 fi
 
 setopt prompt_subst
-
-alias ls="ls --color"
-alias ll="ls --color -l"
-alias manage="python manage.py"
-alias grepc="grep --color=auto"
-
-source .zsh/history.zsh
-
-typeset -A key
-
-source .zsh/keybinding.zsh
-
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     function zle-line-init () {
         printf '%s' "${terminfo[smkx]}"
@@ -38,12 +22,16 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
+source .zsh/alias.zsh
+source .zsh/export.zsh
+source .zsh/git.zsh
+source .zsh/history.zsh
+source .zsh/keybinding.zsh
 source .zsh/completion.zsh
 source .zsh/theme.zsh
 
-cd $HOME
-fortune -s | cowsay -f tux
 
 source `which virtualenvwrapper.sh`
 
-export PYTHONSTARTUP="$HOME/.pyrc"
+cd $HOME
+fortune -s | cowsay -f tux
