@@ -19,6 +19,7 @@ setopt prompt_subst
 alias ls="ls --color"
 alias ll="ls --color -l"
 alias manage="python manage.py"
+alias grepc="grep --color=auto"
 
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'

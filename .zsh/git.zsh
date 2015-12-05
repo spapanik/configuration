@@ -11,9 +11,7 @@ parse_git_dirty() {
   local GIT_STATUS=''
   local CLEAN_MESSAGE='nothing to commit (working directory clean)'
   if [[ "$(command git config --get oh-my-zsh.hide-status)" != "1" ]]; then
-    if [[ $POST_1_7_2_GIT -gt 0 ]]; then
-          SUBMODULE_SYNTAX="--ignore-submodules=dirty"
-    fi
+    SUBMODULE_SYNTAX="--ignore-submodules=dirty"
     if [[ "$DISABLE_UNTRACKED_FILES_DIRTY" == "true" ]]; then
         GIT_STATUS=$(command git status -s ${SUBMODULE_SYNTAX} -uno 2> /dev/null | tail -n1)
     else
@@ -109,23 +107,3 @@ git_prompt_status() {
   fi
   echo $STATUS
 }
-
-function git_compare_version() {
-  local INPUT_GIT_VERSION=$1;
-  local INSTALLED_GIT_VERSION
-  INPUT_GIT_VERSION=(${(s/./)INPUT_GIT_VERSION});
-  INSTALLED_GIT_VERSION=($(command git --version 2>/dev/null));
-  INSTALLED_GIT_VERSION=(${(s/./)INSTALLED_GIT_VERSION[3]});
-
-  for i in {1..3}; do
-    if [[ $INSTALLED_GIT_VERSION[$i] -lt $INPUT_GIT_VERSION[$i] ]]; then
-      echo -1
-      return 0
-    fi
-  done
-  echo 1
-}
-
-
-POST_1_7_2_GIT=$(git_compare_version "1.7.2")
-unset -f git_compare_version
