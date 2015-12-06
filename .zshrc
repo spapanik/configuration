@@ -1,12 +1,13 @@
-source .zsh/options.zsh
-source .zsh/alias.zsh
-source .zsh/export.zsh
-source .zsh/git.zsh
-source .zsh/history.zsh
-source .zsh/keybinding.zsh
-source .zsh/completion.zsh
-source .zsh/theme.zsh
+cd $HOME
+
+source $HOME/.zsh/options.zsh
+source $HOME/.zsh/alias.zsh
+source $HOME/.zsh/export.zsh
+source $HOME/.zsh/git.zsh
+source $HOME/.zsh/history.zsh
+source $HOME/.zsh/keybinding.zsh
+source $HOME/.zsh/completion.zsh
+source $HOME/.zsh/theme.zsh
 source `which virtualenvwrapper.sh`
 
-cd $HOME
 fortune -s | cowsay -f tux
