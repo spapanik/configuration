@@ -44,5 +44,5 @@ else:
     ipython.magic("load_ext autoreload")
     try:
         ipython.magic("matplotlib inline")
-    except UsageError:
+    except (ImportError, UsageError):
         pass

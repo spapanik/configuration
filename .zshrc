@@ -6,7 +6,6 @@
 . $HOME/.zsh/keybinding.zsh
 . $HOME/.zsh/completion.zsh
 . $HOME/.zsh/theme.zsh
-. $HOME/.zsh/extra.zsh
 . `which virtualenvwrapper.sh`
 
 fortune -s | cowsay -f tux
