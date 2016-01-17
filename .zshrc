@@ -1,6 +1,7 @@
 . $HOME/.zsh/options.zsh
 . $HOME/.zsh/alias.zsh
-. $HOME/.zsh/export.zsh
+. $HOME/.zsh/constants.zsh
+. $HOME/.zsh/functions.zsh
 . $HOME/.zsh/git.zsh
 . $HOME/.zsh/history.zsh
 . $HOME/.zsh/keybinding.zsh
