@@ -24,7 +24,6 @@ filetype indent on
 set ai
 set si
 
-set incsearch
 set autoread
 set lazyredraw
 set magic
