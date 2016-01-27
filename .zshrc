@@ -7,6 +7,9 @@
 . $HOME/.zsh/keybinding.zsh
 . $HOME/.zsh/completion.zsh
 . $HOME/.zsh/theme.zsh
+if [[ -a $HOME/.zsh/extra.zsh ]]; then
+    . $HOME/.zsh/extra.zsh
+fi
 . `which virtualenvwrapper.sh`
 
 fortune -s | cowsay -f tux
