@@ -33,9 +33,9 @@ set encoding=utf8
 
 "remapping keys"
 "move lines"
-nnoremap <A-Up> :m .-2<CR>==
-nnoremap <A-Down> :m .+1<CR>==
-inoremap <A-Up> <Esc>:m .-2<CR>==gi
-inoremap <A-Down> <Esc>:m .+1<CR>==gi
-vnoremap <A-Up> :m '<-2<CR>gv=gv
-vnoremap <A-Down> :m '>+1<CR>gv=gv
+nnoremap <M-S-Up> :m .-2<CR>==
+nnoremap <M-S-Down> :m .+1<CR>==
+inoremap <M-S-Up> <Esc>:m .-2<CR>==gi
+inoremap <M-S-Down> <Esc>:m .+1<CR>==gi
+vnoremap <M-S-Up> :m '<-2<CR>gv=gv
+vnoremap <M-S-Down> :m '>+1<CR>gv=gv
