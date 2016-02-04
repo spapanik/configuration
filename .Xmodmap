@@ -1,5 +1,3 @@
 pointer = 1 2 3 5 4 7 6 8 9 10 11 12
-clear Lock
-keysym Caps_Lock = Escape
-keysym Escape = Caps_Lock
-add Lock = Caps_Lock
+keycode   9 = Caps_Lock ISO_Next_Group Caps_Lock ISO_Next_Group
+keycode  66 = Escape NoSymbol Escape
