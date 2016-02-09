@@ -49,3 +49,6 @@ inoremap <C-Up> <Esc>:m .-2<CR>==gi
 inoremap <C-Down> <Esc>:m .+1<CR>==gi
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+1<CR>gv=gv
+
+"save as root"
+command W w !sudo tee % >/dev/null
