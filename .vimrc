@@ -18,11 +18,19 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-
+set pastetoggle=<F12>
 "indentation"
 filetype indent on
 set ai
 set si
+
+"problematic characters"
+set list
+set listchars=tab:»\ ,trail:·
+
+"sane split
+set splitright
+set splitbelow
 
 let g:loaded_matchparen=1
 set noincsearch
