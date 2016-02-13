@@ -19,6 +19,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set pastetoggle=<F12>
+
 "indentation"
 filetype indent on
 set ai
@@ -57,6 +58,14 @@ inoremap <C-Up> <Esc>:m .-2<CR>==gi
 inoremap <C-Down> <Esc>:m .+1<CR>==gi
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+1<CR>gv=gv
+
+"move cursor"
+inoremap <up> <C-O>gk
+inoremap <down> <C-O>gj
+nnoremap <up> gk
+nnoremap <down> gj
+vnoremap <up> gk
+vnoremap <down> gj
 
 "save as root"
 command W w !sudo tee % >/dev/null
