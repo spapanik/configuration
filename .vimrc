@@ -33,6 +33,10 @@ set listchars=tab:»\ ,trail:·
 set splitright
 set splitbelow
 
+"jedi options"
+let g:jedi#popup_on_dot=0
+let g:jedi#show_call_signatures="2"
+
 let g:loaded_matchparen=1
 set noincsearch
 set nohlsearch
@@ -60,12 +64,12 @@ vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+1<CR>gv=gv
 
 "move cursor"
-inoremap <up> <C-O>gk
-inoremap <down> <C-O>gj
-nnoremap <up> gk
-nnoremap <down> gj
-vnoremap <up> gk
-vnoremap <down> gj
+inoremap <M-S-up> <C-O>gk
+inoremap <M-S-down> <C-O>gj
+nnoremap <M-S-up> gk
+nnoremap <M-S-down> gj
+vnoremap <M-S-up> gk
+vnoremap <M-S-down> gj
 
 "save as root"
 command W w !sudo tee % >/dev/null
