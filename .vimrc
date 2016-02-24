@@ -46,6 +46,7 @@ set magic
 set noerrorbells
 set novisualbell
 set encoding=utf8
+set notimeout
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes  "
@@ -73,3 +74,9 @@ vnoremap <M-S-down> gj
 
 "save as root"
 command W w !sudo tee % >/dev/null
+
+"move in splits"
+nnoremap <C-h> <C-W><C-h>
+nnoremap <C-j> <C-W><C-j>
+nnoremap <C-k> <C-W><C-k>
+nnoremap <C-l> <C-W><C-l>
