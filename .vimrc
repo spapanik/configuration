@@ -37,7 +37,7 @@ let g:jedi#popup_on_dot=0
 let g:jedi#show_call_signatures="2"
 
 "spell
-set spellland=en_gb
+set spelllang=en_gb
 
 let g:loaded_matchparen=1
 set noincsearch
