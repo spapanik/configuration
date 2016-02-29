@@ -1,4 +1,4 @@
-set history=700
+Set history=700
 "syntax
 syntax on
 filetype plugin on
@@ -73,9 +73,6 @@ nnoremap <M-S-up> gk
 nnoremap <M-S-down> gj
 vnoremap <M-S-up> gk
 vnoremap <M-S-down> gj
-
-"save as root
-command W w !sudo tee % >/dev/null
 
 "move in splits
 nnoremap <C-h> <C-W><C-h>
