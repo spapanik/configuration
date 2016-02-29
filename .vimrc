@@ -1,4 +1,4 @@
-Set history=700
+set history=700
 "syntax
 syntax on
 filetype plugin on
