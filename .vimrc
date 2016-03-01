@@ -9,7 +9,7 @@ set number
 set wildmenu
 set background=dark
 set t_Co=256
-color molokai
+color molokai-stema
 
 "tabs
 set smarttab
