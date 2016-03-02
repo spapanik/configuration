@@ -7,8 +7,8 @@
 . $HOME/.zsh/keybinding.zsh
 . $HOME/.zsh/completion.zsh
 . $HOME/.zsh/theme.zsh
-if [[ -a $HOME/.zsh/extra.zsh ]]; then
-    . $HOME/.zsh/extra.zsh
+if [[ -a $HOME/.zsh/local.zsh ]]; then
+    . $HOME/.zsh/local.zsh
 fi
 . `which virtualenvwrapper.sh`
 

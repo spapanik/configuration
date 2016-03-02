@@ -62,3 +62,7 @@ command Ssudo silent w !sudo tee  % >/dev/null
 
 "remapping keys
 source $HOME/.vim/remaps.vim
+
+if filereadable($HOME . "/.vim/local.vim")
+     source $HOME/.vim/local.vim
+ endif
