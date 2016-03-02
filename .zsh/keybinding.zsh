@@ -9,6 +9,8 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
+stty stop '' -ixoff
+
 bindkey -e
 typeset -A key
 
@@ -24,7 +26,6 @@ key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
 key[CtrlRight]="^[[1;5C"
 key[CtrlLeft]="^[[1;5D"
- 
 
 bindkey "${key[Home]}"        beginning-of-line
 bindkey "${key[End]}"         end-of-line

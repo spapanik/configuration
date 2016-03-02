@@ -58,24 +58,4 @@ if &term =~ '256color'
 endif
 
 "remapping keys
-"move lines
-nnoremap <C-Up> :m .-2<CR>==
-nnoremap <C-Down> :m .+1<CR>==
-inoremap <C-Up> <Esc>:m .-2<CR>==gi
-inoremap <C-Down> <Esc>:m .+1<CR>==gi
-vnoremap <C-Up> :m '<-2<CR>gv=gv
-vnoremap <C-Down> :m '>+1<CR>gv=gv
-
-"move cursor
-inoremap <M-S-up> <C-O>gk
-inoremap <M-S-down> <C-O>gj
-nnoremap <M-S-up> gk
-nnoremap <M-S-down> gj
-vnoremap <M-S-up> gk
-vnoremap <M-S-down> gj
-
-"move in splits
-nnoremap <C-h> <C-W><C-h>
-nnoremap <C-j> <C-W><C-j>
-nnoremap <C-k> <C-W><C-k>
-nnoremap <C-l> <C-W><C-l>
+source $HOME/.vim/remaps.vim
