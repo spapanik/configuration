@@ -57,5 +57,8 @@ if &term =~ '256color'
   set t_ut=
 endif
 
+"commands
+command Ssudo silent w !sudo tee  % >/dev/null
+
 "remapping keys
 source $HOME/.vim/remaps.vim
