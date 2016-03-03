@@ -39,7 +39,6 @@ let g:jedi#show_call_signatures="2"
 "spell
 set spelllang=en_gb
 
-let g:loaded_matchparen=1
 set noincsearch
 set nohlsearch
 set autoread
