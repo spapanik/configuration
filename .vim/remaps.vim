@@ -24,3 +24,8 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <silent> <C-s> :update<CR>
 vnoremap <silent> <C-s> <C-C>:update<CR>
 inoremap <silent> <C-s> <C-O>:update<CR>
+
+"quit
+nnoremap <silent> <C-q> :Bclose<CR>
+vnoremap <silent> <C-q> <C-C>:Bclose<CR>
+inoremap <silent> <C-q> <C-O>:Bclose<CR>
