@@ -10,6 +10,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 stty stop '' -ixoff
+stty stop '' -ixon
 
 bindkey -e
 typeset -A key
