@@ -31,6 +31,6 @@ inoremap <silent> <C-q> <C-O>:Bclose<CR>
 vnoremap <silent> <C-q> <C-C>:Bclose<CR>
 
 "taglist
-nnoremap <silent> <F8> :TlistToggle<CR>
-inoremap <silent> <F8> <C-O>:TlistToggle<CR>
-vnoremap <silent> <F8> <C-C>:TlistToggle<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
+inoremap <silent> <F8> <C-O>:TagbarToggle<CR>
+vnoremap <silent> <F8> <C-C>:TagbarToggle<CR>
