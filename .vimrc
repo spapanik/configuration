@@ -39,6 +39,10 @@ let g:jedi#show_call_signatures="2"
 "spell
 set spelllang=en_gb
 
+"folding
+set foldmethod=syntax
+set nofoldenable
+
 set noincsearch
 set nohlsearch
 set autoread
