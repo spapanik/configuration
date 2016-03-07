@@ -52,6 +52,8 @@ set noerrorbells
 set novisualbell
 set encoding=utf8
 set notimeout
+set omnifunc=syntaxcomplete
+set suffixesadd=.js,.tex
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
