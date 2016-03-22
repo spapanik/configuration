@@ -67,7 +67,12 @@ if &term =~ '256color'
 endif
 
 "commands
-command Ssudo silent w !sudo tee  % >/dev/null
+command Ssudo call SudoSaveFile()
+
+function! SudoSaveFile() abort
+  execute (has('gui_running') ? '' : 'silent') 'write !env SUDO_EDITOR=tee sudo -e % >/dev/null'
+  let &modified = v:shell_error
+endfunction
 
 "remapping keys
 source $HOME/.vim/remaps.vim
