@@ -36,6 +36,6 @@ inoremap <silent> <F8> <C-O>:TagbarToggle<CR>
 vnoremap <silent> <F8> <C-C>:TagbarToggle<CR>
 
 "NERDTree
-nnoremap <silent> <F1> :NERDTreeToggle<CR>
-inoremap <silent> <F1> <Esc>:NERDTreeToggle<CR>
-vnoremap <silent> <F1> <Esc>:NERDTreeToggle<CR>
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+inoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
+vnoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
