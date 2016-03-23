@@ -22,15 +22,20 @@ nnoremap <C-l> <C-w><C-l>
 
 "save
 nnoremap <silent> <C-s> :update<CR>
-inoremap <silent> <C-s> <C-O>:update<CR>
-vnoremap <silent> <C-s> <C-C>:update<CR>
+inoremap <silent> <C-s> <Esc>:update<CR>
+vnoremap <silent> <C-s> <Esc>:update<CR>
 
 "quit
 nnoremap <silent> <C-q> :Bclose<CR>
-inoremap <silent> <C-q> <C-O>:Bclose<CR>
-vnoremap <silent> <C-q> <C-C>:Bclose<CR>
+inoremap <silent> <C-q> <Esc>:Bclose<CR>
+vnoremap <silent> <C-q> <Esc>:Bclose<CR>
 
 "taglist
 nnoremap <silent> <F8> :TagbarToggle<CR>
 inoremap <silent> <F8> <C-O>:TagbarToggle<CR>
 vnoremap <silent> <F8> <C-C>:TagbarToggle<CR>
+
+"NERDTree
+nnoremap <silent> <F1> :NERDTreeToggle<CR>
+inoremap <silent> <F1> <Esc>:NERDTreeToggle<CR>
+vnoremap <silent> <F1> <Esc>:NERDTreeToggle<CR>
