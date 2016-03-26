@@ -56,7 +56,7 @@ set noerrorbells
 set novisualbell
 set encoding=utf8
 set notimeout
-set omnifunc=syntaxcomplete
+set omnifunc=syntaxcomplete#Complete
 set suffixesadd=.js,.tex
 
 if &term =~ '256color'
