@@ -1,24 +1,32 @@
 "move lines
-nnoremap <C-Up> :m .-2<CR>==
-nnoremap <C-Down> :m .+1<CR>==
-inoremap <C-Up> <Esc>:m .-2<CR>==gi
-inoremap <C-Down> <Esc>:m .+1<CR>==gi
-vnoremap <C-Up> :m '<-2<CR>gv=gv
-vnoremap <C-Down> :m '>+1<CR>gv=gv
+nnoremap <C-up>   :m .-2<CR>==
+nnoremap <C-down> :m .+1<CR>==
+inoremap <C-up>   <Esc>:m .-2<CR>==gi
+inoremap <C-down> <Esc>:m .+1<CR>==gi
+vnoremap <C-up>   :m '<-2<CR>gv=gv
+vnoremap <C-down> :m '>+1<CR>gv=gv
 
 "move cursor
-nnoremap <M-S-up> gk
+nnoremap <M-S-up>   gk
 nnoremap <M-S-down> gj
-inoremap <M-S-up> <C-O>gk
+inoremap <M-S-up>   <C-O>gk
 inoremap <M-S-down> <C-O>gj
-vnoremap <M-S-up> gk
+vnoremap <M-S-up>   gk
 vnoremap <M-S-down> gj
 
 "move in splits
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
+nnoremap <S-left>  <C-w><C-h>
+nnoremap <S-down>  <C-w><C-j>
+nnoremap <S-up>    <C-w><C-k>
+nnoremap <S-right> <C-w><C-l>
+inoremap <S-left>  <Esc><C-w><C-h>
+inoremap <S-down>  <Esc><C-w><C-j>
+inoremap <S-up>    <Esc><C-w><C-k>
+inoremap <S-right> <Esc><C-w><C-l>
+vnoremap <S-left>  <Esc><C-w><C-h>
+vnoremap <S-down>  <Esc><C-w><C-j>
+vnoremap <S-up>    <Esc><C-w><C-k>
+vnoremap <S-right> <Esc><C-w><C-l>
 
 "save
 nnoremap <silent> <C-s> :update<CR>
