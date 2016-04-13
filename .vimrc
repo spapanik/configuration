@@ -18,6 +18,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'majutsushi/tagbar'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'jlanzarotta/bufexplorer'
 filetype plugin indent on
 "vundle end
 
