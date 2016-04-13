@@ -1,3 +1,27 @@
+" vundle start
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tomasr/molokai'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
+filetype plugin indent on
+"vundle end
+
 set history=700
 "syntax
 syntax on
@@ -9,7 +33,7 @@ set number
 set wildmenu
 set background=dark
 set t_Co=256
-color molokai-stema
+color molokai
 
 "tabs
 set smarttab
