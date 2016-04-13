@@ -1,18 +1,21 @@
-. $HOME/.zsh/options.zsh
-. $HOME/.zsh/alias.zsh
-. $HOME/.zsh/constants.zsh
-. $HOME/.zsh/functions.zsh
-. $HOME/.zsh/git.zsh
-. $HOME/.zsh/history.zsh
-if [[ -a $HOME/.zsh/.use_vim_mode ]]; then
-    . $HOME/.zsh/vim_keybinding.zsh
-else
-    . $HOME/.zsh/keybinding.zsh
-fi
-. $HOME/.zsh/completion.zsh
-. $HOME/.zsh/theme.zsh
-if [[ -a $HOME/.zsh/local.zsh ]]; then
-    . $HOME/.zsh/local.zsh
+# antigen start
+. /usr/share/zsh/scripts/antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle pip
+antigen bundle git
+antigen apply
+# antigen end
+
+. .zsh/options.zsh
+. .zsh/alias.zsh
+. .zsh/constants.zsh
+. .zsh/functions.zsh
+. .zsh/history.zsh
+. .zsh/keybinding.zsh
+. .zsh/completion.zsh
+. .zsh/theme.zsh
+if [[ -a .zsh/local.zsh ]]; then
+    . .zsh/local.zsh
 fi
 . `which virtualenvwrapper.sh`
 
