@@ -57,6 +57,7 @@ set novisualbell
 set encoding=utf8
 set notimeout
 set omnifunc=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 set suffixesadd=.js,.tex
 
 if &term =~ '256color'
