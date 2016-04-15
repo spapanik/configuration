@@ -10,7 +10,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomasr/molokai'
-Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jiangmiao/auto-pairs'
@@ -19,6 +18,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'majutsushi/tagbar'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'ervandew/supertab'
 filetype plugin indent on
 "vundle end
 
