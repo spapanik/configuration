@@ -6,6 +6,7 @@ antigen bundle git
 antigen apply
 # antigen end
 
+cd $HOME
 . .zsh/options.zsh
 . .zsh/alias.zsh
 . .zsh/constants.zsh
