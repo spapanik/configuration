@@ -1,0 +1,28 @@
+[user]
+	name =
+	email =
+[core]
+	editor = vim
+[push]
+	default = current
+[color]
+	ui = always
+[alias]
+	cm = checkout master
+	mm = merge master
+	dm = difftool master
+	dom = difftool origin/master
+	df = difftool
+	pr = pull --rebase
+	this = rev-parse --abbrev-ref HEAD
+	nuke = "!f() { git reset --hard origin/`git this`; }; f"
+	destroy = "!f() { git branch -D $1; git push origin --delete $1; }; f"
+	pushit = "!f() { git push -u origin `git this`; }; f"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[fetch]
+	prune = true
