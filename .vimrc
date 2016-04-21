@@ -81,8 +81,18 @@ set novisualbell
 set encoding=utf8
 set notimeout
 set omnifunc=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 set suffixesadd=.js,.tex
+
+"UltiSnip config
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe
+let g:UltiSnipsExpandTrigger="<C-x><C-x>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
