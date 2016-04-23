@@ -57,7 +57,6 @@ set splitright
 set splitbelow
 
 "jedi options
-let g:jedi#popup_on_dot=0
 let g:jedi#use_tabs_not_buffers=0
 let g:jedi#show_call_signatures="2"
 
@@ -114,4 +113,4 @@ source $HOME/.vim/remaps.vim
 
 if filereadable($HOME . "/.vim/local.vim")
      source $HOME/.vim/local.vim
- endif
+endif
