@@ -19,6 +19,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'ervandew/supertab'
+Plugin 'lervag/vimtex'
 filetype plugin indent on
 "vundle end
 
