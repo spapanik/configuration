@@ -2,4 +2,3 @@ set zoom=fitwidth
 set content=no
 set continuous=no
 set guioptions=m
-set doubleclick=word
