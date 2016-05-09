@@ -93,6 +93,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__']
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
