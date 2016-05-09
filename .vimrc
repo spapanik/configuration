@@ -8,7 +8,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'spapanik/molokai'
+Plugin 'blueshirts/darcula'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -34,7 +34,7 @@ set number
 set wildmenu
 set background=dark
 set t_Co=256
-color molokai
+color darcula
 
 "tabs
 set smarttab
