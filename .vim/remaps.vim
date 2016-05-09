@@ -47,3 +47,8 @@ vnoremap <silent> <F8> <C-C>:TagbarToggle<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 inoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
 vnoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
+
+"syntax check
+nnoremap <silent> <F7> :SyntasticCheck<CR>
+inoremap <silent> <F7> <Esc>:SyntasticCheck<CR>
+vnoremap <silent> <F7> <Esc>:SyntasticCheck<CR>
