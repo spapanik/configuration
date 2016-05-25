@@ -1,2 +1,4 @@
 clear lock
-keycode 66 = Escape Caps_Lock NoSymbol NoSymbol
+clear control
+add control = Caps_Lock Control_L Control_R
+keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
