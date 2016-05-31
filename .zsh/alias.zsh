@@ -1,3 +1,5 @@
+alias eww=emacs
+alias enw="emacs -nw"
 alias ls="ls --color"
 alias la="ls --color -A"
 alias ll="ls --color -lG"
@@ -9,4 +11,3 @@ alias dj_server="python manage.py runserver_plus"
 alias dj_shell="python manage.py shell_plus"
 alias dj_celery="celery -A django_transmission worker -c 8 -l info"
 alias grep="grep --color=auto"
-alias wemacs="emacs -nw"
