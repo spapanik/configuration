@@ -7,6 +7,7 @@ FILES=".pyrc
 .Xmodmap
 .zsh
 .zshrc
+.emacs.d
 "
 
 filepath=${0:a}
