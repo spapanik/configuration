@@ -33,6 +33,11 @@
 (require 'use-package)
 (use-package darcula-theme
   :ensure t)
+(use-package multiple-cursors
+  :ensure t)
+
+(global-set-key (kbd "M-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
 
 ;; move lines
 (defun move-line-up ()
