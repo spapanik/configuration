@@ -83,6 +83,7 @@ set notimeout
 set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 set suffixesadd=.js,.tex
+set whichwrap+=<,>,[,]
 
 "UltiSnip config
 " Trigger configuration. Do not use <tab> if you use YouCompleteMe

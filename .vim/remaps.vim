@@ -1,32 +1,70 @@
-"move lines
-nnoremap <C-up>   :m .-2<CR>==
-nnoremap <C-down> :m .+1<CR>==
-inoremap <C-up>   <Esc>:m .-2<CR>==gi
-inoremap <C-down> <Esc>:m .+1<CR>==gi
-vnoremap <C-up>   :m '<-2<CR>gv=gv
-vnoremap <C-down> :m '>+1<CR>gv=gv
+"esc
+inoremap <C-l> <Esc>
+vnoremap <C-l> <Esc>
 
-"move cursor
-nnoremap <M-S-up>   gk
-nnoremap <M-S-down> gj
-inoremap <M-S-up>   <C-O>gk
-inoremap <M-S-down> <C-O>gj
-vnoremap <M-S-up>   gk
-vnoremap <M-S-down> gj
+"visual line movement
+nnoremap <up>   gk
+nnoremap <down> gj
+inoremap <up>   <C-O>gk
+inoremap <down> <C-O>gj
+vnoremap <up>   gk
+vnoremap <down> gj
+
+"visual line movement
+nnoremap <C-up>   {
+nnoremap <C-down> }
+inoremap <C-up>   <C-O>{
+inoremap <C-down> <C-O>}
+vnoremap <C-up>   {
+vnoremap <C-down> }
+
+"move lines
+nnoremap <M-S-up>   :m .-2<CR>==
+nnoremap <M-S-down> :m .+1<CR>==
+inoremap <M-S-up>   <Esc>:m .-2<CR>==gi
+inoremap <M-S-down> <Esc>:m .+1<CR>==gi
+vnoremap <M-S-up>   :m '<-2<CR>gv=gv
+vnoremap <M-S-down> :m '>+1<CR>gv=gv
+
+"select with shift
+nmap <S-up>      v<up>
+nmap <S-down>    v<down>
+nmap <S-left>    v<left>
+nmap <S-right>   v<right>
+nmap <C-S-up>    v<C-up>
+nmap <C-S-down>  v<C-down>
+nmap <C-S-left>  v<C-left>
+nmap <C-S-right> v<C-right>
+vmap <S-up>      <up>
+vmap <S-down>    <down>
+vmap <S-left>    <left>
+vmap <S-right>   <right>
+vmap <C-S-up>    <C-up>
+vmap <C-S-down>  <C-down>
+vmap <C-S-left>  <C-left>
+vmap <C-S-right> <C-right>
+imap <S-up>      <Esc>v<up>
+imap <S-down>    <Esc>v<down>
+imap <S-left>    <Esc>v<left>
+imap <S-right>   <Esc>v<right>
+imap <C-S-up>    <Esc>v<C-up>
+imap <C-S-down>  <Esc>v<C-down>
+imap <C-S-left>  <Esc>v<C-left>
+imap <C-S-right> <Esc>v<C-right>
 
 "move in splits
-nnoremap <S-left>  <C-w><C-h>
-nnoremap <S-down>  <C-w><C-j>
-nnoremap <S-up>    <C-w><C-k>
-nnoremap <S-right> <C-w><C-l>
-inoremap <S-left>  <Esc><C-w><C-h>
-inoremap <S-down>  <Esc><C-w><C-j>
-inoremap <S-up>    <Esc><C-w><C-k>
-inoremap <S-right> <Esc><C-w><C-l>
-vnoremap <S-left>  <Esc><C-w><C-h>
-vnoremap <S-down>  <Esc><C-w><C-j>
-vnoremap <S-up>    <Esc><C-w><C-k>
-vnoremap <S-right> <Esc><C-w><C-l>
+nnoremap <M-left>  <C-w><C-h>
+nnoremap <M-down>  <C-w><C-j>
+nnoremap <M-up>    <C-w><C-k>
+nnoremap <M-right> <C-w><C-l>
+inoremap <M-left>  <Esc><C-w><C-h>
+inoremap <M-down>  <Esc><C-w><C-j>
+inoremap <M-up>    <Esc><C-w><C-k>
+inoremap <M-right> <Esc><C-w><C-l>
+vnoremap <M-left>  <Esc><C-w><C-h>
+vnoremap <M-down>  <Esc><C-w><C-j>
+vnoremap <M-up>    <Esc><C-w><C-k>
+vnoremap <M-right> <Esc><C-w><C-l>
 
 "save
 nnoremap <silent> <C-s> :update<CR>
