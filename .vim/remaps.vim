@@ -2,9 +2,6 @@
 inoremap <C-l> <Esc>
 vnoremap <C-l> <Esc>
 
-"yank without cursor moving
-vmap y ygv<Esc>
-
 "visual line movement
 nnoremap <up>   gk
 nnoremap <down> gj
@@ -74,6 +71,14 @@ nnoremap <leader>d "_d
 nnoremap <leader>D "_D
 vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
+
+"comments
+nmap <C-_> gcc
+imap <C-_> <C-o>gcc
+vmap <C-_> gc
+
+"yank without cursor moving
+vmap y ygv<Esc>
 
 "save
 nnoremap <silent> <C-s> :update<CR>
