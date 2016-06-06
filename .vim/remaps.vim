@@ -2,6 +2,9 @@
 inoremap <C-l> <Esc>
 vnoremap <C-l> <Esc>
 
+"yank without cursor moving
+vmap y ygv<Esc>
+
 "visual line movement
 nnoremap <up>   gk
 nnoremap <down> gj
