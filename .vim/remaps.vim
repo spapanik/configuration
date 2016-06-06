@@ -86,9 +86,9 @@ inoremap <silent> <C-s> <Esc>:update<CR>
 vnoremap <silent> <C-s> <Esc>:update<CR>
 
 "quit
-nnoremap <silent> <C-q> :Bclose<CR>
-inoremap <silent> <C-q> <Esc>:Bclose<CR>
-vnoremap <silent> <C-q> <Esc>:Bclose<CR>
+nnoremap <silent> <C-q> :Bdelete<CR>
+inoremap <silent> <C-q> <Esc>:Bdelete<CR>
+vnoremap <silent> <C-q> <Esc>:Bdelete<CR>
 
 "taglist
 nnoremap <silent> <F8> :TagbarToggle<CR>
