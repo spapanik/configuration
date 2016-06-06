@@ -13,6 +13,7 @@
 	dm = difftool master
 	dom = difftool origin/master
 	df = difftool
+	dnc = diff --no-color
 	pr = pull --rebase
 	this = rev-parse --abbrev-ref HEAD
 	nuke = "!f() { git reset --hard origin/`git this`; }; f"
