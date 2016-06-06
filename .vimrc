@@ -20,6 +20,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'ervandew/supertab'
 Plugin 'lervag/vimtex'
+Plugin 'moll/vim-bbye'
 filetype plugin indent on
 "vundle end
 
