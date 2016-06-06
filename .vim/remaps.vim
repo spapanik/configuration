@@ -66,6 +66,12 @@ vnoremap <M-down>  <Esc><C-w><C-j>
 vnoremap <M-up>    <Esc><C-w><C-k>
 vnoremap <M-right> <Esc><C-w><C-l>
 
+"delete and paste
+nnoremap <leader>d "_d
+nnoremap <leader>D "_D
+vnoremap <leader>d "_d
+vnoremap <leader>p "_dP
+
 "save
 nnoremap <silent> <C-s> :update<CR>
 inoremap <silent> <C-s> <Esc>:update<CR>
