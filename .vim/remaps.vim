@@ -3,20 +3,12 @@ inoremap <C-l> <Esc>
 vnoremap <C-l> <Esc>
 
 "visual line movement
-nnoremap <up>   gk
-nnoremap <down> gj
-inoremap <up>   <C-O>gk
-inoremap <down> <C-O>gj
-vnoremap <up>   gk
-vnoremap <down> gj
-
-"visual line movement
-nnoremap <C-up>   {
-nnoremap <C-down> }
-inoremap <C-up>   <C-O>{
-inoremap <C-down> <C-O>}
-vnoremap <C-up>   {
-vnoremap <C-down> }
+nnoremap <C-up>   gk
+nnoremap <C-down> gj
+inoremap <C-up>   <C-O>gk
+inoremap <C-down> <C-O>gj
+vnoremap <C-up>   gk
+vnoremap <C-down> gj
 
 "move lines
 nnoremap <M-S-up>   :m .-2<CR>==

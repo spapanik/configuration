@@ -45,6 +45,11 @@ set shiftwidth=4
 set softtabstop=4
 set pastetoggle=<F12>
 
+"case insensitive if lowercase
+set ignorecase
+set smartcase
+
+
 "indentation
 filetype indent on
 set ai
