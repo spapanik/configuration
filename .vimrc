@@ -49,7 +49,6 @@ set pastetoggle=<F12>
 set ignorecase
 set smartcase
 
-
 "indentation
 filetype indent on
 set ai
@@ -69,6 +68,10 @@ let g:jedi#show_call_signatures="2"
 
 "syntax highlighting
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []  }
+
+"airline
+set laststatus=2
+let g:airline_theme='dracula'
 
 "spell
 set spelllang=en_gb
