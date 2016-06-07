@@ -105,6 +105,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__']
+set wildignore+=*.pyc,*.pyo,*/__pycache__/*
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
