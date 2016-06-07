@@ -71,7 +71,8 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 
 "airline
 set laststatus=2
-let g:airline_theme='dracula'
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts = 1
 
 "spell
 set spelllang=en_gb
