@@ -10,6 +10,14 @@ inoremap <C-down> <C-O>gj
 vnoremap <C-up>   gk
 vnoremap <C-down> gj
 
+"visual line movement
+nnoremap <M-PageUp>   :bp<CR>
+nnoremap <M-PageDown> :bn<CR>
+inoremap <M-PageUp>   <Esc>:bp<CR>
+inoremap <M-PageDown> <Esc>:bn<CR>
+vnoremap <M-PageUp>   <Esc>:bp<CR>
+vnoremap <M-PageDown> <Esc>:bn<CR>
+
 "move lines
 nnoremap <M-S-up>   :m .-2<CR>==
 nnoremap <M-S-down> :m .+1<CR>==
