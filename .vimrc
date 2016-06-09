@@ -21,6 +21,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'ervandew/supertab'
 Plugin 'lervag/vimtex'
 Plugin 'moll/vim-bbye'
+Plugin 'terryma/vim-multiple-cursors'
 filetype plugin indent on
 "vundle end
 
