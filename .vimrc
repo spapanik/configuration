@@ -22,6 +22,7 @@ Plugin 'ervandew/supertab'
 Plugin 'lervag/vimtex'
 Plugin 'moll/vim-bbye'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tmhedberg/SimpylFold'
 filetype plugin indent on
 "vundle end
 
@@ -81,6 +82,11 @@ set spelllang=en_gb
 "folding
 set foldmethod=syntax
 set nofoldenable
+
+"python folding
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+autocmd FileType python setlocal foldlevel=2
 
 set noincsearch
 set nohlsearch
