@@ -1,6 +1,6 @@
 "esc
-inoremap <C-l> <Esc>
-vnoremap <C-l> <Esc>
+inoremap <C-q> <Esc>
+vnoremap <C-q> <Esc>
 
 "visual line movement
 nnoremap <C-up>   gk
@@ -86,9 +86,9 @@ inoremap <silent> <C-s> <Esc>:update<CR>
 vnoremap <silent> <C-s> <Esc>:update<CR>
 
 "quit
-nnoremap <silent> <C-q> :Bdelete<CR>
-inoremap <silent> <C-q> <Esc>:Bdelete<CR>
-vnoremap <silent> <C-q> <Esc>:Bdelete<CR>
+nnoremap <silent> <C-l> :Bdelete<CR>
+inoremap <silent> <C-l> <Esc>:Bdelete<CR>
+vnoremap <silent> <C-l> <Esc>:Bdelete<CR>
 
 "taglist
 nnoremap <silent> <F8> :TagbarToggle<CR>
