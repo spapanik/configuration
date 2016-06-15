@@ -1,4 +1,5 @@
 "esc
+nnoremap <C-q> <Esc>
 inoremap <C-q> <Esc>
 vnoremap <C-q> <Esc>
 
