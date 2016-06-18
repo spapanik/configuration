@@ -1,35 +1,32 @@
-" vundle start
+" no vi complatibility
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'blueshirts/darcula'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'majutsushi/tagbar'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'ervandew/supertab'
-Plugin 'lervag/vimtex'
-Plugin 'moll/vim-bbye'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tmhedberg/SimpylFold'
-filetype plugin indent on
-"vundle end
+
+" install plugins
+call plug#begin('~/.vim/plugged')
+ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+ Plug 'blueshirts/darcula'
+ Plug 'ctrlpvim/ctrlp.vim'
+ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+ Plug 'scrooloose/syntastic'
+ Plug 'scrooloose/nerdtree'
+ Plug 'tpope/vim-commentary'
+ Plug 'tpope/vim-surround'
+ Plug 'tpope/vim-fugitive'
+ Plug 'jiangmiao/auto-pairs'
+ Plug 'majutsushi/tagbar'
+ Plug 'davidhalter/jedi-vim'
+ Plug 'jlanzarotta/bufexplorer'
+ Plug 'ervandew/supertab'
+ Plug 'lervag/vimtex'
+ Plug 'moll/vim-bbye'
+ Plug 'terryma/vim-multiple-cursors'
+ Plug 'tmhedberg/SimpylFold'
+call plug#end()
 
 set history=700
 "syntax
 syntax on
-filetype plugin on
+filetype plugin indent on
 
 "UI
 set ruler
