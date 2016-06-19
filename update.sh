@@ -1,6 +1,7 @@
 #/usr/bin/bash
 FILES=".pyrc
 .apvlvrc
+.config
 .tmux.conf
 .vim
 .vimrc
