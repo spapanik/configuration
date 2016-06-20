@@ -21,6 +21,9 @@ call plug#begin('~/.vim/plugged')
  Plug 'moll/vim-bbye'
  Plug 'terryma/vim-multiple-cursors'
  Plug 'tmhedberg/SimpylFold'
+ if filereadable($HOME . "/.vim/local_plugins.vim")
+     source $HOME/.vim/local_plugins.vim
+ endif
 call plug#end()
 
 set history=700
