@@ -130,8 +130,8 @@ function! SudoSaveFile() abort
 endfunction
 
 "remapping keys
-source $HOME/.vim/remaps.vim
+source $HOME/~.config/nvim/remaps.vim
 
-if filereadable($HOME . "/.vim/local.vim")
-     source $HOME/.vim/local.vim
+if filereadable($HOME . "/.config/nvim/local.vim")
+     source $HOME/.config/nvim/local.vim
 endif
