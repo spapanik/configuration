@@ -3,3 +3,4 @@ clear control
 add control = Caps_Lock Control_L Control_R
 keycode 66 = Control_L NoSymbol NoSymbol NoSymbol
 keycode 127 = Caps_Lock Break Caps_Lock Break
+pointer = 1 2 3 4 5 6 7 0 0 0 0 0 0 0 0 0
