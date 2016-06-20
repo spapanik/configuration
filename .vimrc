@@ -76,9 +76,6 @@ let g:airline_powerline_fonts = 1
 "spell
 set spelllang=en_gb
 
-"no mouse
-set mouse=
-
 "folding
 set foldmethod=syntax
 set nofoldenable
@@ -130,8 +127,8 @@ function! SudoSaveFile() abort
 endfunction
 
 "remapping keys
-source ./remaps.vim
+source $HOME/.vim/remaps.vim
 
-if !empty(glob("./local.vim"))
-     source ./local.vim
+if filereadable($HOME . "/.vim/local.vim")
+     source $HOME/.vim/local.vim
 endif
