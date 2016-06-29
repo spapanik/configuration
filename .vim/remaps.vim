@@ -44,14 +44,14 @@ vmap <C-S-up>    <C-up>
 vmap <C-S-down>  <C-down>
 vmap <C-S-left>  <C-left>
 vmap <C-S-right> <C-right>
-imap <S-up>      <Esc>v<up>
-imap <S-down>    <Esc>v<down>
-imap <S-left>    <Esc>v<left>
-imap <S-right>   <Esc>v<right>
-imap <C-S-up>    <Esc>v<C-up>
-imap <C-S-down>  <Esc>v<C-down>
-imap <C-S-left>  <Esc>v<C-left>
-imap <C-S-right> <Esc>v<C-right>
+imap <S-up>      <Esc>`^v<up>
+imap <S-down>    <Esc>`^v<down>
+imap <S-left>    <Esc>`^v<left>
+imap <S-right>   <Esc>`^v<right>
+imap <C-S-up>    <Esc>`^v<C-up>
+imap <C-S-down>  <Esc>`^v<C-down>
+imap <C-S-left>  <Esc>`^v<C-left>
+imap <C-S-right> <Esc>`^v<C-right>
 
 "move in splits
 nnoremap <M-left>  <C-w><C-h>
