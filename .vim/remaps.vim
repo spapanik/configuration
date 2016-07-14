@@ -1,7 +1,7 @@
 "esc
-nnoremap <C-q> <Esc>
-inoremap <C-q> <Esc>
-vnoremap <C-q> <Esc>
+nnoremap <C-q> <Esc>`^
+inoremap <C-q> <Esc>`^
+vnoremap <C-q> <Esc>`^
 
 "visual line movement
 nnoremap <C-up>   gk
