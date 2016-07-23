@@ -1,5 +1,5 @@
 "esc
-nnoremap <C-q> <Esc>`^
+nnoremap <C-q> <Esc>
 inoremap <C-q> <Esc>`^
 vnoremap <C-q> <Esc>`^
 
@@ -83,10 +83,10 @@ vmap y ygv<Esc>
 
 "save
 nnoremap <silent> <C-s> :update<CR>
-inoremap <silent> <C-s> <Esc>:update<CR>
+inoremap <silent> <C-s> <Esc>`^:update<CR>
 vnoremap <silent> <C-s> <Esc>:update<CR>
 
-"quit
+"kill buffer
 nnoremap <silent> <C-l> :Bdelete<CR>
 inoremap <silent> <C-l> <Esc>:Bdelete<CR>
 vnoremap <silent> <C-l> <Esc>:Bdelete<CR>
