@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'moll/vim-bbye'
  Plug 'terryma/vim-multiple-cursors'
  Plug 'tmhedberg/SimpylFold'
+ Plug 'Rip-Rip/clang_complete'
  if filereadable($HOME . "/.vim/local_plugins.vim")
      source $HOME/.vim/local_plugins.vim
  endif
@@ -110,6 +111,9 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" fix <CR> with autopairs
+let g:AutoPairsMapCR = 0
 
 let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__']
 set wildignore+=*.pyc,*.pyo,*/__pycache__/*
