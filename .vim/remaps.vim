@@ -71,12 +71,15 @@ vnoremap <M-up>    <Esc><C-w><C-k>
 vnoremap <M-right> <Esc><C-w><C-l>
 
 "delete and paste
-nnoremap <leader>d "_d
-nnoremap <leader>D "_D
-vnoremap <leader>d "_d
-vnoremap <leader>p "_dP
+vnoremap <leader>dd "_d
+vnoremap <leader>dp "_dp
 
-"comments
+"clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+
+", make_response, make_responsec, make_responseomments
 nmap <C-_> gcc
 imap <C-_> <C-o>gcc
 vmap <C-_> gc
