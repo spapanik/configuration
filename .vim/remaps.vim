@@ -1,3 +1,6 @@
+"space as leader
+let mapleader = "\<Space>"
+
 "esc
 nnoremap <C-q> <Esc>
 inoremap <C-q> <Esc>`^
