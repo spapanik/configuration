@@ -4,23 +4,37 @@ let mapleader = "\<Space>"
 "esc
 nnoremap <C-q> <Esc>
 inoremap <C-q> <Esc>`^
-vnoremap <C-q> <Esc>`^
+vnoremap <C-q> <Esc>
 
-"visual line movement
-nnoremap <C-up>   gk
-nnoremap <C-down> gj
-inoremap <C-up>   <C-O>gk
-inoremap <C-down> <C-O>gj
-vnoremap <C-up>   gk
-vnoremap <C-down> gj
+"bigger movement
+nnoremap <C-up>    {
+nnoremap <C-down>  }
+nnoremap <C-left>  b
+nnoremap <C-right> w
+inoremap <C-up>    <C-o>{
+inoremap <C-down>  <C-o>}
+inoremap <C-left>  <C-o>b
+inoremap <C-right> <C-o>w
+vnoremap <C-up>    {
+vnoremap <C-down>  }
+vnoremap <C-left>  b
+vnoremap <C-right> w
 
-"visual line movement
+"move in buffer
 nnoremap <M-PageUp>   :bp<CR>
 nnoremap <M-PageDown> :bn<CR>
 inoremap <M-PageUp>   <Esc>:bp<CR>
 inoremap <M-PageDown> <Esc>:bn<CR>
 vnoremap <M-PageUp>   <Esc>:bp<CR>
 vnoremap <M-PageDown> <Esc>:bn<CR>
+
+"visual line movement
+nnoremap <C-PageUp>   gk
+nnoremap <C-PageDown> gj
+inoremap <C-PageUp>   <C-o>gk
+inoremap <C-PageDown> <C-o>gj
+vnoremap <C-PageUp>   gk
+vnoremap <C-PageDown> gj
 
 "move lines
 nnoremap <M-S-up>   :m .-2<CR>==
