@@ -86,7 +86,7 @@ vnoremap <M-right> <Esc><C-w><C-l>
 
 "delete and paste
 vnoremap <leader>dd "_d
-vnoremap <leader>dp "_dp
+vnoremap <leader>dp "_dP
 
 "clipboard
 nnoremap <leader>p "+p
