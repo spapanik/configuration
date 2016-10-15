@@ -93,7 +93,7 @@ nnoremap <leader>p "+p
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
-", make_response, make_responsec, make_responseomments
+"comments
 nmap <C-_> gcc
 imap <C-_> <C-o>gcc
 vmap <C-_> gc
