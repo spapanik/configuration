@@ -28,6 +28,9 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 set history=700
+"fortran should be before syntax
+let fortran_free_source=1
+let fortran_more_precise=1
 "syntax
 syntax on
 filetype plugin indent on
