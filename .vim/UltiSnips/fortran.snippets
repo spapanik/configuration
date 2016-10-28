@@ -1,0 +1,7 @@
+snippet etime "Time execution"
+integer(kind=16) :: start, finish, answer
+call system_clock(start)
+answer = main(upper_bound)
+call system_clock(finish)
+print *, finish-start, 'ns'
+endsnippet
