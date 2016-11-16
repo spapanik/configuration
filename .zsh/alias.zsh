@@ -1,4 +1,3 @@
-alias eww=emacs
 alias enw="emacs -nw"
 alias ls="ls --color"
 alias la="ls --color -A"
