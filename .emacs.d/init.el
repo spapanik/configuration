@@ -31,8 +31,10 @@
     (package-install 'use-package)))
 
 (require 'use-package)
-(use-package darcula-theme
-  :ensure t)
+(unless
+    (file-exists-p "~/.light")
+    (use-package darcula-theme
+      :ensure t))
 (use-package multiple-cursors
   :ensure t)
 

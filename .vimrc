@@ -39,9 +39,13 @@ filetype plugin indent on
 set ruler
 set number
 set wildmenu
-set background=dark
 set t_Co=256
-color darcula
+if filereadable($HOME . "/.light")
+    set background=light
+else
+     set background=dark
+     color darcula
+endif
 
 "tabs
 set smarttab
