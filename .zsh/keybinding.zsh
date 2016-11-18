@@ -42,3 +42,5 @@ bindkey "${key[PageDown]}"    end-of-buffer-or-history
 bindkey "${key[CtrlRight]}"   forward-word
 bindkey "${key[CtrlLeft]}"    backward-word
 bindkey \^U                   backward-kill-line
+bindkey \^N                   history-beginning-search-backward
+bindkey \^B                   history-beginning-search-forward
