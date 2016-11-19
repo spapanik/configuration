@@ -1,10 +1,8 @@
 #/usr/bin/bash
 FILES=".pyrc
-.apvlvrc
 .tmux.conf
 .vim
 .vimrc
-.Xmodmap
 .zsh
 .zshrc
 .emacs.d
