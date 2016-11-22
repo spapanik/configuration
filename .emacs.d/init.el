@@ -37,6 +37,8 @@
       :ensure t))
 (use-package multiple-cursors
   :ensure t)
+(use-package tramp
+  :ensure t)
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
