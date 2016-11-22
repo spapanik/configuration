@@ -6,6 +6,14 @@ nnoremap <C-q> <Esc>
 inoremap <C-q> <Esc>`^
 vnoremap <C-q> <Esc>
 
+"move to beginning/end
+nnoremap <C-k> 0
+inoremap <C-k> 0
+vnoremap <C-k> 0
+nnoremap k $
+inoremap k $
+vnoremap k $
+
 "bigger movement
 nnoremap <C-up>    {
 nnoremap <C-down>  }
