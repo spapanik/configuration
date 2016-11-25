@@ -8,10 +8,10 @@ vnoremap <C-q> <Esc>
 
 "move to beginning/end
 nnoremap <C-k> 0
-inoremap <C-k> 0
+inoremap <C-k> <C-o>0
 vnoremap <C-k> 0
 nnoremap k $
-inoremap k $
+inoremap k <C-o>$
 vnoremap k $
 
 "bigger movement
