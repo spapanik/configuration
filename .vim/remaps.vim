@@ -2,9 +2,8 @@
 let mapleader = "\<Space>"
 
 "esc
-nnoremap <C-q> <Esc>
-inoremap <C-q> <Esc>`^
-vnoremap <C-q> <Esc>
+map <C-q> <Esc>
+imap <C-q> <Esc>`^
 
 "move to beginning/end
 nnoremap <C-k> 0
