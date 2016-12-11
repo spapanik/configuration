@@ -1,5 +1,5 @@
 alias enw="emacs -nw"
-if [[ ! -a $HOME/.macosx ]]; then
+if [[ `uname` == 'Darwin' ]]; then
     alias ls="ls --color"
 fi
 alias la="ls -A"

@@ -1,5 +1,5 @@
 # antigen start
-if [[ -a $HOME/.macosx ]]; then
+if [[ `uname` == 'Darwin' ]]; then
     . $(brew --prefix)/share/antigen/antigen.zsh
 else
     . /usr/share/zsh/scripts/antigen/antigen.zsh
