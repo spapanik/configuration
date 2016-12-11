@@ -1,10 +1,12 @@
 alias enw="emacs -nw"
-alias ls="ls --color"
-alias la="ls --color -A"
-alias ll="ls --color -lG"
-alias llh="ls --color -lGh"
-alias lla="ls --color -lGA"
-alias llah="ls --color -lGAh"
+if [[ ! -a .macosx ]]; then
+    alias ls="ls --color"
+fi
+alias la="ls -A"
+alias ll="ls -lG"
+alias llh="ls -lGh"
+alias lla="ls -lGA"
+alias llah="ls -lGAh"
 alias manage="python manage.py"
 alias dj_server="python manage.py runserver_plus"
 alias dj_shell="python manage.py shell_plus"
