@@ -146,3 +146,7 @@ source $HOME/.vim/remaps.vim
 if filereadable($HOME . "/.vim/local.vim")
      source $HOME/.vim/local.vim
 endif
+
+if filereadable($HOME . "/.macosx")
+     set backspace=indent,eol,start
+endif
