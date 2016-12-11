@@ -1,5 +1,9 @@
 # antigen start
-. /usr/share/zsh/scripts/antigen/antigen.zsh
+if [[ -a .macosx ]]; then
+    . $(brew --prefix)/share/antigen/antigen.zsh
+else
+    . /usr/share/zsh/scripts/antigen/antigen.zsh
+fi
 antigen use oh-my-zsh
 antigen bundle pip
 antigen bundle git
