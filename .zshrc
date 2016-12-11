@@ -1,5 +1,5 @@
 # antigen start
-if [[ -a .macosx ]]; then
+if [[ -a $HOME/.macosx ]]; then
     . $(brew --prefix)/share/antigen/antigen.zsh
 else
     . /usr/share/zsh/scripts/antigen/antigen.zsh
@@ -19,7 +19,7 @@ cd $HOME
 . .zsh/keybinding.zsh
 . .zsh/completion.zsh
 . .zsh/theme.zsh
-if [[ -a .zsh/local.zsh ]]; then
+if [[ -a $HOME/.zsh/local.zsh ]]; then
     . .zsh/local.zsh
 fi
 . `which virtualenvwrapper.sh`
