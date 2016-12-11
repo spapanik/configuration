@@ -1,5 +1,5 @@
 alias enw="emacs -nw"
-if [[ `uname` == 'Darwin' ]]; then
+if [[ ! `uname` == 'Darwin' ]]; then
     alias ls="ls --color"
 fi
 alias la="ls -A"
