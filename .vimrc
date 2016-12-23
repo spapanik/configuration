@@ -20,7 +20,6 @@ call plug#begin('~/.vim/plugged')
  Plug 'lervag/vimtex'
  Plug 'moll/vim-bbye'
  Plug 'terryma/vim-multiple-cursors'
- Plug 'tmhedberg/SimpylFold'
  Plug 'Rip-Rip/clang_complete'
  if filereadable($HOME . "/.vim/local_plugins.vim")
      source $HOME/.vim/local_plugins.vim
@@ -91,11 +90,6 @@ set spelllang=en_gb
 "folding
 set foldmethod=syntax
 set nofoldenable
-
-"python folding
-autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
-autocmd FileType python setlocal foldlevel=2
 
 set noincsearch
 set nohlsearch

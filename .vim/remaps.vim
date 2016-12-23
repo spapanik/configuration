@@ -56,22 +56,24 @@ nmap <S-up>      v<up>
 nmap <S-down>    v<down>
 nmap <S-left>    v<left>
 nmap <S-right>   v<right>
-nmap <C-S-up>    v<C-up>
-nmap <C-S-down>  v<C-down>
-nmap <C-S-left>  v<C-left>
-nmap <C-S-right> v<C-right>
 vmap <S-up>      <up>
 vmap <S-down>    <down>
 vmap <S-left>    <left>
 vmap <S-right>   <right>
-vmap <C-S-up>    <C-up>
-vmap <C-S-down>  <C-down>
-vmap <C-S-left>  <C-left>
-vmap <C-S-right> <C-right>
 imap <S-up>      <Esc>`^v<up>
 imap <S-down>    <Esc>`^v<down>
 imap <S-left>    <Esc>`^v<left>
 imap <S-right>   <Esc>`^v<right>
+
+"bigger selects
+nmap <C-S-up>    v<C-up>
+nmap <C-S-down>  v<C-down>
+nmap <C-S-left>  v<C-left>
+nmap <C-S-right> v<C-right>
+vmap <C-S-up>    <C-up>
+vmap <C-S-down>  <C-down>
+vmap <C-S-left>  <C-left>
+vmap <C-S-right> <C-right>
 imap <C-S-up>    <Esc>`^v<C-up>
 imap <C-S-down>  <Esc>`^v<C-down>
 imap <C-S-left>  <Esc>`^v<C-left>
