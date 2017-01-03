@@ -1,0 +1,9 @@
+echo "Checking for debuggers..."
+if [[  `grep -Irn --include="*.py" "import .pdb" .` ]]; then
+    echo "There is a debugger in commited files; aborting commit"
+    exit 1
+fi
+if [[  `grep -Irn --include="*.html" "debugger" .` ]]; then
+    echo "There is a debugger in commited files; aborting commit"
+    exit 1
+fi
