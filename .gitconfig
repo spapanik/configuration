@@ -9,9 +9,15 @@
 	ui = always
 [alias]
 	cm = checkout master
+	cd = checkout develop
+	rem = rebase master
+	red = rebase develop
 	mm = merge master
+	md = merge develop
 	dm = difftool master
+	dd = difftool develop
 	dom = difftool origin/master
+	dod = difftool origin/develop
 	df = difftool
 	dnc = diff --no-color
 	pr = pull --rebase
