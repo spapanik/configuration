@@ -73,6 +73,9 @@ set splitright
 set splitbelow
 
 "jedi options
+let g:jedi#completions_command="<C-x><C-o>"
+let g:jedi#popup_on_dot=0
+let g:jedi#popup_select_first=0
 let g:jedi#use_tabs_not_buffers=0
 let g:jedi#show_call_signatures="2"
 
