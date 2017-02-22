@@ -9,22 +9,19 @@
 	ui = always
 [alias]
 	cm = checkout master
-	cd = checkout develop
 	rem = rebase master
-	red = rebase develop
 	mm = merge master
-	md = merge develop
-	dm = difftool master
-	dd = difftool develop
-	dom = difftool origin/master
-	dod = difftool origin/develop
 	df = difftool
 	dnc = diff --no-color
 	pr = pull --rebase
 	this = rev-parse --abbrev-ref HEAD
-	nuke = "!f() { git reset --hard origin/`git this`; }; f"
+	unstage = reset HEAD --
+	nuke = "!f() { git reset --hard origin/$(git this); }; f"
+	do = "!f() { git difftool origin/$(git this); }; f"
+	da = "!f() { git difftool $(git merge-base $1 $(git this)); }; f"
+	dm = "!f() { git difftool $(git merge-base master $(git this)); }; f"
 	destroy = "!f() { git branch -D $1; git push origin --delete $1; }; f"
-	pushit = "!f() { git push -u origin `git this`; }; f"
+	pushit = "!f() { git push -u origin $(git this); }; f"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [diff]
