@@ -2,7 +2,7 @@
 if [[ `uname` == 'Darwin' ]]; then
     . $(brew --prefix)/share/antigen/antigen.zsh
 else
-    . /usr/share/zsh/scripts/antigen/antigen.zsh
+    . /usr/share/zsh/share/antigen.zsh
 fi
 antigen use oh-my-zsh
 antigen bundle pip
