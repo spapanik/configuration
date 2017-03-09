@@ -1,5 +1,6 @@
 (setq backup-inhibited t)
 (setq make-backup-files nil)
+(setq kill-whole-line t)
 (setq inhibit-startup-message t)
 (setq-default column-number-mode t)
 (setq display-time-24hr-format t)
@@ -15,7 +16,6 @@
 (auto-fill-mode -1)
 (global-auto-revert-mode t)
 (setq-default indent-tabs-mode nil)
-(display-time-mode -1)
 
 (require 'package)
 (add-to-list 'package-archives
