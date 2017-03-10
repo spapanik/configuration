@@ -1,4 +1,5 @@
-alias enw="emacs -nw"
+alias emacs="emacs -nw"
+alias gemacs="\emacs"
 if [[ ! `uname` == 'Darwin' ]]; then
     alias ls="ls --color"
 fi
