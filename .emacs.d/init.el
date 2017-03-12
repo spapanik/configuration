@@ -69,3 +69,9 @@
 (global-set-key (kbd "M-<right>") 'windmove-right)
 (global-set-key (kbd "M-<up>") 'windmove-up)
 (global-set-key (kbd "M-<down>") 'windmove-down)
+
+;; source local file
+(if
+    (file-readable-p (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
+    (load-file (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
+)
