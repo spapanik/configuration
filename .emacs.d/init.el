@@ -14,6 +14,7 @@
     (tool-bar-mode 0))
 (global-linum-mode 1)
 (auto-fill-mode -1)
+(electric-pair-mode t)
 (global-auto-revert-mode t)
 (setq-default indent-tabs-mode nil)
 
