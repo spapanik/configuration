@@ -68,6 +68,15 @@
 (global-set-key (kbd "M-<up>") 'windmove-up)
 (global-set-key (kbd "M-<down>") 'windmove-down)
 
+;; copy whole line
+(defun copy-line (arg)
+  (interactive "p")
+  (kill-ring-save (line-beginning-position)
+                  (line-beginning-position (+ 1 arg)))
+  (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
+
+(global-set-key (kbd "C-x C-y") 'copy-line)
+
 ;; source local file
 (defvar local-init (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
 (if (file-readable-p local-init)
