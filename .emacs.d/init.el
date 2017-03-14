@@ -74,7 +74,6 @@
 (global-set-key (kbd "M-<down>") 'windmove-down)
 
 ;; source local file
-(if
-    (file-readable-p (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
-    (load-file (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
-)
+(defvar local-init (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
+(if (file-readable-p local-init)
+    (load-file local-init))
