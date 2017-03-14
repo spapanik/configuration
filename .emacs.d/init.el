@@ -39,6 +39,7 @@
 (use-package tramp)
 (use-package direx)
 (use-package magit)
+(use-package auto-complete)
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
@@ -76,6 +77,10 @@
   (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
 (global-set-key (kbd "C-x C-y") 'copy-line)
+
+;; tab-complete
+(global-auto-complete-mode t)
+(setq ac-auto-start 3)
 
 ;; source local file
 (defvar local-init (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
