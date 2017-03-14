@@ -32,17 +32,13 @@
     (package-install 'use-package)))
 
 (require 'use-package)
+(setq use-package-always-ensure t)
 (unless (file-exists-p "~/.light")
-  (use-package darcula-theme
-    :ensure t))
-(use-package multiple-cursors
-  :ensure t)
-(use-package tramp
-  :ensure t)
-(use-package direx
-  :ensure t)
-(use-package magit
-  :ensure t)
+  (use-package darcula-theme))
+(use-package multiple-cursors)
+(use-package tramp)
+(use-package direx)
+(use-package magit)
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
