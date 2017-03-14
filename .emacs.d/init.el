@@ -5,6 +5,7 @@
 (setq-default column-number-mode t)
 (setq display-time-24hr-format t)
 (display-time-mode 1)
+(setq-default show-trailing-whitespace t)
 (setq require-final-newline t)
 (unless window-system
   (menu-bar-mode -1)
