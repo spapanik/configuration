@@ -40,6 +40,7 @@
 (use-package direx)
 (use-package magit)
 (use-package auto-complete)
+(use-package whole-line-or-region)
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
@@ -69,14 +70,10 @@
 (global-set-key (kbd "M-<up>") 'windmove-up)
 (global-set-key (kbd "M-<down>") 'windmove-down)
 
-;; copy whole line
-(defun copy-line (arg)
-  (interactive "p")
-  (kill-ring-save (line-beginning-position)
-                  (line-beginning-position (+ 1 arg)))
-  (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
-
-(global-set-key (kbd "C-x C-y") 'copy-line)
+;; comment line or region
+(whole-line-or-region-mode t)
+(global-set-key (kbd "C-x C-/") 'whole-line-or-region-comment-dwim)
+(global-set-key (kbd "C-x C-_") 'whole-line-or-region-comment-dwim)
 
 ;; tab-complete
 (global-auto-complete-mode t)
