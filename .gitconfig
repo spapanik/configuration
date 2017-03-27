@@ -13,15 +13,16 @@
 	pr = pull --rebase
 	this = rev-parse --abbrev-ref HEAD
 	unstage = reset HEAD --
-	nuke = "!f() { git reset --hard origin/$(git this); }; f"
-	do = "!f() { git diff origin/$(git this) $@; }; f"
-	dfo = "!f() { git difftool origin/$(git this) $@; }; f"
+	pushit = "!git push -u origin $(git this)"
+	track = "!git branch --set-upstream-to=origin/$(git this) $(git this)"
+	nuke = "!git reset --hard origin/$(git this)"
+	do = "!git diff origin/$(git this)"
+	dfo = "!git difftool origin/$(git this)"
+	dm = "!git diff $(git merge-base master $(git this))"
+	dfm = "!git difftool $(git merge-base master $(git this))"
 	da = "!f() { git diff $(git merge-base $1 $(git this)) ${@:2}; }; f"
 	dfa = "!f() { git difftool $(git merge-base $1 $(git this)) ${@:2}; }; f"
-	dm = "!f() { git diff $(git merge-base master $(git this)) $@; }; f"
-	dfm = "!f() { git difftool $(git merge-base master $(git this)) $@; }; f"
 	destroy = "!f() { git branch -D $1; git push origin --delete $1; }; f"
-	pushit = "!f() { git push -u origin $(git this); }; f"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [diff]
