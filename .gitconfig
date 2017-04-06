@@ -25,6 +25,7 @@
 	destroy = "!f() { git branch -D $1; git push origin --delete $1; }; f"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lb = "!f() { git branch -vv --no-color | grep --color=never ] | awk '{print substr($0,3);}' | awk '{$2=\"\"; print $0}'| awk -F']' '{print $1}'| awk -F':|\\\\[' '{$2=\"\"; if ($3==\"\") print $0; else print $1,\"\\033[1;31m\"$3\"\\033[0m \";}' && git branch -vv --no-color | grep --color=never -v ] | awk '{print substr($0,3);}' | awk '{print $1,\"\\033[1;31mlocal only\\033[0m \"}'; }; f"
 [diff]
 	tool = meld
 [merge]
