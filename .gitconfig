@@ -26,7 +26,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lb = "!f() { git branch -vv --no-color | grep --color=never ] | awk '{print substr($0,3);}' | awk '{$2=\"\"; print $0}'| awk -F']' '{print $1}'| awk -F':|\\\\[' '{$2=\"\"; if ($3==\"\") print $0; else print $1,\"\\033[1;31m\"$3\"\\033[0m \";}' && git branch -vv --no-color | grep --color=never -v ] | awk '{print substr($0,3);}' | awk '{print $1,\"\\033[1;31mlocal only\\033[0m \"}'; }; f"
-	cg = "!f() { MATCHES=( $(git branch --no-color | cut -c 3- | grep $@) ); case ${#MATCHES[@]} in 0) echo \"No branches matched '$@'\";; 1) echo ${MATCHES[0]};; *) echo \"More than one branches matched '$@'\";; esac; }; f"
+	cg = "!f() { MATCHES=( $(git branch --no-color | cut -c 3- | grep $@) ); case ${#MATCHES[@]} in 0) echo \"No branches matched '$@'\";; 1) git checkout ${MATCHES[0]};; *) echo \"More than one branches matched '$@'\";; esac; }; f"
 [diff]
 	tool = meld
 [merge]
