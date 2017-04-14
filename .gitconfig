@@ -8,6 +8,7 @@
 	cm = checkout master
 	rem = rebase master
 	mm = merge master
+	stf = status --untracked-files
 	df = difftool
 	dnc = diff --no-color
 	pr = pull --rebase
