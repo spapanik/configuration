@@ -5,6 +5,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
  Plug 'blueshirts/darcula'
+ Plug 'NLKNguyen/papercolor-theme'
  Plug 'ctrlpvim/ctrlp.vim'
  Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
  Plug 'scrooloose/syntastic'
@@ -42,6 +43,7 @@ set wildmenu
 set t_Co=256
 if filereadable($HOME . "/.light")
     set background=light
+    color PaperColor
 else
      set background=dark
      color darcula
