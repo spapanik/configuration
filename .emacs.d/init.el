@@ -33,7 +33,8 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
-(unless (file-exists-p "~/.light")
+(if (file-exists-p "~/.light")
+    (use-package paper-theme)
   (use-package darcula-theme))
 (use-package multiple-cursors)
 (use-package tramp)
