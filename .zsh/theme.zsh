@@ -13,11 +13,13 @@ else
     local user_info=${fg_no_bold[white]}
 fi
 
-local ret_status="%{${user_info}%}%n@%M%(?:%{${success}%}$ :%{${failure}%}$ %s)"
-PROMPT='%{${success}%}%p${vim_mode} %{${directory}%}%~ %{${git}%}$(git_prompt_info)
-${ret_status}%{${reset}%}'
+local ret_status="%(?:%{${success}%}:%{${failure}%}%s)"
+local first_line="%{${directory}%}%~ "
+local second_line="%{${user_info}%}%n@%M${ret_status}$%{${reset}%} "
+PROMPT='${first_line}$(git_prompt_info)
+${second_line}'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{${branch}%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{${git}%}) %{${warning}%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{${git}%}git:(%{${branch}%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{${git}%})"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{${git}%}) %{${warning}%}✗"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{${reset}%}"
