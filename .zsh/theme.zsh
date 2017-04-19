@@ -14,8 +14,8 @@ else
 fi
 
 local ret_status="%{${user_info}%}%n@%M%(?:%{${success}%}$ :%{${failure}%}$ %s)"
-PROMPT="%{${success}%}%p${vim_mode} %{${directory}%}%~ %{${git_parenthesis}%}$(git_prompt_info)
-${ret_status}%{${reset}%}"
+PROMPT='%{${success}%}%p${vim_mode} %{${directory}%}%~ %{${git}%}$(git_prompt_info)
+${ret_status}%{${reset}%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{${branch}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset%}"
