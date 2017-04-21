@@ -11,7 +11,6 @@ antigen apply
 # antigen end
 
 cd $HOME
-. .zsh/options.zsh
 . .zsh/alias.zsh
 . .zsh/constants.zsh
 . .zsh/functions.zsh

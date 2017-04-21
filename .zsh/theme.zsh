@@ -1,3 +1,4 @@
+autoload colors; colors;
 local reset=${reset_color}
 local failure={160}
 local warning={136}

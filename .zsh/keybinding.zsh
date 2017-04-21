@@ -7,7 +7,6 @@ function zle-line-finish () {
 }
 
 zle -N zle-line-init
-
 zle -N zle-line-finish
 
 stty stop '' -ixoff
@@ -28,6 +27,9 @@ key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
 key[CtrlRight]="^[[1;5C"
 key[CtrlLeft]="^[[1;5D"
+key[CtrlU]="^U"
+key[CtrlP]="^P"
+key[CtrlN]="^N"
 
 bindkey "${key[Home]}"        beginning-of-line
 bindkey "${key[End]}"         end-of-line
@@ -41,6 +43,6 @@ bindkey "${key[PageUp]}"      beginning-of-buffer-or-history
 bindkey "${key[PageDown]}"    end-of-buffer-or-history
 bindkey "${key[CtrlRight]}"   forward-word
 bindkey "${key[CtrlLeft]}"    backward-word
-bindkey \^U                   backward-kill-line
-bindkey \^P                   history-beginning-search-backward
-bindkey \^N                   history-beginning-search-forward
+bindkey "${key[CtrlU]}"       backward-kill-line
+bindkey "${key[CtrlP]}"       history-beginning-search-backward
+bindkey "${key[CtrlN]}"       history-beginning-search-forward
