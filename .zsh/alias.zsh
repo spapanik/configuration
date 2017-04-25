@@ -1,6 +1,8 @@
 alias emacs="emacs -nw"
 alias gemacs="\emacs"
-if [[ ! `uname` == 'Darwin' ]]; then
+if [[ $(uname) == 'Darwin' ]]; then
+    alias ls="gls --color"
+else
     alias ls="ls --color"
 fi
 alias la="ls -A"
