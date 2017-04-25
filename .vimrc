@@ -4,8 +4,6 @@ set nocompatible
 " install plugins
 call plug#begin('~/.vim/plugged')
  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
- Plug 'blueshirts/darcula'
- Plug 'NLKNguyen/papercolor-theme'
  Plug 'altercation/vim-colors-solarized'
  Plug 'ctrlpvim/ctrlp.vim'
  Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -44,11 +42,10 @@ set wildmenu
 set t_Co=256
 if filereadable($HOME . "/.light")
     set background=light
-    color PaperColor
 else
      set background=dark
-     color darcula
 endif
+color solarized
 
 "tabs
 set smarttab
@@ -87,7 +84,7 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 
 "airline
 set laststatus=2
-let g:airline_theme='powerlineish'
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 
 "spell
