@@ -34,8 +34,8 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 (if (file-exists-p "~/.light")
-    (use-package paper-theme)
-  (use-package darcula-theme))
+    (setq-default frame-background-mode 'light)
+  (setq-default frame-background-mode 'dark))
 (use-package multiple-cursors)
 (use-package tramp)
 (use-package direx)
@@ -43,6 +43,10 @@
 (use-package auto-complete)
 (use-package whole-line-or-region)
 (use-package smart-tab)
+
+;; theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(load-theme 'solarized t)
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
