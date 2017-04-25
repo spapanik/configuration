@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
  Plug 'blueshirts/darcula'
  Plug 'NLKNguyen/papercolor-theme'
+ Plug 'altercation/vim-colors-solarized'
  Plug 'ctrlpvim/ctrlp.vim'
  Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
  Plug 'scrooloose/syntastic'
