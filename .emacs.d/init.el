@@ -33,9 +33,6 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
-(if (file-exists-p "~/.light")
-    (setq-default frame-background-mode 'light)
-  (setq-default frame-background-mode 'dark))
 (use-package multiple-cursors)
 (use-package tramp)
 (use-package direx)
@@ -46,6 +43,9 @@
 
 ;; theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(if (file-exists-p "~/.light")
+    (setq-default frame-background-mode 'light)
+  (setq-default frame-background-mode 'dark))
 (load-theme 'solarized t)
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
