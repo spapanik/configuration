@@ -1,2 +1,2 @@
-"Microsoft Natural® Ergonomic Keyboard 4000" "/dev/input/event*" any key/418 "XKey/Up"
-"Microsoft Natural® Ergonomic Keyboard 4000" "/dev/input/event*" any key/419 "XKey/Down"
+"Microsoft Natural® Ergonomic Keyboard 4000" "/dev/input/event*" any key/418 "XKey/Control_L+Alt_L+Up"
+"Microsoft Natural® Ergonomic Keyboard 4000" "/dev/input/event*" any key/419 "XKey/Control_L+Alt_L+Down"

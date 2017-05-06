@@ -6,6 +6,7 @@ FILES=".pyrc
 .zsh
 .zshrc
 .emacs.d
+.evrouterrc
 .gitconfig
 "
 
