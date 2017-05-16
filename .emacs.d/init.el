@@ -37,16 +37,18 @@
 (use-package tramp)
 (use-package direx)
 (use-package magit)
+(use-package material-theme)
 (use-package auto-complete)
 (use-package whole-line-or-region)
 (use-package smart-tab)
 
 ;; theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
 (if (file-exists-p "~/.light")
     (setq-default frame-background-mode 'light)
   (setq-default frame-background-mode 'dark))
-(load-theme 'solarized t)
+(if (file-exists-p "~/.light")
+    (load-theme 'material-light t)
+  (load-theme 'material t))
 
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
