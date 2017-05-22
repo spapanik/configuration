@@ -1,5 +1,5 @@
 # antigen start
-if [[ `uname` == 'Darwin' ]]; then
+if [[ $(uname) == 'Darwin' ]]; then
     . $(brew --prefix)/share/antigen/antigen.zsh
 else
     . /usr/share/zsh/share/antigen.zsh
@@ -21,6 +21,6 @@ cd $HOME
 if [[ -a $HOME/.zsh/local.zsh ]]; then
     . .zsh/local.zsh
 fi
-. `which virtualenvwrapper.sh`
+. $(which virtualenvwrapper.sh)
 
 fortune -s | cowsay -f tux
