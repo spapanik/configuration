@@ -51,12 +51,12 @@ else
 fi
 USER_INFO_SUFFIX="${reset}"
 
-VENV_PROMPT_PREFIX="${blue}venv:(${red}"
-VENV_PROMPT_SUFFIX="${blue})${reset}"
+VENV_PROMPT_PREFIX="${bold_blue}venv:(${red}"
+VENV_PROMPT_SUFFIX="${bold_blue})${reset}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${blue}git:(${red}"
-ZSH_THEME_GIT_PROMPT_CLEAN="${blue})"
-ZSH_THEME_GIT_PROMPT_DIRTY="${blue}) ${yellow}✗"
+ZSH_THEME_GIT_PROMPT_PREFIX="${bold_blue}git:(${red}"
+ZSH_THEME_GIT_PROMPT_CLEAN="${bold_blue})"
+ZSH_THEME_GIT_PROMPT_DIRTY="${bold_blue}) ${bold_yellow}✗"
 ZSH_THEME_GIT_PROMPT_SUFFIX="${reset}"
 
 PROMPT='$(venv_info)${cyan}${directory} $(git_prompt_info)
