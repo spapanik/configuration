@@ -1,13 +1,3 @@
-# antigen start
-if [[ $(uname) == 'Darwin' ]]; then
-    . $(brew --prefix)/share/antigen/antigen.zsh
-else
-    . /usr/share/zsh/share/antigen.zsh
-fi
-antigen use oh-my-zsh
-antigen apply
-# antigen end
-
 cd $HOME
 . .zsh/alias.zsh
 . .zsh/pip.zsh

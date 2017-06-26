@@ -1,28 +1,9 @@
-# ANSI colors
-local reset="%{${reset_color}%}"
-
-local black="${reset}%{${fg[black]}%}"
-local red="${reset}%{${fg[red]}%}"
-local green="${reset}%{${fg[green]}%}"
-local yellow="${reset}%{${fg[yellow]}%}"
-local blue="${reset}%{${fg[blue]}%}"
-local magenta="${reset}%{${fg[magenta]}%}"
-local cyan="${reset}%{${fg[cyan]}%}"
-local white="${reset}%{${fg[white]}%}"
-
-local bold_black="${reset}%{${fg_bold[black]}%}"
-local bold_red="${reset}%{${fg_bold[red]}%}"
-local bold_green="${reset}%{${fg_bold[green]}%}"
-local bold_yellow="${reset}%{${fg_bold[yellow]}%}"
-local bold_blue="${reset}%{${fg_bold[blue]}%}"
-local bold_magenta="${reset}%{${fg_bold[magenta]}%}"
-local bold_cyan="${reset}%{${fg_bold[cyan]}%}"
-local bold_white="${reset}%{${fg_bold[white]}%}"
+setopt prompt_subst
 
 # prompt commands
 local directory="%~"
 local prompt_sign="%(!.#.$)"
-local ret_status="%(?.${green}.${red})"
+local ret_status="%(?.%F{green}.%F{red})"
 
 function user_info() {
     if [[ -n ${HIDE_USER} ]]; then
@@ -45,21 +26,21 @@ function venv_info() {
 
 # prompt variables
 if [[ -a $HOME/.light ]]; then
-    USER_INFO_PREFIX=${black}
+    USER_INFO_PREFIX=%F{black}
 else
-    USER_INFO_PREFIX=${white}
+    USER_INFO_PREFIX=%F{white}
 fi
-USER_INFO_SUFFIX="${reset}"
+USER_INFO_SUFFIX="%f"
 
-VENV_PROMPT_PREFIX="${bold_blue}venv:(${red}"
-VENV_PROMPT_SUFFIX="${bold_blue})${reset}"
+VENV_PROMPT_PREFIX="%F{blue}%Bvenv:(%b%F{red}"
+VENV_PROMPT_SUFFIX="%F{blue})%B$%b%f"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${bold_blue}git:(${red}"
-ZSH_THEME_GIT_PROMPT_CLEAN="${bold_blue})"
-ZSH_THEME_GIT_PROMPT_DIRTY="${bold_blue}) ${bold_yellow}✗"
-ZSH_THEME_GIT_PROMPT_SUFFIX="${reset}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{blue}%Bgit:(%b%F{red}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{blue}%B)"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{blue}%B) %F{yellow}✗"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b"
 
-PROMPT='$(venv_info)${cyan}${directory} $(git_prompt_info)
-$(user_info)${ret_status}${prompt_sign}${reset} '
+PROMPT='$(venv_info)%F{cyan}${directory}%f $(git_prompt_info)
+$(user_info)${ret_status}${prompt_sign}%f '
 
 autoload colors && colors
