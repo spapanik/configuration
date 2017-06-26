@@ -5,13 +5,13 @@ else
     . /usr/share/zsh/share/antigen.zsh
 fi
 antigen use oh-my-zsh
-antigen bundle git
 antigen apply
 # antigen end
 
 cd $HOME
 . .zsh/alias.zsh
 . .zsh/pip.zsh
+. .zsh/git.zsh
 . .zsh/constants.zsh
 . .zsh/functions.zsh
 . .zsh/history.zsh
