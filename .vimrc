@@ -35,6 +35,9 @@ let fortran_more_precise=1
 syntax on
 filetype plugin indent on
 
+"use system clipboard
+set clipboard=unnamedplus
+
 "UI
 set ruler
 set number

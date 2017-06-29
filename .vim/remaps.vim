@@ -97,11 +97,6 @@ vnoremap <M-right> <Esc><C-w><C-l>
 vnoremap <leader>dd "_d
 vnoremap <leader>dp "_dP
 
-"clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
-
 "comments
 nmap <C-_> gcc
 imap <C-_> <C-o>gcc
