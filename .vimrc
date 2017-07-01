@@ -68,7 +68,8 @@ set si
 
 "problematic characters
 set list
-set listchars=tab:»\ ,trail:·
+set showbreak=↪\
+set listchars=tab:»\ ,trail:·,nbsp:␣
 
 "sane split
 set splitright
