@@ -110,6 +110,11 @@ nnoremap <silent> <C-s> :update<CR>
 inoremap <silent> <C-s> <Esc>`^:update<CR>
 vnoremap <silent> <C-s> <Esc>:update<CR>
 
+"save and quit
+nnoremap <silent> s :wq<CR>
+inoremap <silent> s <Esc>:wq<CR>
+vnoremap <silent> s <Esc>:wq<CR>
+
 "kill buffer
 nnoremap <silent> <C-l> :Bdelete<CR>
 inoremap <silent> <C-l> <Esc>:Bdelete<CR>
