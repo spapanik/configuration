@@ -82,12 +82,12 @@ let g:jedi#use_tabs_not_buffers=0
 let g:jedi#show_call_signatures="2"
 
 "syntax highlighting
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []  }
+let g:syntastic_mode_map={'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []}
 
 "airline
 set laststatus=2
 let g:airline_theme='papercolor'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 "spell
 set spelllang=en_gb
@@ -106,7 +106,7 @@ set novisualbell
 set encoding=utf8
 set notimeout
 set omnifunc=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
+let g:SuperTabDefaultCompletionType="<C-x><C-o>"
 set suffixesadd=.js,.tex
 set whichwrap+=<,>,[,]
 
@@ -120,7 +120,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " fix <CR> with autopairs
-let g:AutoPairsMapCR = 0
+let g:AutoPairsMapCR=0
 
 let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__']
 set wildignore+=*.pyc,*.pyo,*/__pycache__/*
