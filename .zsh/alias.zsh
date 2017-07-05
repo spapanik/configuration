@@ -1,9 +1,9 @@
 alias emacs="emacs -nw"
 alias gemacs="\emacs"
 if [[ $(uname) == 'Darwin' ]]; then
-    alias ls="gls --color"
+	alias ls="gls --color --group-directories-first"
 else
-    alias ls="ls --color"
+	alias ls="ls --color --group-directories-first"
 fi
 alias la="ls -A"
 alias ll="ls -lG"
