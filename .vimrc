@@ -123,8 +123,8 @@ let g:UltiSnipsEditSplit="vertical"
 " fix <CR> with autopairs
 let g:AutoPairsMapCR=0
 
-let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__']
-set wildignore+=*.pyc,*.pyo,*/__pycache__/*
+let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__','\.o$','out']
+set wildignore+=*.pyc,*.pyo,*/__pycache__/*,*.o,*/out/*
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
