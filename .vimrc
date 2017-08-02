@@ -98,6 +98,10 @@ set spelllang=en_gb
 set foldmethod=syntax
 set nofoldenable
 
+"project specific vimrc
+set exrc
+set secure
+
 set noincsearch
 set nohlsearch
 set autoread
@@ -138,7 +142,7 @@ if &term =~ '256color'
 endif
 
 "commands
-command Ssudo call SudoSaveFile()
+command! Ssudo call SudoSaveFile()
 
 function! SudoSaveFile() abort
   execute (has('gui_running') ? '' : 'silent') 'write !env SUDO_EDITOR=tee sudo -e % >/dev/null'
