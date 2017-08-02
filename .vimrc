@@ -5,6 +5,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
  Plug 'NLKNguyen/papercolor-theme'
+ Plug 'mileszs/ack.vim'
  Plug 'ctrlpvim/ctrlp.vim'
  Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
  Plug 'scrooloose/syntastic'
@@ -122,6 +123,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 " fix <CR> with autopairs
 let g:AutoPairsMapCR=0
+
+" Ack to use ag
+let g:ackprg = 'ag --vimgrep'
 
 let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__','\.o$','out']
 set wildignore+=*.pyc,*.pyo,*/__pycache__/*,*.o,*/out/*
