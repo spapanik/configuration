@@ -94,8 +94,9 @@ vnoremap <M-up>    <Esc><C-w><C-k>
 vnoremap <M-right> <Esc><C-w><C-l>
 
 "delete and paste
-vnoremap <leader>dd "_d
-vnoremap <leader>dp "_dP
+vnoremap <leader>d "_d
+nnoremap <leader>p "0p
+nnoremap <leader>P "0P
 
 "comments
 nmap <C-_> gcc
