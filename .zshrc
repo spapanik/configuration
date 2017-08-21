@@ -11,6 +11,11 @@ cd $HOME
 if [[ -a $HOME/.zsh/local.zsh ]]; then
     . .zsh/local.zsh
 fi
-. $(which virtualenvwrapper.sh)
 
-fortune -s | cowsay -f tux
+if [ -z "${NOVENVWRAPPER+1}" ]; then
+	. $(which virtualenvwrapper.sh)
+fi
+
+if [ -z "${NOFORTUNE+1}" ]; then
+	fortune -s | cowsay -f tux
+fi
