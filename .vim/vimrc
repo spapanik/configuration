@@ -2,7 +2,7 @@
 set nocompatible
 
 " install plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin($HOME . "/.vim/plugged")
 	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 	Plug 'NLKNguyen/papercolor-theme'
 	Plug 'mileszs/ack.vim'
