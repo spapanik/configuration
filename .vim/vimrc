@@ -22,9 +22,7 @@ call plug#begin($HOME . "/.vim/plugged")
 	Plug 'moll/vim-bbye'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'Rip-Rip/clang_complete'
-	if filereadable($HOME . "/.vim/local_plugins.vim")
-		source $HOME/.vim/local_plugins.vim
-	endif
+	runtime local_plugins.vim
 call plug#end()
 
 set history=700
@@ -152,12 +150,12 @@ function! SudoSaveFile() abort
 endfunction
 
 "remapping keys
-source $HOME/.vim/remaps.vim
+runtime remaps.vim
 
-if filereadable($HOME . "/.vim/local.vim")
-	source $HOME/.vim/local.vim
-endif
-
+" fix mac backspace
 if has('mac')
 	set backspace=indent,eol,start
 endif
+
+" Load local settings
+runtime local.vim
