@@ -35,6 +35,7 @@
 (setq use-package-always-ensure t)
 (use-package multiple-cursors)
 (use-package tramp)
+(use-package popwin)
 (use-package direx)
 (use-package magit)
 (use-package material-theme)
@@ -53,7 +54,13 @@
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
 
-(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
+;; popwin
+(popwin-mode 1)
+
+;; direx
+(push '(direx:direx-mode :position left :width 25 :dedicated t)
+      popwin:special-display-config)
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
 
 ;; move lines
 (defun move-line-up ()
