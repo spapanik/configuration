@@ -1,4 +1,4 @@
-#/usr/bin/bash
+#!/usr/bin/env bash
 FILES=".pyrc
 .tmux.conf
 .vim
