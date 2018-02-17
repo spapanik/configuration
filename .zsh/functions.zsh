@@ -18,3 +18,7 @@ function outenv {
 	PATH=${_OLD_PATH}
 	unset _OLD_PATH
 }
+
+function pvmake {
+	make PYTHON_BIN_DIR=$(dirname $(which python)) ${@}
+}
