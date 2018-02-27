@@ -97,6 +97,7 @@ vnoremap <M-right> <Esc><C-w><C-l>
 vnoremap <leader>d "_d
 nnoremap <leader>p "0p
 nnoremap <leader>P "0P
+vnoremap <C-c> "+y
 
 "comments
 nmap <C-_> gcc
