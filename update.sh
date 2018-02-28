@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-FILES=".pyrc
-.vim
+FILES=".zshrc
 .zsh
-.zshrc
-.emacs.d
 .gitconfig
+.vim
+.emacs.d
 "
 
 filepath=${0:a}
