@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 FILES=".pyrc
-.tmux.conf
 .vim
 .zsh
 .zshrc
 .emacs.d
-.evrouterrc
 .gitconfig
 "
 
