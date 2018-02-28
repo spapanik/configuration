@@ -8,9 +8,14 @@ function git_prompt_info() {
 function parse_git_dirty() {
   local STATUS=''
   local FLAGS
-  FLAGS=('--porcelain' '--ignore-submodules=dirty')
+  FLAGS=('--porcelain=v1')
   if [[ "${DISABLE_UNTRACKED_FILES_DIRTY}" == "true" ]]; then
     FLAGS+='--untracked-files=no'
+  fi
+  if [[ -a .ignore-smc ]]; then
+    FLAGS+='--ignore-submodules=all'
+  else
+    FLAGS+='--ignore-submodules=dirty'
   fi
   STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
   if [[ -n ${STATUS} ]]; then
