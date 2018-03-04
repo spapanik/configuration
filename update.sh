@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+if [[ $(uname) == 'Darwin' ]]; then
+	copy=gcp
+else
+	copy=cp
+fi
 FILES=".zshrc
 .zsh
 .gitconfig
@@ -11,5 +16,5 @@ dirpath=$(dirname ${filepath})
 cd ${dirpath}
 for FILE in ${FILES}; do
 	echo Updating ${FILE}...
-	cp -R ${FILE} ${HOME}
+	${copy} -R ${FILE} ${HOME}
 done
