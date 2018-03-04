@@ -1,0 +1,6 @@
+#compdef _avenv avenv
+
+function _avenv {
+	_arguments -C \
+		"1: :_files -W ~/.virtualenvs -/"
+}
