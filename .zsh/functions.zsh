@@ -19,6 +19,32 @@ function outenv {
 	unset _OLD_PATH
 }
 
-function pvmake {
-	make PYTHON_BIN_DIR=$(dirname $(which python)) ${@}
+function cvenv {
+	BASE_DIR=~/.virtualenvs
+	CD=false
+	VENV_DIR=${BASE_DIR}/${PWD##*/}
+	PYTHON=$(which python)
+	while getopts an:p: opt; do
+		case $opt in
+			a)
+				CD=true;;
+			n)
+				VENV_DIR=${BASE_DIR}/${OPTARG};;
+			p)
+				PYTHON=${OPTARG};;
+		esac
+	done
+	virtualenv ${VENV_DIR} -p ${PYTHON}
+	if ( ${CD} ); then
+		echo ${PWD} >> ${VENV_DIR}/.project
+	fi
+}
+
+function avenv {
+	VENV_DIR=~/.virtualenvs/${1}
+	echo ${VENV_DIR}
+	if [[ -r "${VENV_DIR}/.project" ]]; then
+		cd $(cat ${VENV_DIR}/.project)
+	fi
+	. ${VENV_DIR}/bin/activate
 }
