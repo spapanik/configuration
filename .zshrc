@@ -8,7 +8,7 @@ cd $HOME
 . .zsh/keybinding.zsh
 . .zsh/completion.zsh
 . .zsh/theme.zsh
-if [[ -a $HOME/.zsh/local.zsh ]]; then
+if [[ -r $HOME/.zsh/local.zsh ]]; then
     . .zsh/local.zsh
 fi
 

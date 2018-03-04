@@ -43,7 +43,7 @@ function cvenv {
 function avenv {
 	VENV_DIR=~/.virtualenvs/${1}
 	echo ${VENV_DIR}
-	if [[ -r "${VENV_DIR}/.project" ]]; then
+	if [[ -r ${VENV_DIR}/.project ]]; then
 		cd $(cat ${VENV_DIR}/.project)
 	fi
 	. ${VENV_DIR}/bin/activate
