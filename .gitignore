@@ -1,4 +1,10 @@
+# Emacs
 .emacs.d/ac-comphist.dat
+.emacs.d/auto-save-list/
 .emacs.d/elpa/
 
+# Vim
+.vim/swap/
+
+# Zshell
 .zsh/local.zsh
