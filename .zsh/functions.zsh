@@ -26,7 +26,7 @@ function proj {
 	ACTIVATE=true
 	CD=true
 	NAME=${PWD##*/}
-	while getopts acgn: opt; do
+	while getopts cdn:s opt; do
 		case $opt in
 			c)
 				CREATE=true;;
