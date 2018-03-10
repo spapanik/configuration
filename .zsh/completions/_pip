@@ -1,12 +1,6 @@
-#compdef pip pip2 pip-2.7 pip3 pip-3.2 pip-3.3 pip-3.4
-#autoload
-
-# pip zsh completion, based on last stable release (pip8)
-# homebrew completion and backwards compatibility
-# copied from oh-my-zsh
+#compdef pip pip2 pip3
 
 _pip_all() {
-	# we cache the list of packages (originally from the macports plugin)
 	if (( ! $+piplist )); then
 		zsh-pip-cache-packages
 		piplist=($(cat $ZSH_PIP_CACHE_FILE))
@@ -14,7 +8,7 @@ _pip_all() {
 }
 
 _pip_installed() {
-	installed_pkgs=(`pip freeze | cut -d '=' -f 1`)
+	installed_pkgs=($(pip freeze | cut -d '=' -f 1))
 }
 
 local -a _1st_arguments
