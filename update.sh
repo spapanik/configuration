@@ -11,8 +11,8 @@ FILES=".zshrc
 .emacs.d
 "
 
-filepath=${0:a}
-dirpath=$(dirname ${filepath})
+dirpath=$(dirname $(realpath ${0}))
+
 cd ${dirpath}
 for FILE in ${FILES}; do
 	echo Updating ${FILE}...
