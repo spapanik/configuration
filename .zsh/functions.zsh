@@ -19,6 +19,39 @@ function outenv {
 	unset _OLD_PATH
 }
 
+function proj {
+	BASE_DIR=~/.config/projects
+	mkdir -p ${BASE_DIR}
+	CREATE=false
+	ACTIVATE=true
+	CD=true
+	NAME=${PWD##*/}
+	while getopts acgn: opt; do
+		case $opt in
+			c)
+				CREATE=true;;
+			d)
+				ACTIVATE=false;;
+			n)
+				NAME=${OPTARG};;
+			s)
+				CD=false;;
+		esac
+	done
+	PROJ_FILE=${BASE_DIR}/${NAME}
+	if ( ${CREATE} ); then
+		echo ${PWD} > ${PROJ_FILE}
+		echo $(pipenv --venv) >> ${PROJ_FILE}
+		return 0
+	fi
+	if ( ${CD} ); then
+		cd $(sed -n '1p' ${PROJ_FILE})
+	fi
+	if ( ${ACTIVATE} ); then
+		. $(sed -n '2p' ${PROJ_FILE})/bin/activate
+	fi
+}
+
 function cvenv {
 	BASE_DIR=~/.virtualenvs
 	CD=false
