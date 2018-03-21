@@ -1,22 +1,20 @@
+[KDE Keyboard Layout Switcher][Global Shortcuts]
+Show System Activity=none
+Switch to Next Keyboard Layout=none
+display=none
+
 [kaccess][Global Shortcuts]
 Toggle Screen Reader On and Off=Meta+Alt+S
 
-[kcm_touchpad][Global Shortcuts]
+[khotkeys][Global Shortcuts]
 Disable Touchpad=Touchpad Off
 Enable Touchpad=Touchpad On
-Show System Activity=Ctrl+Esc
-Switch keyboard layout to English (UK)=none
-Switch keyboard layout to Greek=none
-Switch to Next Keyboard Layout=none
 Toggle Touchpad=Touchpad Toggle
-display=Display; Meta+P
-
-[khotkeys][Global Shortcuts]
-{63284317-3235-4b2f-bc36-c7ce7f9f01be}=Print
-{a4929ffb-e881-4b6a-8f22-a27b376a97c9}=Meta+Shift+Print
-{a7c4c9fd-9471-410f-85dd-a3cd10e18ff5}=Shift+Print
-{cfad85dd-8d26-490c-bd42-29a9563864c7}=Meta+Print
+{01c515f8-7ead-4161-a12e-26e937503e93}=none
+{8628d0b0-8f3c-425b-aecc-1abaceabf86d}=none
+{a59ffe73-6c43-47d2-965c-41b50c435f78}=none
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none
+{d10f2be7-f8fa-4c83-b185-bd111327605f}=none
 
 [kmix][Global Shortcuts]
 decrease_microphone_volume=Microphone Volume Down
@@ -32,7 +30,7 @@ run command on clipboard contents=Alt+Shift+F2
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
-Lock Session=Ctrl+Alt+L; Screensaver
+Lock Session=Ctrl+Alt+L; Sleep
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
@@ -114,7 +112,7 @@ Walk Through Windows of Current Application Alternative=none
 Walk Through Windows of Current Application Alternative (Reverse)=none
 Window Above Other Windows=none
 Window Below Other Windows=none
-Window Close=Alt+F4
+Window Close=Meta+Shift+Q
 Window Fullscreen=none
 Window Grow Horizontal=none
 Window Grow Vertical=none
@@ -184,14 +182,20 @@ view_actual_size=none
 view_zoom_in=Meta+=
 view_zoom_out=Meta+-
 
+[mediacontrol][Global Shortcuts]
+nextmedia=Media Next
+playpausemedia=Media Play
+previousmedia=Media Previous
+stopmedia=Media Stop
+
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
 Decrease Screen Brightness=Monitor Brightness Down
-Hibernate=Hibernate
+Hibernate=none
 Increase Keyboard Brightness=Keyboard Brightness Up
 Increase Screen Brightness=Monitor Brightness Up
 PowerOff=Power Off
-Sleep=Sleep
+Sleep=none
 Toggle Keyboard Backlight=Keyboard Light On/Off
 
 [plasmashell][Global Shortcuts]
@@ -205,9 +209,10 @@ activate task manager entry 6=Meta+6
 activate task manager entry 7=Meta+7
 activate task manager entry 8=Meta+8
 activate task manager entry 9=Meta+9
-activate widget 22=Alt+F1
-activate widget 27=none
-activate widget 4=none
+activate widget 40=none
+activate widget 45=none
+activate widget 98=none
+activate widget 99=none
 clear-history=none
 clipboard_action=Ctrl+Alt+X
 cycleNextAction=none
