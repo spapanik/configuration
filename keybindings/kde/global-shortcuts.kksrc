@@ -7,12 +7,10 @@ display=none
 Toggle Screen Reader On and Off=Meta+Alt+S
 
 [khotkeys][Global Shortcuts]
-Disable Touchpad=Touchpad Off
-Enable Touchpad=Touchpad On
-Toggle Touchpad=Touchpad Toggle
-{01c515f8-7ead-4161-a12e-26e937503e93}=none
-{8628d0b0-8f3c-425b-aecc-1abaceabf86d}=none
-{a59ffe73-6c43-47d2-965c-41b50c435f78}=none
+{63284317-3235-4b2f-bc36-c7ce7f9f01be}=Print
+{a4929ffb-e881-4b6a-8f22-a27b376a97c9}=Shift+Print
+{a7c4c9fd-9471-410f-85dd-a3cd10e18ff5}=Meta+Print
+{cfad85dd-8d26-490c-bd42-29a9563864c7}=Ctrl+Print
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none
 {d10f2be7-f8fa-4c83-b185-bd111327605f}=none
 
@@ -30,7 +28,7 @@ run command on clipboard contents=Alt+Shift+F2
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
-Lock Session=Ctrl+Alt+L; Sleep
+Lock Session=Meta+L; Sleep
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
@@ -122,7 +120,7 @@ Window Maximize Horizontal=none
 Window Maximize Vertical=none
 Window Minimize=Meta+Shift+Down
 Window Move=none
-Window No Border=none
+Window No Border=Meta+H
 Window On All Desktops=none
 Window One Desktop Down=Ctrl+Alt+Shift+Down
 Window One Desktop Up=Ctrl+Alt+Shift+Up
@@ -209,10 +207,6 @@ activate task manager entry 6=Meta+6
 activate task manager entry 7=Meta+7
 activate task manager entry 8=Meta+8
 activate task manager entry 9=Meta+9
-activate widget 40=none
-activate widget 45=none
-activate widget 98=none
-activate widget 99=none
 clear-history=none
 clipboard_action=Ctrl+Alt+X
 cycleNextAction=none
@@ -224,5 +218,5 @@ previous activity=Meta+Shift+Tab
 repeat_action=Ctrl+Alt+R
 show dashboard=Ctrl+F12
 show-barcode=none
-show-on-mouse-pos=none
+show-on-mouse-pos=Meta+V
 stop current activity=Meta+S
