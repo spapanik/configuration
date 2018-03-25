@@ -7,6 +7,9 @@ display=none
 Toggle Screen Reader On and Off=Meta+Alt+S
 
 [khotkeys][Global Shortcuts]
+Disable Touchpad=Touchpad Off
+Enable Touchpad=Touchpad On
+Toggle Touchpad=Touchpad Toggle
 {63284317-3235-4b2f-bc36-c7ce7f9f01be}=Print
 {a4929ffb-e881-4b6a-8f22-a27b376a97c9}=Shift+Print
 {a7c4c9fd-9471-410f-85dd-a3cd10e18ff5}=Meta+Print
