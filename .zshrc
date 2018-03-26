@@ -1,5 +1,6 @@
 cd $HOME
 . .zsh/alias.zsh
+. .zsh/ssh.zsh
 . .zsh/pip.zsh
 . .zsh/git.zsh
 . .zsh/constants.zsh
