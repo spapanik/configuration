@@ -4,6 +4,7 @@
 .emacs.d/elpa/
 
 # Vim
+.vim/local.vim
 .vim/swap/
 
 # Zshell
