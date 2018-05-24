@@ -1,9 +1,0 @@
-#compdef _proj proj
-
-function _proj {
-	_arguments -C \
-		"-c[flag:(c)reate a new project for the current directory]" \
-		"-d[flag:(d)on't activate ]" \
-		"-s[flag:(s)tay in current directory]" \
-		"-n+[arg:(n)ame of the project(default: current dir name)]: :_files -W ~/.config/projects -/"
-}

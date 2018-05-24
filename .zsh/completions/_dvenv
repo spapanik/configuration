@@ -1,0 +1,6 @@
+#compdef _dvenv dvenv
+
+function _dvenv {
+	_arguments -C \
+		"1: :_files -W ~/.virtualenvs -/"
+}
