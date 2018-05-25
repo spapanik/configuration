@@ -1,6 +1,6 @@
-#compdef _avenv avenv
+#compdef _avenv avenv dvenv
 
 function _avenv {
 	_arguments -C \
-		"1: :_files -W ~/.virtualenvs -/"
+		"1: :_files -W ~/.local/share/virtualenvs -/"
 }
