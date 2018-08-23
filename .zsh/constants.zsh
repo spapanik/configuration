@@ -1,5 +1,5 @@
 export LC_COLLATE=C
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='vi'
+export VISUAL='vi'
 export TERM='xterm-256color'
 export LESS='-FRXK'
