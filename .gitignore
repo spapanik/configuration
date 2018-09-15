@@ -4,8 +4,8 @@
 .emacs.d/elpa/
 
 # Vim
-.vim/local.vim
-.vim/swap/
+.config/nvim/local.vim
+.config/nvim/swap/
 
 # Zshell
 .zsh/local.zsh
