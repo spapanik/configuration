@@ -12,7 +12,7 @@ filetype plugin indent on
 
 "use system clipboard
 if !has('mac')
-	 set clipboard=unnamedplus
+	 set clipboard+=unnamedplus
 endif
 
 "UI
