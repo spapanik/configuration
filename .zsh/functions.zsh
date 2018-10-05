@@ -43,6 +43,7 @@ function cvenv {
 	if ( ${CD} ); then
 		echo ${PWD} >> ${VENV_DIR}/.project
 	fi
+	. ${VENV_DIR}/bin/activate
 	unset VENV_BASE VENV_DIR CD PYTHON
 }
 
