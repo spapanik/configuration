@@ -19,6 +19,12 @@ function outenv {
 	unset _OLD_PATH
 }
 
+function upypi {
+	pip install -U twine
+	python setup.py sdist bdist_wheel
+	twine upload dist/*
+}
+
 function cvenv {
 	VENV_BASE=~/.local/share/virtualenvs
 	CD=false
