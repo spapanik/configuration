@@ -19,7 +19,15 @@ function outenv {
 	unset _OLD_PATH
 }
 
-function upypi {
+function pypiver {
+	sed -i "/^__version__/c\__version__ = '$1'" setup.py
+	git add setup.py
+	git commit -m "Bump version"
+	git tag -s v$1 -m v$1
+	git push --follow-tags
+}
+
+function pypiup {
 	pip install -U twine
 	rm -r build dist
 	python setup.py sdist bdist_wheel
