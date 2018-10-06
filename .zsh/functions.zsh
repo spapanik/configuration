@@ -20,8 +20,9 @@ function outenv {
 }
 
 function pypiver {
-	sed -i "/^__version__/c\__version__ = '$1'" setup.py
-	git add setup.py
+	sed -i "/^version =/c\version = \"$1\"" pyproject.toml
+	sed -i "/^__version__/c\__version__ = \"$1\"" setup.py
+	git add setup.py pyproject.toml
 	git commit -m "Bump version"
 	git tag -s v$1 -m v$1
 	git push --follow-tags
