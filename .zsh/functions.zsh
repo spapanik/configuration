@@ -21,6 +21,7 @@ function outenv {
 
 function upypi {
 	pip install -U twine
+	rm -r build dist
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
 }
