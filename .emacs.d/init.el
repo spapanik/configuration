@@ -84,8 +84,8 @@
 
 ;; comment line or region
 (whole-line-or-region-mode t)
-(global-set-key (kbd "C-x C-/") 'whole-line-or-region-comment-dwim)
-(global-set-key (kbd "C-x C-_") 'whole-line-or-region-comment-dwim)
+(global-set-key (kbd "C-x C-/") 'comment-line)
+(global-set-key (kbd "C-x C-_") 'comment-line)
 
 ;; tab-complete
 (global-auto-complete-mode t)
