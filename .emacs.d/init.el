@@ -1,6 +1,5 @@
 (setq backup-inhibited t)
 (setq make-backup-files nil)
-(setq kill-whole-line t)
 (setq inhibit-startup-message t)
 (setq-default column-number-mode t)
 (setq display-time-24hr-format t)
