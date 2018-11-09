@@ -1,35 +1,34 @@
-;; startup
-(setq inhibit-startup-message t)
+;; install packages
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
 
-;; default modes
-(column-number-mode t)
-(display-time-mode 1)
-(electric-pair-mode t)
-(auto-fill-mode -1)
-(global-linum-mode 1)
-(setq-default indent-tabs-mode nil)
+(unless (package-installed-p 'use-package)
+  (progn
+    (package-refresh-contents)
+    (package-install 'use-package)))
 
-;; backup
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+(require 'use-package)
+(setq use-package-always-ensure t)
+(use-package multiple-cursors)
+(use-package tramp)
+(use-package popwin)
+(use-package direx)
+(use-package magit)
+(use-package moe-theme)
+(use-package auto-complete)
+(use-package whole-line-or-region)
+(use-package smart-tab)
 
-;; display
-(setq display-time-24hr-format t)
-(unless window-system
-  (menu-bar-mode -1)
-  (if (functionp 'scroll-bar-mode)
-      (scroll-bar-mode 0)))
-(if (functionp 'tool-bar-mode)
-    (tool-bar-mode 0))
-
-;; whitespace
-(setq-default show-trailing-whitespace t)
-(setq require-final-newline t)
-
-;; packages
+;; source config
+(load-file (concat (file-name-as-directory "~") ".emacs.d/func.el"))
+(load-file (concat (file-name-as-directory "~") ".emacs.d/core.el"))
+(load-file (concat (file-name-as-directory "~") ".emacs.d/modes.el"))
 (load-file (concat (file-name-as-directory "~") ".emacs.d/packages.el"))
+(load-file (concat (file-name-as-directory "~") ".emacs.d/remaps.el"))
 
-;; source local file
+;; source local config
 (defvar local-init (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
 (if (file-readable-p local-init)
     (load-file local-init))
