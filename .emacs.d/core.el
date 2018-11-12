@@ -21,6 +21,9 @@
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 
+;; tab-complete
+(setq ac-auto-start 3)
+
 ;; whitespace
 (setq-default show-trailing-whitespace t)
 (setq require-final-newline t)

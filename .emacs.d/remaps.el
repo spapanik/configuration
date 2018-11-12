@@ -18,4 +18,4 @@
 (global-set-key (kbd "C-x C-_") 'comment-line)
 
 ;; project structure
-(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
+(global-set-key [f8] 'neotree-toggle)

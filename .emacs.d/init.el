@@ -14,7 +14,7 @@
 (use-package multiple-cursors)
 (use-package tramp)
 (use-package popwin)
-(use-package direx)
+(use-package neotree)
 (use-package magit)
 (use-package moe-theme)
 (use-package auto-complete)
