@@ -3,8 +3,10 @@
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
 
 ;; move lines
-(global-set-key (kbd "M-S-<up>") 'move-line-up)
-(global-set-key (kbd "M-S-<down>") 'move-line-down)
+(global-set-key (kbd "M-S-<left>") 'drag-stuff-left)
+(global-set-key (kbd "M-S-<right>") 'drag-stuff-right)
+(global-set-key (kbd "M-S-<up>") 'drag-stuff-up)
+(global-set-key (kbd "M-S-<down>") 'drag-stuff-down)
 
 ;; move between windows
 (global-set-key (kbd "M-<left>") 'windmove-left)
@@ -13,9 +15,7 @@
 (global-set-key (kbd "M-<down>") 'windmove-down)
 
 ;; comment line or region
-(whole-line-or-region-mode t)
-(global-set-key (kbd "C-x C-/") 'comment-line)
-(global-set-key (kbd "C-x C-_") 'comment-line)
+(global-set-key (kbd "s-/") 'comment-line)
 
 ;; project structure
 (global-set-key [f8] 'neotree-toggle)

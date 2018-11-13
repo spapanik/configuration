@@ -17,15 +17,14 @@
 (use-package neotree)
 (use-package magit)
 (use-package moe-theme)
+(use-package drag-stuff)
 (use-package auto-complete)
 (use-package whole-line-or-region)
 (use-package smart-tab)
 
 ;; source config
-(load-file (concat (file-name-as-directory "~") ".emacs.d/func.el"))
 (load-file (concat (file-name-as-directory "~") ".emacs.d/core.el"))
 (load-file (concat (file-name-as-directory "~") ".emacs.d/modes.el"))
-(load-file (concat (file-name-as-directory "~") ".emacs.d/packages.el"))
 (load-file (concat (file-name-as-directory "~") ".emacs.d/remaps.el"))
 
 ;; source local config
