@@ -3,7 +3,7 @@
 [push]
 	default = current
 [color]
-	ui = always
+	ui = true
 [alias]
 	cm = checkout master
 	rem = rebase master
