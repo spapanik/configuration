@@ -38,18 +38,19 @@ function pypiup {
 function cvenv {
 	VENV_BASE=~/.local/share/virtualenvs
 	CD=false
-	VENV_DIR=${VENV_BASE}/${PWD##*/}
+	VENV_NAME=${PWD##*/}
 	PYTHON=$(which python)
 	while getopts an:p: opt; do
 		case $opt in
 			a)
 				CD=true;;
 			n)
-				VENV_DIR=${VENV_BASE}/${OPTARG};;
+				VENV_NAME=${OPTARG};;
 			p)
 				PYTHON=${OPTARG};;
 		esac
 	done
+	VENV_DIR=${VENV_BASE}/${VENV_NAME}
 	if [[ -d ${VENV_DIR} ]]; then
 		echo Virtualenv ${1} already exist, aborting...
 		unset VENV_BASE VENV_DIR CD PYTHON
@@ -59,8 +60,8 @@ function cvenv {
 	if ( ${CD} ); then
 		echo ${PWD} >> ${VENV_DIR}/.project
 	fi
-	. ${VENV_DIR}/bin/activate
-	unset VENV_BASE VENV_DIR CD PYTHON
+	avenv ${VENV_NAME}
+	unset VENV_BASE VENV_NAME VENV_DIR CD PYTHON
 }
 
 function avenv {
@@ -73,6 +74,9 @@ function avenv {
 	fi
 	if [[ -r ${VENV_DIR}/.project ]]; then
 		cd $(cat ${VENV_DIR}/.project)
+		if [[ -r $(cat ${VENV_DIR}/.project)/.environ ]]; then
+			. $(cat ${VENV_DIR}/.project)/.environ
+		fi
 	fi
 	. ${VENV_DIR}/bin/activate
 	unset VENV_BASE VENV_DIR
