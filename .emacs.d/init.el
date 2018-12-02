@@ -28,6 +28,6 @@
 (load-file (concat (file-name-as-directory "~") ".emacs.d/remaps.el"))
 
 ;; source local config
-(defvar local-init (concat (file-name-as-directory "~") ".emacs.d/init.local.el"))
+(defvar local-init (concat (file-name-as-directory "~") ".emacs.d/local.el"))
 (if (file-readable-p local-init)
     (load-file local-init))

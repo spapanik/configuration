@@ -1,4 +1,5 @@
 # Emacs
+.emacs.d/local.el
 .emacs.d/ac-comphist.dat
 .emacs.d/tramp
 .emacs.d/auto-save-list/
