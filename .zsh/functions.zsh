@@ -35,7 +35,7 @@ function pypiup {
 	twine upload dist/*
 }
 
-function cvenv {
+function mkvenv {
 	VENV_BASE=~/.local/share/virtualenvs
 	CD=false
 	VENV_NAME=${PWD##*/}
@@ -64,6 +64,20 @@ function cvenv {
 	unset VENV_BASE VENV_NAME VENV_DIR CD PYTHON
 }
 
+function rmvenv {
+	VENV_BASE=~/.local/share/virtualenvs
+	VENV_DIR=${VENV_BASE}/${1}
+	if [[ ! -d ${VENV_DIR} ]]; then
+		echo Virtualenv ${1} doesn\'t exist, aborting...
+		unset VENV_BASE VENV_DIR
+		return 1
+	fi
+	if [[ -w ${VENV_DIR} ]]; then
+		rm -rf ${VENV_DIR}
+	fi
+	unset VENV_BASE VENV_DIR
+}
+
 function avenv {
 	VENV_BASE=~/.local/share/virtualenvs
 	VENV_DIR=${VENV_BASE}/${1}
@@ -83,15 +97,5 @@ function avenv {
 }
 
 function dvenv {
-	VENV_BASE=~/.local/share/virtualenvs
-	VENV_DIR=${VENV_BASE}/${1}
-	if [[ ! -d ${VENV_DIR} ]]; then
-		echo Virtualenv ${1} doesn\'t exist, aborting...
-		unset VENV_BASE VENV_DIR
-		return 1
-	fi
-	if [[ -w ${VENV_DIR} ]]; then
-		rm -rf ${VENV_DIR}
-	fi
-	unset VENV_BASE VENV_DIR
+	deactivate
 }
