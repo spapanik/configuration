@@ -1,0 +1,74 @@
+[global_config]
+[keybindings]
+  broadcast_all = None
+  broadcast_group = None
+  broadcast_off = None
+  cycle_next = None
+  cycle_prev = None
+  edit_tab_title = None
+  edit_terminal_title = None
+  edit_window_title = None
+  go_down = <Primary><Super>Down
+  go_left = <Primary><Super>Left
+  go_next = None
+  go_prev = None
+  go_right = <Primary><Super>Right
+  go_up = <Primary><Super>Up
+  group_all = None
+  group_tab = None
+  hide_window = None
+  insert_number = None
+  insert_padded = None
+  layout_launcher = None
+  line_down = None
+  line_up = None
+  move_tab_left = <Super>comma
+  move_tab_right = <Super>period
+  new_terminator = None
+  new_window = None
+  next_tab = <Primary>Tab
+  page_down = <Shift>Page_Down
+  page_down_half = <Primary>Page_Down
+  page_up = <Shift>Page_Up
+  page_up_half = <Primary>Page_Up
+  prev_tab = <Primary><Shift>Tab
+  resize_down = <Primary><Shift><Super>Down
+  resize_left = <Primary><Shift><Super>Left
+  resize_right = <Primary><Shift><Super>Right
+  resize_up = <Primary><Shift><Super>Up
+  rotate_ccw = None
+  rotate_cw = None
+  scaled_zoom = None
+  split_horiz = <Primary><Shift>o
+  split_vert = <Primary><Shift>e
+  switch_to_tab_1 = <Primary><Super>1
+  switch_to_tab_10 = <Primary><Super>0
+  switch_to_tab_2 = <Primary><Super>2
+  switch_to_tab_3 = <Primary><Super>3
+  switch_to_tab_4 = <Primary><Super>4
+  switch_to_tab_5 = <Primary><Super>5
+  switch_to_tab_6 = <Primary><Super>6
+  switch_to_tab_7 = <Primary><Super>7
+  switch_to_tab_8 = <Primary><Super>8
+  switch_to_tab_9 = <Primary><Super>9
+  toggle_scrollbar = None
+  ungroup_all = None
+  ungroup_tab = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    cursor_color = "#aaaaaa"
+    font = Hack 14
+    icon_bell = False
+    scrollback_infinite = True
+    show_titlebar = False
+    use_system_font = False
