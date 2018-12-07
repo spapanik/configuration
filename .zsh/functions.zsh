@@ -43,7 +43,7 @@ function mkvenv {
 	else
 		local GETOPT=getopt
 	fi
-	local PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+	local PARSED=$($GETOPT --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
 	eval set -- "$PARSED"
 
 	local VENV_BASE=~/.local/share/virtualenvs
