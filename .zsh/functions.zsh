@@ -39,7 +39,7 @@ function mkvenv {
 	local OPTIONS=ip:
 	local LONGOPTS=independent,python:
 	if [[ $(uname) == 'Darwin' ]]; then
-		local GETOPT=gnu-getopt
+		local GETOPT=/usr/local/opt/gnu-getopt/bin/getopt
 	else
 		local GETOPT=getopt
 	fi

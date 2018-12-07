@@ -2,7 +2,6 @@ alias emacs="emacs -nw"
 alias gemacs="\emacs"
 if [[ $(uname) == 'Darwin' ]]; then
 	alias ls="gls --color=auto --group-directories-first -N"
-	alias gnu-getopt="/usr/local/opt/gnu-getopt/bin/getopt"
 else
 	alias ls="ls --color=auto --group-directories-first -N"
 fi
