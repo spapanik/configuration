@@ -36,54 +36,75 @@ function pypiup {
 }
 
 function mkvenv {
-	VENV_BASE=~/.local/share/virtualenvs
-	CD=false
-	VENV_NAME=${PWD##*/}
-	PYTHON=$(which python)
-	while getopts an:p: opt; do
-		case $opt in
-			a)
-				CD=true;;
-			n)
-				VENV_NAME=${OPTARG};;
-			p)
-				PYTHON=${OPTARG};;
+	local OPTIONS=ip:
+	local LONGOPTS=independent,python:
+	if [[ $(uname) == 'Darwin' ]]; then
+		local GETOPT=gnu-getopt
+	else
+		local GETOPT=getopt
+	fi
+	local PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+	eval set -- "$PARSED"
+
+	local VENV_BASE=~/.local/share/virtualenvs
+	local ASSOCIATED=true
+	local VENV_NAME=${PWD##*/}
+	local PYTHON=$(which python)
+	while true; do
+		case "$1" in
+			-i|--independent)
+				ASSOCIATED=false
+				shift
+				;;
+			-p|--python)
+				PYTHON="$2"
+				shift 2
+				;;
+			--)
+				shift
+				break
+				;;
 		esac
 	done
-	VENV_DIR=${VENV_BASE}/${VENV_NAME}
+
+	if [[ $# -gt 1 ]]; then
+		echo Ambiguous venv name, aborting...
+		return 1
+	fi
+
+	if [[ $# -eq 1 ]]; then
+		VENV_NAME=$1
+	fi
+
+	local VENV_DIR=${VENV_BASE}/${VENV_NAME}
 	if [[ -d ${VENV_DIR} ]]; then
 		echo Virtualenv ${1} already exist, aborting...
-		unset VENV_BASE VENV_DIR CD PYTHON
 		return 1
 	fi
 	virtualenv ${VENV_DIR} -p ${PYTHON}
-	if ( ${CD} ); then
+	if ( ${ASSOCIATED} ); then
 		echo ${PWD} >> ${VENV_DIR}/.project
 	fi
 	avenv ${VENV_NAME}
-	unset VENV_BASE VENV_NAME VENV_DIR CD PYTHON
 }
 
 function rmvenv {
-	VENV_BASE=~/.local/share/virtualenvs
-	VENV_DIR=${VENV_BASE}/${1}
+	local VENV_BASE=~/.local/share/virtualenvs
+	local VENV_DIR=${VENV_BASE}/${1}
 	if [[ ! -d ${VENV_DIR} ]]; then
 		echo Virtualenv ${1} doesn\'t exist, aborting...
-		unset VENV_BASE VENV_DIR
 		return 1
 	fi
 	if [[ -w ${VENV_DIR} ]]; then
 		rm -rf ${VENV_DIR}
 	fi
-	unset VENV_BASE VENV_DIR
 }
 
 function avenv {
-	VENV_BASE=~/.local/share/virtualenvs
-	VENV_DIR=${VENV_BASE}/${1}
+	local VENV_BASE=~/.local/share/virtualenvs
+	local VENV_DIR=${VENV_BASE}/${1}
 	if [[ ! -d ${VENV_DIR} ]]; then
 		echo Virtualenv ${1} doesn\'t exist, aborting...
-		unset VENV_BASE VENV_DIR
 		return 1
 	fi
 	if [[ -r ${VENV_DIR}/.project ]]; then
@@ -93,7 +114,6 @@ function avenv {
 		fi
 	fi
 	. ${VENV_DIR}/bin/activate
-	unset VENV_BASE VENV_DIR
 }
 
 function dvenv {

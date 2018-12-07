@@ -1,9 +1,0 @@
-#compdef _cvenv cvenv
-
-function _cvenv {
-	_arguments -C \
-		"-a[flag:(a)ssociate with current directory]" \
-		"-n+[arg:(n)ame of the virtualenv(default: current dir name)]:" \
-		"-p+[arg:(p)ython path(default: system default python)]:" \
-		"*::arg:->args"
-}
