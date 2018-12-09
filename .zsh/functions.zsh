@@ -35,6 +35,36 @@ function pypiup {
 	twine upload dist/*
 }
 
+function environ_activate {
+	local VAR_NAME
+	while read line; do
+		if [[ $line != '#'* ]]; then
+			VAR_NAME=$(echo $line | cut -d= -f1)
+			if [[ -n "${VAR_NAME+1}" ]]; then
+				export _OLD_${VAR_NAME}=${(P)VAR_NAME}
+			fi
+			export ${(e)line}
+		fi
+	done < $1
+}
+
+function environ_deactivate {
+	local VAR_NAME
+	local TEMP_NAME
+	while read line; do
+		if [[ $line != '#'* ]]; then
+			VAR_NAME=$(echo $line | cut -d= -f1)
+			TEMP_NAME=_OLD_${VAR_NAME}
+			if [[ -n "${TEMP_NAME+1}" ]]; then
+				export ${VAR_NAME}=${(P)TEMP_NAME}
+			else
+				unset VAR_NAME
+			fi
+			unset $_OLD_${VAR_NAME}
+		fi
+	done < $1
+}
+
 function mkvenv {
 	local OPTIONS=ip:
 	local LONGOPTS=independent,python:
@@ -101,6 +131,9 @@ function rmvenv {
 }
 
 function avenv {
+	if [[ -n "${VIRTUAL_ENV+1}" ]]; then
+		dvenv
+	fi
 	local VENV_BASE=~/.local/share/virtualenvs
 	local VENV_DIR=${VENV_BASE}/${1}
 	if [[ ! -d ${VENV_DIR} ]]; then
@@ -110,12 +143,19 @@ function avenv {
 	if [[ -r ${VENV_DIR}/.project ]]; then
 		cd $(cat ${VENV_DIR}/.project)
 		if [[ -r $(cat ${VENV_DIR}/.project)/.environ ]]; then
-			. $(cat ${VENV_DIR}/.project)/.environ
+			environ_activate $(cat ${VENV_DIR}/.project)/.environ
 		fi
 	fi
+
 	. ${VENV_DIR}/bin/activate
 }
 
 function dvenv {
+	if [[ -r ${VIRTUAL_ENV}/.project ]]; then
+		if [[ -r $(cat ${VIRTUAL_ENV}/.project)/.environ ]]; then
+			environ_deactivate $(cat ${VIRTUAL_ENV}/.project)/.environ
+		fi
+	fi
+
 	deactivate
 }
