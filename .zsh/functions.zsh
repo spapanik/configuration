@@ -37,6 +37,7 @@ function pypiup {
 
 function environ_activate {
 	local VAR_NAME
+	local line
 	while read line; do
 		if [[ $line != '#'* ]]; then
 			VAR_NAME=$(echo $line | cut -d= -f1)
@@ -51,6 +52,7 @@ function environ_activate {
 function environ_deactivate {
 	local VAR_NAME
 	local TEMP_NAME
+	local line
 	while read line; do
 		if [[ $line != '#'* ]]; then
 			VAR_NAME=$(echo $line | cut -d= -f1)
