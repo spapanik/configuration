@@ -1,0 +1,6 @@
+#compdef _rmvenv rmvenv
+
+function _rmvenv {
+	_arguments -C \
+		"*: :_files -W ~/.local/share/virtualenvs -/"
+}

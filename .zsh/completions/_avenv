@@ -1,4 +1,4 @@
-#compdef _avenv avenv rmvenv
+#compdef _avenv avenv
 
 function _avenv {
 	_arguments -C \
