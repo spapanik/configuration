@@ -122,14 +122,17 @@ function mkvenv {
 
 function rmvenv {
 	local VENV_BASE=~/.local/share/virtualenvs
-	local VENV_DIR=${VENV_BASE}/${1}
-	if [[ ! -d ${VENV_DIR} ]]; then
-		echo Virtualenv ${1} doesn\'t exist, aborting...
-		return 1
-	fi
-	if [[ -w ${VENV_DIR} ]]; then
-		rm -rf ${VENV_DIR}
-	fi
+	local VENV_NAME
+	for VENV_NAME in $@; do
+		local VENV_DIR=${VENV_BASE}/${VENV_NAME}
+		if [[ ! -d ${VENV_DIR} ]]; then
+			echo Virtualenv ${1} doesn\'t exist, aborting...
+			return 1
+		fi
+		if [[ -w ${VENV_DIR} ]]; then
+			rm -rf ${VENV_DIR}
+		fi
+	done
 }
 
 function avenv {
