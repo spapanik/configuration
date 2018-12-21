@@ -16,12 +16,6 @@
 [submodule ".vim/pack/bundle/start/jedi-vim"]
 	path = .config/nvim/pack/bundle/start/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
-[submodule ".vim/pack/bundle/start/jedi"]
-	path = .config/nvim/pack/bundle/start/jedi
-	url = git@github.com:davidhalter/jedi.git
-[submodule ".vim/pack/bundle/start/parso"]
-	path = .config/nvim/pack/bundle/start/parso
-	url = git@github.com:davidhalter/parso.git
 [submodule ".vim/pack/bundle/start/auto-pairs"]
 	path = .config/nvim/pack/bundle/start/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
