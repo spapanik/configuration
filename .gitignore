@@ -7,7 +7,9 @@
 
 # Vim
 .config/nvim/local.vim
+.config/nvim/local.plug.vim
 .config/nvim/swap/
+.config/nvim/plugged/
 
 # Zshell
 .zsh/local.zsh

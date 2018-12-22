@@ -1,19 +1,19 @@
-"space as leader
+" space as leader
 let mapleader = "\<Space>"
 
-"esc
+" easier reach escape
 map <C-q> <Esc>
 imap <C-q> <Esc>`^
 
-"move to beginning/end
+" move to beginning/end
 nnoremap <C-k> 0
 inoremap <C-k> <C-o>0
 vnoremap <C-k> 0
-nnoremap k $
-inoremap k <C-o>$
-vnoremap k $
+nnoremap <M-k> $
+inoremap <M-k> <C-o>$
+vnoremap <M-k> $
 
-"bigger movement
+" bigger movement
 nnoremap <C-up>    {
 nnoremap <C-down>  }
 nnoremap <C-left>  b
@@ -27,7 +27,7 @@ vnoremap <C-down>  }
 vnoremap <C-left>  b
 vnoremap <C-right> w
 
-"move in buffer
+" move in buffer
 nnoremap <M-PageUp>   :bp<CR>
 nnoremap <M-PageDown> :bn<CR>
 inoremap <M-PageUp>   <Esc>:bp<CR>
@@ -35,7 +35,7 @@ inoremap <M-PageDown> <Esc>:bn<CR>
 vnoremap <M-PageUp>   <Esc>:bp<CR>
 vnoremap <M-PageDown> <Esc>:bn<CR>
 
-"visual line movement
+" visual line movement
 nnoremap <C-PageUp>   gk
 nnoremap <C-PageDown> gj
 inoremap <C-PageUp>   <C-o>gk
@@ -43,7 +43,7 @@ inoremap <C-PageDown> <C-o>gj
 vnoremap <C-PageUp>   gk
 vnoremap <C-PageDown> gj
 
-"move lines
+" move lines
 nnoremap <M-S-up>   :m .-2<CR>==
 nnoremap <M-S-down> :m .+1<CR>==
 inoremap <M-S-up>   <Esc>:m .-2<CR>==gi
@@ -51,7 +51,7 @@ inoremap <M-S-down> <Esc>:m .+1<CR>==gi
 vnoremap <M-S-up>   :m '<-2<CR>gv=gv
 vnoremap <M-S-down> :m '>+1<CR>gv=gv
 
-"select with shift
+" select with shift
 nmap <S-up>      v<up>
 nmap <S-down>    v<down>
 nmap <S-left>    v<left>
@@ -65,7 +65,7 @@ imap <S-down>    <Esc>`^v<down>
 imap <S-left>    <Esc>`^v<left>
 imap <S-right>   <Esc>`^v<right>
 
-"bigger selects
+" bigger selects
 nmap <C-S-up>    v<C-up>
 nmap <C-S-down>  v<C-down>
 nmap <C-S-left>  v<C-left>
@@ -79,7 +79,7 @@ imap <C-S-down>  <Esc>`^v<C-down>
 imap <C-S-left>  <Esc>`^v<C-left>
 imap <C-S-right> <Esc>`^v<C-right>
 
-"move in splits
+" move in splits
 nnoremap <M-left>  <C-w><C-h>
 nnoremap <M-down>  <C-w><C-j>
 nnoremap <M-up>    <C-w><C-k>
@@ -93,46 +93,36 @@ vnoremap <M-down>  <Esc><C-w><C-j>
 vnoremap <M-up>    <Esc><C-w><C-k>
 vnoremap <M-right> <Esc><C-w><C-l>
 
-"delete and paste
+" delete and paste
 vnoremap <leader>d "_d
 nnoremap <leader>p "0p
 nnoremap <leader>P "0P
 vnoremap <C-c> "+y
 
-"comments
+" comments
 nmap <C-_> gcc
 imap <C-_> <C-o>gcc
 vmap <C-_> gc
 
-"yank without cursor moving
+" yank without cursor moving
 vmap y ygv<Esc>
 
-"save
+" save
 nnoremap <silent> <C-s> :update<CR>
 inoremap <silent> <C-s> <Esc>`^:update<CR>
 vnoremap <silent> <C-s> <Esc>:update<CR>
 
-"save and quit
-nnoremap <silent> s :wq<CR>
-inoremap <silent> s <Esc>:wq<CR>
-vnoremap <silent> s <Esc>:wq<CR>
+" save and quit
+nnoremap <silent> <M-s> :wq<CR>
+inoremap <silent> <M-s> <Esc>:wq<CR>
+vnoremap <silent> <M-s> <Esc>:wq<CR>
 
-"kill buffer
+" kill buffer
 nnoremap <silent> <C-l> :Bdelete<CR>
 inoremap <silent> <C-l> <Esc>:Bdelete<CR>
 vnoremap <silent> <C-l> <Esc>:Bdelete<CR>
 
-"taglist
-nnoremap <silent> <F8> :TagbarToggle<CR>
-inoremap <silent> <F8> <C-O>:TagbarToggle<CR>
-vnoremap <silent> <F8> <C-C>:TagbarToggle<CR>
-
-"NERDTree
+" NERDTree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 inoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
 vnoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
-
-"syntax check
-nnoremap <silent> <F7> :SyntasticCheck<CR>
-inoremap <silent> <F7> <Esc>:SyntasticCheck<CR>
-vnoremap <silent> <F7> <Esc>:SyntasticCheck<CR>
