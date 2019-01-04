@@ -2,18 +2,26 @@ set nocompatible  " no vi complatibility
 
 " install plugins
 call plug#begin()
+" Main plugins
 Plug 'mileszs/ack.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'moll/vim-bbye'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
+
+" Plugin extras
+Plug 'zchee/deoplete-jedi'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'honza/vim-snippets'
 runtime local.plug.vim
 call plug#end()
 
