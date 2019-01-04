@@ -19,9 +19,10 @@ Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
 
 " Plugin extras
-Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'honza/vim-snippets'
+Plug 'Shougo/deoplete-clangx'
+Plug 'zchee/deoplete-jedi'
 runtime local.plug.vim
 call plug#end()
 
