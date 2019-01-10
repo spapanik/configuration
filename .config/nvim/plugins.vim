@@ -29,3 +29,4 @@ let g:airline_theme='papercolor'
 " LanguageClient-neovim
 let g:LanguageClient_serverCommands = {}
 let g:LanguageClient_serverCommands.python = ['/usr/bin/pyls']
+let g:LanguageClient_serverCommands.rust = ['/usr/bin/rustup', 'run', 'stable', 'rls']
