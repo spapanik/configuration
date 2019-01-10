@@ -25,3 +25,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " vim-airline-themes
 let g:airline_theme='papercolor'
+
+" LanguageClient-neovim
+let g:LanguageClient_serverCommands = {}
+let g:LanguageClient_serverCommands.python = ['/usr/bin/pyls']
