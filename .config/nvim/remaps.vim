@@ -126,3 +126,8 @@ vnoremap <silent> <C-l> <Esc>:Bdelete<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 inoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
 vnoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
+
+
+" fzf
+nnoremap <C-f> :Files<CR>
+nnoremap <M-f> :Rg<CR>

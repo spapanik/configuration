@@ -3,10 +3,9 @@ set nocompatible  " no vi complatibility
 " install plugins
 call plug#begin()
 " Main plugins
-Plug 'mileszs/ack.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kien/ctrlp.vim'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'scrooloose/nerdtree'
 Plug 'NLKNguyen/papercolor-theme'
@@ -22,8 +21,7 @@ Plug 'tpope/vim-surround'
 " Plugin extras
 Plug 'vim-airline/vim-airline-themes'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete-clangx'
-Plug 'zchee/deoplete-jedi'
+Plug 'junegunn/fzf.vim'
 runtime local.plug.vim
 call plug#end()
 
