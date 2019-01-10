@@ -6,6 +6,7 @@ let g:AutoPairsMapCR=0
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#source('LanguageClient', 'min_pattern_length', 2)
 
 " nerdtree
 let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__','\.o$']
