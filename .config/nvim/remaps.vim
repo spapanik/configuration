@@ -2,8 +2,8 @@
 let mapleader = "\<Space>"
 
 " easier reach escape
-map <C-q> <Esc>
-imap <C-q> <Esc>`^
+map <C-q> <Esc>:noh<CR>
+imap <C-q> <Esc>`^:noh<CR>
 
 " move to beginning/end
 nnoremap <C-k> 0
