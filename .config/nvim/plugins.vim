@@ -15,6 +15,10 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " vim-airline
 let g:airline_powerline_fonts=1
 
+" vim-lsp
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
