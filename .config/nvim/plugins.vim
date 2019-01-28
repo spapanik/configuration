@@ -1,3 +1,7 @@
+" ALE
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers.python = ['black']
+
 " asyncomplete
 let g:asyncomplete_remove_duplicates = 1
 let g:asyncomplete_smart_completion = 1
@@ -16,8 +20,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:airline_powerline_fonts=1
 
 " vim-lsp
-let g:lsp_signs_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_enabled = 0
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"

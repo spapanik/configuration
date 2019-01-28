@@ -3,6 +3,7 @@ set nocompatible  " no vi complatibility
 " install plugins
 call plug#begin()
 " Main plugins
+Plug 'w0rp/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
