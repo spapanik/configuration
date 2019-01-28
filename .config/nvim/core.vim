@@ -12,6 +12,7 @@ endif
 set history=700
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
+set mouse=a
 set number
 set tabstop=4
 set shiftwidth=4
