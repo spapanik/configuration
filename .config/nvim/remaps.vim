@@ -117,6 +117,11 @@ nnoremap <silent> <M-s> :wq<CR>
 inoremap <silent> <M-s> <Esc>:wq<CR>
 vnoremap <silent> <M-s> <Esc>:wq<CR>
 
+" ALE
+nnoremap <silent> <F8> :ALEFix<CR>
+inoremap <silent> <F8> <Esc>:ALEFix<CR>
+vnoremap <silent> <F8> <Esc>:ALEFix<CR>
+
 " bbye
 nnoremap <silent> <C-l> :Bdelete<CR>
 inoremap <silent> <C-l> <Esc>:Bdelete<CR>
