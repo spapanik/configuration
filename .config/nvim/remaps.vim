@@ -117,17 +117,22 @@ nnoremap <silent> <M-s> :wq<CR>
 inoremap <silent> <M-s> <Esc>:wq<CR>
 vnoremap <silent> <M-s> <Esc>:wq<CR>
 
-" kill buffer
+" bbye
 nnoremap <silent> <C-l> :Bdelete<CR>
 inoremap <silent> <C-l> <Esc>:Bdelete<CR>
 vnoremap <silent> <C-l> <Esc>:Bdelete<CR>
+
+" fzf
+nnoremap <C-f> :Files<CR>
+nnoremap <M-f> :Rg<CR>
 
 " NERDTree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 inoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
 vnoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
 
-
-" fzf
-nnoremap <C-f> :Files<CR>
-nnoremap <M-f> :Rg<CR>
+" vim-lsp
+nnoremap <silent> <F2> :LspRename<CR>
+nnoremap <silent> gd :LspDefinition<CR>
+nnoremap <silent> gr :LspReferences<CR>
+nnoremap <silent> <F4> :LspHover<CR>
