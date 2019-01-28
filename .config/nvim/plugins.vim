@@ -1,6 +1,7 @@
 " ALE
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 let g:ale_fixers.python = ['black']
+let g:ale_fixers.rust = ['rustfmt']
 
 " asyncomplete
 let g:asyncomplete_remove_duplicates = 1
