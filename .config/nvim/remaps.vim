@@ -131,13 +131,14 @@ vnoremap <silent> <C-l> <Esc>:Bdelete<CR>
 nnoremap <C-f> :Files<CR>
 nnoremap <M-f> :Rg<CR>
 
+" LanguageClient-neovim
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap gr :call LanguageClient#textDocument_references()<CR>
+nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <F4> :call LanguageClient#textDocument_hover()<CR>
+
 " NERDTree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 inoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
 vnoremap <silent> <F3> <Esc>:NERDTreeToggle<CR>
-
-" vim-lsp
-nnoremap <silent> <F2> :LspRename<CR>
-nnoremap <silent> gd :LspDefinition<CR>
-nnoremap <silent> gr :LspReferences<CR>
-nnoremap <silent> <F4> :LspHover<CR>

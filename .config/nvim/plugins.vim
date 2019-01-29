@@ -14,14 +14,16 @@ let g:AutoPairsMapCR=0
 " nerdtree
 let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__','\.o$']
 
+" LanguageClient-neovim
+let g:LanguageClient_serverCommands = {}
+let g:LanguageClient_serverCommands.python = ['pyls']
+let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
+
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " vim-airline
 let g:airline_powerline_fonts=1
-
-" vim-lsp
-let g:lsp_diagnostics_enabled = 0
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
