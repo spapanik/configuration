@@ -146,7 +146,7 @@ function avenv {
 		return 1
 	fi
 	if [[ -r ${VENV_DIR}/.project ]]; then
-		cd $(cat ${VENV_DIR}/.project)
+		cd "$(cat ${VENV_DIR}/.project)"
 		if [[ -r $(cat ${VENV_DIR}/.project)/.environ ]]; then
 			environ_activate $(cat ${VENV_DIR}/.project)/.environ
 		fi
