@@ -2,6 +2,19 @@ function pb {
 	curl -F "c=@${1:--}" https://ptpb.pw/
 }
 
+function ws {
+	if [[ ! -s $1 ]]; then
+		return 0
+	fi
+	if [[ $(tail -c 1 $1 | wc -l) -eq 0 ]]; then
+		echo >> $1
+	elif [[ $(tail -c 2 $1 | head -c 1 | wc -l) -eq 1 ]]; then
+		while [[ $(tail -c 2 $1 | head -c 1 | wc -l) -eq 1 ]]; do
+			truncate -s -1 $1
+		done
+	fi
+}
+
 function inenv {
 	if [[ -z "${_OLD_PATH+1}" ]]; then
 		_OLD_PATH=${PATH}
