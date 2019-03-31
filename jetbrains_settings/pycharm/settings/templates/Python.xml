@@ -1,0 +1,17 @@
+<templateSet group="Python">
+  <template name="ipdb" value="__import__('ipdb').set_trace()" description="Ipython debugger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="pdb" value="__import__('pdb').set_trace()" description="Python debugger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="etime" value="from euler.utils import timed&#10;@timed" description="Function timing" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

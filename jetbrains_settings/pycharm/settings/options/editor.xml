@@ -1,0 +1,20 @@
+<application>
+  <component name="DefaultFont">
+    <option name="FONT_SIZE" value="24" />
+    <option name="FONT_FAMILY" value="Bitstream Vera Sans Mono" />
+    <option name="FONT_SCALE" value="1.9166666" />
+    <option name="SECONDARY_FONT_FAMILY" value="DejaVu Sans Mono" />
+  </component>
+  <component name="EditorSettings">
+    <option name="STRIP_TRAILING_SPACES" value="Whole" />
+    <option name="IS_ENSURE_NEWLINE_AT_EOF" value="true" />
+    <option name="IS_WHITESPACES_SHOWN" value="true" />
+    <option name="IS_LEADING_WHITESPACES_SHOWN" value="false" />
+    <option name="IS_INNER_WHITESPACES_SHOWN" value="false" />
+    <option name="KEEP_TRAILING_SPACE_ON_CARET_LINE" value="false" />
+  </component>
+  <component name="SqlEditorOptions">
+    <option name="concatenateStringsOnEnter" value="true" />
+    <option name="qualificationType" value="On collisions" />
+  </component>
+</application>
