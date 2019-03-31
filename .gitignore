@@ -13,3 +13,6 @@
 
 # Zshell
 .zsh/local.zsh
+
+# jetbrains
+jetbrains_settings/*/settings.zip
