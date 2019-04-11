@@ -10,6 +10,7 @@
 .config/nvim/local.plug.vim
 .config/nvim/swap/
 .config/nvim/plugged/
+.config/nvim/spell/
 
 # Zshell
 .zsh/local.zsh
