@@ -28,13 +28,12 @@ zsh-pip-cache-packages() {
 
 	if [[ ! -f $ZSH_PIP_CACHE_FILE ]]; then
 		echo -n "(...caching package index...)"
-		tmp_cache=/tmp/zsh_tmp_cache
+		tmp_cache=$(mktemp)
 		for index in $ZSH_PIP_INDEXES ; do
 			# well... I've already got two problems
 			curl -L $index 2>/dev/null | zsh-pip-clean-packages >> $tmp_cache
 		done
 		sort $tmp_cache | uniq | tr '\n' ' ' > $ZSH_PIP_CACHE_FILE
-		rm $tmp_cache
 	fi
 }
 
