@@ -1,5 +1,5 @@
 function pb {
-	curl -F "c=@${1:--}" https://ptpb.pw/
+	curl -F 'f:1=<-' ix.io
 }
 
 function ws {
