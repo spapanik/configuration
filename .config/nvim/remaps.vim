@@ -94,7 +94,10 @@ vnoremap <M-up>    <Esc><C-w><C-k>
 vnoremap <M-right> <Esc><C-w><C-l>
 
 " delete and paste
+vnoremap <leader>c "_c
+nnoremap <leader>c "_c
 vnoremap <leader>d "_d
+nnoremap <leader>d "_d
 nnoremap <leader>p "0p
 nnoremap <leader>P "0P
 vnoremap <C-c> "+y
