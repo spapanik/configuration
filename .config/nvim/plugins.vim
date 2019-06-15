@@ -21,6 +21,7 @@ let NERDTreeIgnore=['\.pyc$','\.pyo$','__pycache__','\.o$']
 let g:LanguageClient_diagnosticsEnable = 0
 let g:LanguageClient_serverCommands = {}
 let g:LanguageClient_serverCommands.c = ['clangd']
+let g:LanguageClient_serverCommands.cpp = ['clangd']
 let g:LanguageClient_serverCommands.python = ['pyls']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 
