@@ -15,23 +15,6 @@ function ws {
 	fi
 }
 
-function inenv {
-	if [[ -z "${_OLD_PATH+1}" ]]; then
-		_OLD_PATH=${PATH}
-		PATH=${1}:${PATH}
-	else
-		PATH=${1}:${_OLD_PATH}
-	fi
-}
-
-function outenv {
-	if [[ -z "${_OLD_PATH+1}" ]]; then
-		return 1
-	fi
-	PATH=${_OLD_PATH}
-	unset _OLD_PATH
-}
-
 function pypiver {
 	sed -i "/^version =/c\version = \"$1\"" pyproject.toml
 	sed -i "/^__version__/c\__version__ = \"$1\"" setup.py
@@ -48,7 +31,7 @@ function pypiup {
 	twine upload dist/*
 }
 
-function environ_activate {
+function inenv {
 	local VAR_NAME
 	local line
 	while read line; do
@@ -62,7 +45,7 @@ function environ_activate {
 	done < $1
 }
 
-function environ_deactivate {
+function outenv {
 	local VAR_NAME
 	local TEMP_NAME
 	local line
@@ -161,7 +144,7 @@ function avenv {
 	if [[ -r ${VENV_DIR}/.project ]]; then
 		cd "$(cat ${VENV_DIR}/.project)"
 		if [[ -r $(cat ${VENV_DIR}/.project)/.environ ]]; then
-			environ_activate $(cat ${VENV_DIR}/.project)/.environ
+			inenv $(cat ${VENV_DIR}/.project)/.environ
 		fi
 	fi
 
@@ -171,7 +154,7 @@ function avenv {
 function dvenv {
 	if [[ -r ${VIRTUAL_ENV}/.project ]]; then
 		if [[ -r $(cat ${VIRTUAL_ENV}/.project)/.environ ]]; then
-			environ_deactivate $(cat ${VIRTUAL_ENV}/.project)/.environ
+			outenv $(cat ${VIRTUAL_ENV}/.project)/.environ
 		fi
 	fi
 
