@@ -116,9 +116,9 @@ inoremap <silent> <C-s> <Esc>`^:update<CR>
 vnoremap <silent> <C-s> <Esc>:update<CR>
 
 " save and quit
-nnoremap <silent> <M-s> :wq<CR>
-inoremap <silent> <M-s> <Esc>:wq<CR>
-vnoremap <silent> <M-s> <Esc>:wq<CR>
+nnoremap <silent> <M-s> :x<CR>
+inoremap <silent> <M-s> <Esc>:x<CR>
+vnoremap <silent> <M-s> <Esc>:x<CR>
 
 " ALE
 nnoremap <silent> <F8> :ALEFix<CR>
