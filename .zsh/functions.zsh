@@ -33,34 +33,36 @@ function pypiup {
 
 function inenv {
 	local VAR_NAME
-	local line
-	while read line; do
-		if [[ $line != '#'* ]]; then
-			VAR_NAME=$(echo $line | cut -d= -f1)
-			if [[ -n "${VAR_NAME+1}" ]]; then
-				export _OLD_${VAR_NAME}=${(P)VAR_NAME}
+	for file in $@; do
+		while read line; do
+			if [[ $line != '#'* ]]; then
+				VAR_NAME=$(echo $line | cut -d= -f1)
+				if [[ -n "${VAR_NAME+1}" ]]; then
+					export _OLD_${VAR_NAME}=${(P)VAR_NAME}
+				fi
+				export ${(e)line}
 			fi
-			export ${(e)line}
-		fi
-	done < $1
+		done < $file
+	done
 }
 
 function outenv {
 	local VAR_NAME
 	local TEMP_NAME
-	local line
-	while read line; do
-		if [[ $line != '#'* ]]; then
-			VAR_NAME=$(echo $line | cut -d= -f1)
-			TEMP_NAME=_OLD_${VAR_NAME}
-			if [[ -n "${TEMP_NAME+1}" ]]; then
-				export ${VAR_NAME}=${(P)TEMP_NAME}
-			else
-				unset VAR_NAME
+	for file in $@; do
+		while read line; do
+			if [[ $line != '#'* ]]; then
+				VAR_NAME=$(echo $line | cut -d= -f1)
+				TEMP_NAME=_OLD_${VAR_NAME}
+				if [[ -n "${TEMP_NAME+1}" ]]; then
+					export ${VAR_NAME}=${(P)TEMP_NAME}
+				else
+					unset VAR_NAME
+				fi
+				unset $_OLD_${VAR_NAME}
 			fi
-			unset $_OLD_${VAR_NAME}
-		fi
-	done < $1
+		done < $file
+	done
 }
 
 function mkvenv {
