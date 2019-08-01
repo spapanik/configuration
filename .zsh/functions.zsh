@@ -66,8 +66,8 @@ function outenv {
 }
 
 function mkvenv {
-	local OPTIONS=ip:
-	local LONGOPTS=independent,python:
+	local OPTIONS=iep:
+	local LONGOPTS=independent,environ-only,python:
 	if [[ $(uname) == 'Darwin' ]]; then
 		local GETOPT=/usr/local/opt/gnu-getopt/bin/getopt
 	else
@@ -78,12 +78,17 @@ function mkvenv {
 
 	local VENV_BASE=~/.local/share/virtualenvs
 	local ASSOCIATED=true
+	local PYTHON_VENV=true
 	local VENV_NAME=${PWD##*/}
 	local PYTHON=$(which python)
 	while true; do
 		case "$1" in
 			-i|--independent)
 				ASSOCIATED=false
+				shift
+				;;
+			-e|--environ-only)
+				PYTHON_VENV=false
 				shift
 				;;
 			-p|--python)
@@ -111,7 +116,11 @@ function mkvenv {
 		echo Virtualenv ${1} already exist, aborting...
 		return 1
 	fi
-	virtualenv ${VENV_DIR} -p ${PYTHON}
+	if ( ${PYTHON_VENV} ); then
+		virtualenv ${VENV_DIR} -p ${PYTHON}
+	else
+		mkdir -p ${VENV_DIR}
+	fi
 	if ( ${ASSOCIATED} ); then
 		echo ${PWD} >> ${VENV_DIR}/.project
 	fi
@@ -149,7 +158,9 @@ function avenv {
 		fi
 	fi
 
-	. ${VENV_DIR}/bin/activate
+	if [[ -r ${VENV_DIR}/bin/activate ]]; then
+		. ${VENV_DIR}/bin/activate
+	fi
 }
 
 function dvenv {
