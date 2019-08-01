@@ -120,7 +120,6 @@ function mkvenv {
 
 function rmvenv {
 	local VENV_BASE=~/.local/share/virtualenvs
-	local VENV_NAME
 	for VENV_NAME in $@; do
 		local VENV_DIR=${VENV_BASE}/${VENV_NAME}
 		if [[ ! -d ${VENV_DIR} ]]; then
