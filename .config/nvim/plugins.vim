@@ -31,6 +31,10 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " vim-airline
 let g:airline_powerline_fonts = 1
 
+" omnicompletion
+let g:loaded_sql_completion = 0
+let g:omni_sql_no_default_maps = 1
+
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
