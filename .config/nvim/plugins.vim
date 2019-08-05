@@ -29,7 +29,7 @@ let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " vim-airline
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
