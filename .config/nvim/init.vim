@@ -29,6 +29,7 @@ call plug#end()
 " source config
 runtime core.vim
 runtime plugins.vim
+runtime autocommands.vim
 runtime functions.vim
 runtime commands.vim
 runtime remaps.vim
