@@ -16,7 +16,7 @@
 .config/git/local.git
 
 # Zshell
-.zsh/local.zsh
+.config/zsh/local.zsh
 
 # jetbrains
 jetbrains_settings/*/settings.zip
