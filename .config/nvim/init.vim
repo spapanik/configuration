@@ -9,7 +9,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'scrooloose/nerdtree'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'altercation/vim-colors-solarized'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'

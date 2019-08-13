@@ -42,7 +42,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " vim-airline-themes
-let g:airline_theme='papercolor'
+let g:airline_theme='solarized'
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0
