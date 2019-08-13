@@ -12,6 +12,9 @@
 .config/nvim/plugged/
 .config/nvim/spell/
 
+# git
+.config/git/local.git
+
 # Zshell
 .zsh/local.zsh
 
