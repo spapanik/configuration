@@ -1,5 +1,8 @@
 setopt prompt_subst
 
+# ls colors
+eval $(dircolors ~/.config/zsh/dircolors/ansi-dark.dircolors)
+
 # prompt commands
 local directory="%~"
 local prompt_sign="%(!.#.$)"
