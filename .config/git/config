@@ -2,15 +2,12 @@
 	editor = vi
 [push]
 	default = current
-[color]
-	ui = true
 [alias]
 	cm = checkout master
 	rem = rebase master
 	mm = merge master
 	stf = status --untracked-files
 	df = difftool
-	dnc = diff --no-color
 	pr = pull --rebase
 	this = rev-parse --abbrev-ref HEAD
 	unstage = reset HEAD --
