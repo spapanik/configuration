@@ -100,6 +100,10 @@ vnoremap <leader>d "_d
 nnoremap <leader>d "_d
 vnoremap <C-c> "+y
 
+" get filename
+nmap <silent> <leader>fn :let @+ = expand("%:t")<CR>
+nmap <silent> <leader>fp :let @+ = expand("%:p")<CR>
+
 " comments
 nmap <C-_> gcc
 imap <C-_> <C-o>gcc
