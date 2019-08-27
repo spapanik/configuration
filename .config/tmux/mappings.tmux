@@ -14,5 +14,7 @@ bind V split-window -h
 bind S split-window -v
 bind k confirm kill-window
 bind K confirm kill-server
+bind -r < swap-window -t -1
+bind -r > swap-window -t +1
 bind -T copy-mode-vi v send -X begin-selection
 bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
