@@ -1,8 +1,5 @@
 setopt prompt_subst
 
-# ls colors
-eval $(dircolors ~/.config/zsh/dircolors/ansi-dark.dircolors)
-
 # prompt commands
 local directory="%~"
 local prompt_sign="%(!.#.$)"
@@ -30,8 +27,10 @@ function venv_info() {
 # prompt variables
 if [[ -a $HOME/.light ]]; then
 	USER_INFO_PREFIX=%F{black}
+	eval $(dircolors ~/.config/zsh/dircolors/ansi-light.dircolors)
 else
 	USER_INFO_PREFIX=%F{white}
+	eval $(dircolors ~/.config/zsh/dircolors/ansi-dark.dircolors)
 fi
 USER_INFO_SUFFIX="%f"
 
