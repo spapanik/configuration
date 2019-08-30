@@ -10,8 +10,9 @@ setw -g mode-keys vi
 unbind '"'
 unbind %
 unbind &
-bind V split-window -h
-bind S split-window -v
+unbind s
+bind v split-window -h
+bind s split-window -v
 bind k confirm kill-window
 bind K confirm kill-server
 bind -r < swap-window -t -1
