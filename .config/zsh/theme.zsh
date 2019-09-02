@@ -24,15 +24,21 @@ function venv_info() {
 	fi
 }
 
+if [[ $(uname) == 'Darwin' ]]; then
+	DIRCOLORS=gdircolors
+else
+	DIRCOLORS=dircolors
+fi
+
 # prompt variables
 if [[ -a $HOME/.light ]]; then
 	export BAT_THEME="ansi-light"
 	USER_INFO_PREFIX=%F{black}
-	eval $(dircolors ~/.config/zsh/dircolors/ansi-light.dircolors)
+	eval $($DIRCOLORS ~/.config/zsh/dircolors/ansi-light.dircolors)
 else
 	export BAT_THEME="ansi-dark"
 	USER_INFO_PREFIX=%F{white}
-	eval $(dircolors ~/.config/zsh/dircolors/ansi-dark.dircolors)
+	eval $($DIRCOLORS ~/.config/zsh/dircolors/ansi-dark.dircolors)
 fi
 USER_INFO_SUFFIX="%f"
 
