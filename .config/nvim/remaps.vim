@@ -36,12 +36,12 @@ vnoremap <M-PageUp>   <Esc>:bp<CR>
 vnoremap <M-PageDown> <Esc>:bn<CR>
 
 " visual line movement
-nnoremap <C-PageUp>   gk
-nnoremap <C-PageDown> gj
-inoremap <C-PageUp>   <C-o>gk
-inoremap <C-PageDown> <C-o>gj
-vnoremap <C-PageUp>   gk
-vnoremap <C-PageDown> gj
+nnoremap <C-p> gk
+nnoremap <C-n> gj
+inoremap <C-p> <C-o>gk
+inoremap <C-n> <C-o>gj
+vnoremap <C-p> gk
+vnoremap <C-n> gj
 
 " move lines
 nnoremap <M-S-up>   :m .-2<CR>==
