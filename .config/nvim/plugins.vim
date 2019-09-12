@@ -30,6 +30,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " vim-airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " omnicompletion
 let g:loaded_sql_completion = 0
