@@ -17,15 +17,15 @@ vnoremap <M-k> $
 nnoremap <C-up>    {
 nnoremap <C-down>  }
 nnoremap <C-left>  b
-nnoremap <C-right> w
+nnoremap <C-right> e
 inoremap <C-up>    <C-o>{
 inoremap <C-down>  <C-o>}
 inoremap <C-left>  <C-o>b
-inoremap <C-right> <C-o>w
+inoremap <C-right> <C-o>e
 vnoremap <C-up>    {
 vnoremap <C-down>  }
 vnoremap <C-left>  b
-vnoremap <C-right> w
+vnoremap <C-right> e
 
 " move in buffer
 nnoremap <M-PageUp>   :bp<CR>
