@@ -38,6 +38,6 @@ runtime remaps.vim
 runtime local.vim
 
 " source project config
-if filereadable(".vimlocal")
-	source .vimlocal
+if filereadable(".local.vim")
+	source .local.vim
 endif
