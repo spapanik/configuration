@@ -1,3 +1,5 @@
+set -sg escape-time 10
+
 set -g base-index 1
 setw -g pane-base-index 1
 
