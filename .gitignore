@@ -13,6 +13,7 @@
 .config/nvim/spell/
 
 # git
+.config/git/ignore
 .config/git/local.git
 
 # Zshell
