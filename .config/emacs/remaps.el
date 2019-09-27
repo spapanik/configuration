@@ -16,4 +16,4 @@
 (global-set-key (kbd "s-/") 'comment-line)
 
 ;; project structure
-(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f3] 'neotree-toggle)
