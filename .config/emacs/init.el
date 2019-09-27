@@ -23,11 +23,11 @@
 (use-package smart-tab)
 
 ;; source config
-(load-file (concat (file-name-as-directory "~") ".emacs.d/core.el"))
-(load-file (concat (file-name-as-directory "~") ".emacs.d/modes.el"))
-(load-file (concat (file-name-as-directory "~") ".emacs.d/remaps.el"))
+(load-file (concat (file-name-as-directory "~") ".config/emacs/core.el"))
+(load-file (concat (file-name-as-directory "~") ".config/emacs/modes.el"))
+(load-file (concat (file-name-as-directory "~") ".config/emacs/remaps.el"))
 
 ;; source local config
-(defvar local-init (concat (file-name-as-directory "~") ".emacs.d/local.el"))
+(defvar local-init (concat (file-name-as-directory "~") ".config/emacs/local.el"))
 (if (file-readable-p local-init)
     (load-file local-init))
