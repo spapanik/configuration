@@ -17,3 +17,6 @@
 
 ;; project structure
 (global-set-key [f3] 'neotree-toggle)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
