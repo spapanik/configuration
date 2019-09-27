@@ -1,7 +1,13 @@
 ;; install packages
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives
+      '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("MELPA"        . "https://melpa.org/packages/"))
+      package-archive-priorities
+      '(("MELPA Stable" . 10)
+        ("GNU ELPA"     . 5)
+        ("MELPA"        . 0)))
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
@@ -16,11 +22,12 @@
 (use-package popwin)
 (use-package neotree)
 (use-package magit)
-(use-package moe-theme)
 (use-package drag-stuff)
 (use-package auto-complete)
 (use-package whole-line-or-region)
 (use-package smart-tab)
+(use-package color-theme-solarized
+  :init (setq color-themes '())) ; Hack to silence compiler warning
 
 ;; source config
 (load-file (concat (file-name-as-directory "~") ".config/emacs/core.el"))

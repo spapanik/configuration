@@ -4,9 +4,7 @@
 (if (file-exists-p "~/.light")
     (setq-default frame-background-mode 'light)
   (setq-default frame-background-mode 'dark))
-(if (file-exists-p "~/.light")
-    (load-theme 'moe-light t)
-  (load-theme 'moe-dark t))
+(load-theme 'solarized t)
 
 ;; display
 (setq display-time-24hr-format t)
