@@ -3,8 +3,6 @@
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
 
 ;; move lines
-(global-set-key (kbd "M-S-<left>") 'drag-stuff-left)
-(global-set-key (kbd "M-S-<right>") 'drag-stuff-right)
 (global-set-key (kbd "M-S-<up>") 'drag-stuff-up)
 (global-set-key (kbd "M-S-<down>") 'drag-stuff-down)
 
