@@ -28,6 +28,7 @@ vnoremap <C-left>  b
 vnoremap <C-right> e
 
 " move in buffer
+nnoremap <leader><space> :Buffers<CR>
 nnoremap <M-PageUp>   :bp<CR>
 nnoremap <M-PageDown> :bn<CR>
 inoremap <M-PageUp>   <Esc>:bp<CR>
