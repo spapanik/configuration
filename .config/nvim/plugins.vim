@@ -25,6 +25,9 @@ let g:LanguageClient_serverCommands.cpp = ['clangd']
 let g:LanguageClient_serverCommands.python = ['pyls']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 
+" suda
+let g:suda_smart_edit = 1
+
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
