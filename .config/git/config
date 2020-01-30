@@ -30,6 +30,8 @@
 	tool = meld
 [merge]
 	tool = meld
+[mergetool]
+	keepBackup = false
 [fetch]
 	prune = true
 [include]
