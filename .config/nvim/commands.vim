@@ -1,4 +1,3 @@
-command! Ssudo call SudoSaveFile()
 command! Wq wq
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
