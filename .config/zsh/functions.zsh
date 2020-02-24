@@ -156,3 +156,44 @@ function dvenv {
 
 	deactivate
 }
+
+function add_to_path {
+	local OPTIONS=p
+	local LONGOPTS=prepend
+	if [[ $(uname) == 'Darwin' ]]; then
+		local GETOPT=/usr/local/opt/gnu-getopt/bin/getopt
+	else
+		local GETOPT=getopt
+	fi
+	local PARSED=$($GETOPT --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+	eval set -- "$PARSED"
+
+	local PREPEND=false
+	while true; do
+		case "$1" in
+			-p|--prepend)
+				PREPEND=true
+				shift
+				;;
+			--)
+				shift
+				break
+				;;
+		esac
+	done
+
+	if [[ $# -gt 1 ]]; then
+		echo Only one directory allowed, aborting...
+		return 1
+	fi
+
+	if [[ -d $1 ]]; then
+		if [[ ${path[(i)$1]} -gt ${#path} ]]; then
+			if ( $PREPEND ); then
+				export PATH=$1:$PATH
+			else
+				export PATH=$PATH:$1
+			fi
+		fi
+	fi
+}
