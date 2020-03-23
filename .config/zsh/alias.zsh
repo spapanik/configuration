@@ -1,3 +1,4 @@
+alias mcx="mc -x"
 alias emacs="emacs -nw"
 alias gemacs="\emacs"
 if [[ $(uname) == 'Darwin' ]]; then
