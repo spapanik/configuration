@@ -1,0 +1,7 @@
+[all]
+phony = true
+commands = [
+    "yamk -m jetbrains_settings/pycharm/make.toml all",
+    "yamk -m jetbrains_settings/datagrip/make.toml all",
+    "yamk -m jetbrains_settings/idea/make.toml all",
+]

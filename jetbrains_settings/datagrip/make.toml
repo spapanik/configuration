@@ -1,0 +1,14 @@
+[all]
+alias = "settings.zip"
+
+["settings.zip"]
+requires = [
+    "settings"
+]
+commands = [
+    "cd settings; zip -r ${.target} ."
+]
+
+[settings]
+exists_only = true
+recursive = true
