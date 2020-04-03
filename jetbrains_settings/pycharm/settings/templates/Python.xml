@@ -9,7 +9,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="etime" value="from euler.utils import timed&#10;@timed" description="Function timing" toReformat="false" toShortenFQNames="true">
+  <template name="pprint" value="__import__('pprint').pprint($end$)" description="Pretty print" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>

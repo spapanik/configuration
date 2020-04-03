@@ -1,9 +1,12 @@
 <application>
+  <component name="CodeFoldingSettings">
+    <option name="COLLAPSE_IMPORTS" value="false" />
+    <option name="COLLAPSE_DOC_COMMENTS" value="true" />
+  </component>
   <component name="DefaultFont">
-    <option name="FONT_SIZE" value="24" />
-    <option name="FONT_FAMILY" value="Bitstream Vera Sans Mono" />
-    <option name="FONT_SCALE" value="1.9166666" />
-    <option name="SECONDARY_FONT_FAMILY" value="DejaVu Sans Mono" />
+    <option name="FONT_SIZE" value="18" />
+    <option name="FONT_FAMILY" value="Noto Sans Mono" />
+    <option name="LINE_SPACING" value="1.0" />
   </component>
   <component name="EditorSettings">
     <option name="STRIP_TRAILING_SPACES" value="Whole" />
@@ -12,9 +15,5 @@
     <option name="IS_LEADING_WHITESPACES_SHOWN" value="false" />
     <option name="IS_INNER_WHITESPACES_SHOWN" value="false" />
     <option name="KEEP_TRAILING_SPACE_ON_CARET_LINE" value="false" />
-  </component>
-  <component name="SqlEditorOptions">
-    <option name="concatenateStringsOnEnter" value="true" />
-    <option name="qualificationType" value="On collisions" />
   </component>
 </application>
