@@ -80,7 +80,12 @@ function mkvenv {
 	local ASSOCIATED=true
 	local PYTHON_VENV=true
 	local VENV_NAME=${PWD##*/}
-	local PYTHON=$(which python)
+	local PYTHON
+	if [ "$(command -v pyenv)" ]; then
+		PYTHON=$(pyenv which python)
+	else
+		PYTHON=$(which python)
+	fi
 	while true; do
 		case "$1" in
 			-i|--independent)
