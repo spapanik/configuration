@@ -24,7 +24,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lb = "!f() { git for-each-ref --shell refs/heads --format='%(refname:short) %(upstream:track,nobracket) %(upstream:trackshort)' | awk -F\"'\" '{if ($4) {print $2 \" \\033[1;31m\" $4 \"\\033[0m\"} else if ($6) {print $2} else {print $2 \" \\033[1;31mlocal only\\033[0m\"}}'; }; f"
-	lt = tag --list --format='%(refname:short)%09%(subject)' --sort='-v:refname'
+	lt = tag --list --format='%(refname:short)%09%(subject)%09%(creatordate:iso)' --sort='-v:refname'
 	cg = "!f() { MATCHES=( $(git for-each-ref refs/heads/ --format='%(refname:short)' | grep ${@:-' '}) ); case ${#MATCHES[@]} in 0) echo \"No branches matched '$@'\";; 1) git checkout ${MATCHES[0]};; *) echo \"More than one branches matched '$@'\";; esac; }; f"
 	cgh = "!f() { git fetch origin pull/$1/head:pull-$1; git checkout pull-$1; }; f"
 [diff]
