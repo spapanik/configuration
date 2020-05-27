@@ -11,6 +11,7 @@
 	pr = pull --rebase
 	this = rev-parse --abbrev-ref HEAD
 	unstage = reset HEAD --
+	exec = "!exec "
 	pushit = "!git push -u origin $(git this)"
 	track = "!git branch --set-upstream-to=origin/$(git this) $(git this)"
 	nuke = "!git reset --hard origin/$(git this)"
