@@ -2,6 +2,8 @@
 	editor = vi
 [push]
 	default = current
+[pull]
+	ff = only
 [alias]
 	cm = checkout master
 	rem = rebase master
