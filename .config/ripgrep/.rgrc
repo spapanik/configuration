@@ -1,0 +1,11 @@
+# Don't let ripgrep vomit really long lines to the terminal, but show a preview instead
+--max-columns=128
+--max-columns-preview
+
+# Be smart about case
+--smart-case
+
+# Look more like grep
+--no-heading
+--line-number
+--column
