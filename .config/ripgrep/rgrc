@@ -5,6 +5,9 @@
 # Be smart about case
 --smart-case
 
+# Hidden files are files too
+--hidden
+
 # Look more like grep
 --no-heading
 --line-number
