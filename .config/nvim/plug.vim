@@ -5,7 +5,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 Plug 'lambdalisue/suda.vim'
 Plug 'ervandew/supertab'
