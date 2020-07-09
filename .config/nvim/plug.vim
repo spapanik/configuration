@@ -19,6 +19,7 @@ Plug 'tpope/vim-surround'
 Plug 'cespare/vim-toml'
 
 " Plugin extras
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'honza/vim-snippets'
