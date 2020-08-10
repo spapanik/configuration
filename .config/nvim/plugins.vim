@@ -31,6 +31,7 @@ let g:LanguageClient_serverCommands.cpp = ['clangd']
 let g:LanguageClient_serverCommands.fortran = ['fortls']
 let g:LanguageClient_serverCommands.python = ['pyls']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
+let g:LanguageClient_serverCommands.tex = ['texlab']
 
 " suda
 let g:suda_smart_edit = 1
