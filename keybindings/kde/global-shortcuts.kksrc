@@ -225,11 +225,11 @@ _launch=Meta+E
 _launch=Meta+.
 
 [org.kde.spectacle.desktop][Global Shortcuts]
-ActiveWindowScreenShot=
+ActiveWindowScreenShot=Meta+Print
 CurrentMonitorScreenShot=
-FullScreenScreenShot=
-RectangularRegionScreenShot=
-_launch=
+FullScreenScreenShot=Shift+Print
+RectangularRegionScreenShot=Meta+Shift+Print
+_launch=Print
 
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
