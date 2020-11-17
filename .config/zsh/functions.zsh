@@ -18,6 +18,14 @@ function pb {
 	curl -F 'f:1=<-' ix.io
 }
 
+function docker_supernuke {
+	sudo docker system prune -af
+	sudo docker container rm -f $(sudo docker container ls -aq)
+	sudo docker image rm -f $(sudo docker image ls -aq)
+	sudo docker volume rm -f $(sudo docker volume ls -q)
+	sudo docker network rm $(sudo docker network ls -q)
+}
+
 function ws {
 	if [[ ! -s $1 ]]; then
 		return 0
