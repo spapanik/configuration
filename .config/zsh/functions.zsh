@@ -19,11 +19,11 @@ function pb {
 }
 
 function docker_supernuke {
-	sudo docker system prune -af
-	sudo docker container rm -f $(sudo docker container ls -aq)
-	sudo docker image rm -f $(sudo docker image ls -aq)
-	sudo docker volume rm -f $(sudo docker volume ls -q)
-	sudo docker network rm $(sudo docker network ls -q)
+	docker system prune -af
+	docker container rm -f $(docker container ls -aq)
+	docker image rm -f $(docker image ls -aq)
+	docker volume rm -f $(docker volume ls -q)
+	docker network rm $(docker network ls -q)
 }
 
 function ws {
