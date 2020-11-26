@@ -21,3 +21,7 @@
 
 # jetbrains
 jetbrains_settings/*/settings.zip
+
+# vscode
+.config/Code - OSS/User/globalStorage/
+.config/Code - OSS/User/workspaceStorage/
