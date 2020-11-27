@@ -8,6 +8,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "workbench.startupEditor": "newUntitledFile",
+    "python.showStartPage": false,
     "gitlens.advanced.fileHistoryFollowsRenames": true,
     "gitlens.blame.ignoreWhitespace": true,
     "gitlens.currentLine.enabled": false
