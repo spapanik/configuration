@@ -11,5 +11,6 @@
     "python.showStartPage": false,
     "gitlens.advanced.fileHistoryFollowsRenames": true,
     "gitlens.blame.ignoreWhitespace": true,
-    "gitlens.currentLine.enabled": false
+    "gitlens.currentLine.enabled": false,
+    "editor.renderFinalNewline": false
 }
