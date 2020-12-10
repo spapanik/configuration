@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'cespare/vim-toml'
+Plug 'editorconfig/editorconfig-vim'
 
 " Plugin extras
 Plug 'Xuyuanp/nerdtree-git-plugin'
