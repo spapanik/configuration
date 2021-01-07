@@ -1,5 +1,7 @@
 [core]
 	editor = vi
+[init]
+	defaultBranch = master
 [push]
 	default = current
 [pull]
