@@ -1,8 +1,8 @@
 [commands.swipe.three]
-up = "xdotool key ctrl+alt+Up"
-down = "xdotool key ctrl+alt+Down"
-left = "xdotool key ctrl+alt+Left"
-right = "xdotool key ctrl+alt+Right"
+up = "xdotool key ctrl+meta+Up"
+down = "xdotool key ctrl+meta+Down"
+left = "xdotool key ctrl+meta+Left"
+right = "xdotool key ctrl+meta+Right"
 
 [commands.swipe.four]
 up = "xdotool key ctrl+F9"
