@@ -8,6 +8,9 @@
 # Hidden files are files too
 --hidden
 
+# Stop searching .git folder
+--glob=!.git
+
 # Look more like grep
 --no-heading
 --line-number
