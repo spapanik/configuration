@@ -144,4 +144,3 @@ nnoremap gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap gr :call LanguageClient#textDocument_references()<CR>
 nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
 nnoremap <F4> :call LanguageClient#textDocument_hover()<CR>
-
