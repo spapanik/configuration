@@ -32,11 +32,11 @@ fi
 
 # prompt variables
 if [[ -a $HOME/.light ]]; then
-	export BAT_THEME="ansi-light"
+	export BAT_THEME="Solarized (light)"
 	USER_INFO_PREFIX=%F{black}
 	eval $($DIRCOLORS ~/.config/zsh/dircolors/ansi-light.dircolors)
 else
-	export BAT_THEME="ansi-dark"
+	export BAT_THEME="Solarized (dark)"
 	USER_INFO_PREFIX=%F{white}
 	eval $($DIRCOLORS ~/.config/zsh/dircolors/ansi-dark.dircolors)
 fi
