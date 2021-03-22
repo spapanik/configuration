@@ -1,6 +1,6 @@
 {
     "editor.fontSize": 20,
-    "editor.fontFamily": "'Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Hack','Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.colorTheme": "Solarized Dark",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "workbench.preferredLightColorTheme": "Solarized Light",
@@ -12,5 +12,7 @@
     "gitlens.advanced.fileHistoryFollowsRenames": true,
     "gitlens.blame.ignoreWhitespace": true,
     "gitlens.currentLine.enabled": false,
-    "editor.renderFinalNewline": false
+    "editor.renderFinalNewline": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.copyWithSyntaxHighlighting": false
 }
