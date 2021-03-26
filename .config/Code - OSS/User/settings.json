@@ -17,5 +17,8 @@
     "gitlens.advanced.fileHistoryFollowsRenames": true,
     "gitlens.blame.ignoreWhitespace": true,
     "gitlens.currentLine.enabled": false,
-    "cSpell.allowCompoundWords": true
+    "cSpell.allowCompoundWords": true,
+    "cSpell.userWords": [
+        "noqa"
+    ]
 }
