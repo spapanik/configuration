@@ -1,18 +1,21 @@
 {
     "editor.fontSize": 20,
     "editor.fontFamily": "'Hack','Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.renderFinalNewline": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.copyWithSyntaxHighlighting": false,
     "workbench.colorTheme": "Solarized Dark",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.startupEditor": "newUntitledFile",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "workbench.startupEditor": "newUntitledFile",
     "python.showStartPage": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
     "gitlens.advanced.fileHistoryFollowsRenames": true,
     "gitlens.blame.ignoreWhitespace": true,
     "gitlens.currentLine.enabled": false,
-    "editor.renderFinalNewline": false,
-    "editor.renderWhitespace": "trailing",
-    "editor.copyWithSyntaxHighlighting": false
+    "cSpell.allowCompoundWords": true
 }
