@@ -15,6 +15,7 @@
 	pr = pull --rebase
 	this = rev-parse --abbrev-ref HEAD
 	unstage = reset HEAD --
+	tl = tag -l --sort v:refname --format "%(refname:short)%09%09%(objectname)%09%(committerdate:iso)%09%(authordate:iso)"
 	exec = "!exec "
 	pushit = "!git push -u origin $(git this)"
 	track = "!git branch --set-upstream-to=origin/$(git this) $(git this)"
