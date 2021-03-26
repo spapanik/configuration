@@ -17,6 +17,7 @@
 	unstage = reset HEAD --
 	tl = tag -l --sort v:refname --format "%(refname:short)%09%09%(objectname)%09%(committerdate:iso)%09%(authordate:iso)"
 	exec = "!exec "
+	ro = "!git rebase -i origin/$(git this)"
 	pushit = "!git push -u origin $(git this)"
 	track = "!git branch --set-upstream-to=origin/$(git this) $(git this)"
 	nuke = "!git reset --hard origin/$(git this)"
