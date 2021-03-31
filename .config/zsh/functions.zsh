@@ -18,6 +18,11 @@ function pb {
 	curl -F 'f:1=<-' ix.io
 }
 
+function clc {
+	printf "$(tail -n2 ~/.zsh_history | head -n1)" | xsel -b
+}
+
+
 function docker_supernuke {
 	docker system prune -af
 	docker container rm -f $(docker container ls -aq)
