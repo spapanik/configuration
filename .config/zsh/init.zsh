@@ -8,6 +8,7 @@
 . $HOME/.config/zsh/history.zsh
 . $HOME/.config/zsh/keybinding.zsh
 . $HOME/.config/zsh/completion.zsh
+. $HOME/.config/zsh/autocorrect.zsh
 . $HOME/.config/zsh/theme.zsh
 
 if [[ -r $HOME/.config/zsh/local.zsh ]]; then
