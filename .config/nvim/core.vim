@@ -34,6 +34,7 @@ set autoread
 set lazyredraw
 set magic
 set notimeout
+set undofile
 set suffixesadd=.js,.tex
 set whichwrap+=<,>,[,]
 set wildignore+=*.pyc,*.pyo,*/__pycache__/*,*.o,*/out/*
