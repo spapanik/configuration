@@ -34,6 +34,7 @@ set autoread
 set lazyredraw
 set magic
 set notimeout
+set hidden
 set undofile
 set suffixesadd=.js,.tex
 set whichwrap+=<,>,[,]
