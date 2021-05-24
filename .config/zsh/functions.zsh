@@ -94,11 +94,6 @@ function mkvenv {
 	local PYTHON_VENV=true
 	local VENV_NAME=${PWD##*/}
 	local PYTHON
-	if [ "$(command -v pyenv)" ]; then
-		PYTHON=$(pyenv which python)
-	else
-		PYTHON=$(which python)
-	fi
 	while true; do
 		case "$1" in
 			-i|--independent)
@@ -135,7 +130,11 @@ function mkvenv {
 		return 1
 	fi
 	if ( ${PYTHON_VENV} ); then
-		virtualenv ${VENV_DIR} -p ${PYTHON}
+		if [ -z "${PYTHON}" ]; then
+			python -m venv ${VENV_DIR}
+		else
+			virtualenv ${VENV_DIR} -p ${PYTHON}
+		fi
 	else
 		mkdir -p ${VENV_DIR}
 	fi
