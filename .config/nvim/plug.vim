@@ -1,5 +1,5 @@
 " Main plugins
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
