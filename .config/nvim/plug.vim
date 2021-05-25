@@ -4,6 +4,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
+Plug 'jparise/vim-graphql'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
