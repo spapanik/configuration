@@ -19,6 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 
