@@ -29,8 +29,8 @@ vnoremap <C-right> e
 
 " move in buffer
 nnoremap <leader><space> :Buffers<CR>
-nnoremap <leader>bp :bp<CR>
-nnoremap <leader>bn :bn<CR>
+nnoremap <M-S-left>      :bp<CR>
+nnoremap <M-S-right>     :bn<CR>
 
 " visual line movement
 nnoremap <C-p> gk
