@@ -1,5 +1,4 @@
 . $HOME/.config/zsh/alias.zsh
-. $HOME/.config/zsh/ssh.zsh
 . $HOME/.config/zsh/pip.zsh
 . $HOME/.config/zsh/git.zsh
 . $HOME/.config/zsh/constants.zsh
