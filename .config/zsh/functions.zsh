@@ -132,6 +132,7 @@ function mkvenv {
 	if ( ${PYTHON_VENV} ); then
 		if [ -z "${PYTHON}" ]; then
 			python -m venv ${VENV_DIR}
+			pip install --upgrade pip wheel setuptools
 		else
 			virtualenv ${VENV_DIR} -p ${PYTHON}
 		fi
