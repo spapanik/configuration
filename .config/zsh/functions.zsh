@@ -132,7 +132,6 @@ function mkvenv {
 	if ( ${PYTHON_VENV} ); then
 		if [ -z "${PYTHON}" ]; then
 			python -m venv ${VENV_DIR}
-			pip install --upgrade pip wheel setuptools
 		else
 			virtualenv ${VENV_DIR} -p ${PYTHON}
 		fi
@@ -143,6 +142,9 @@ function mkvenv {
 		echo ${PWD} >> ${VENV_DIR}/.project
 	fi
 	avenv ${VENV_NAME}
+	if ( ${PYTHON_VENV} ); then
+		pip install --upgrade pip wheel setuptools
+	fi
 }
 
 function rmvenv {
