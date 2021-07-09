@@ -35,7 +35,9 @@ let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 let g:LanguageClient_serverCommands.tex = ['texlab']
 
 " suda
-let g:suda_smart_edit = 1
+if ! &diff
+  let g:suda_smart_edit = 1
+endif
 
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
