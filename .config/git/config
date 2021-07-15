@@ -10,6 +10,7 @@
 	cm = checkout main
 	rem = rebase main
 	mm = merge main
+	st = status
 	stf = status --untracked-files
 	df = difftool
 	pr = pull --rebase
