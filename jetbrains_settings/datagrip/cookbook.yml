@@ -1,0 +1,12 @@
+---
+all:
+  alias: settings.zip
+settings:
+  exists_only: true
+  recursive: true
+settings.zip:
+  requires:
+    - settings
+  commands:
+    - rm -f {.target}
+    - cd settings; zip -r ${.target} .
