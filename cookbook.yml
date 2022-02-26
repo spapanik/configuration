@@ -2,6 +2,6 @@
 all:
   phony: true
   commands:
-    - yamk -m jetbrains_settings/pycharm/make.toml all
-    - yamk -m jetbrains_settings/datagrip/make.toml all
-    - yamk -m jetbrains_settings/idea/make.toml all
+    - yam -d jetbrains_settings/pycharm/ all
+    - yam -d jetbrains_settings/datagrip/ all
+    - yam -d jetbrains_settings/idea/ all
