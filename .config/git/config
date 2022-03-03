@@ -43,5 +43,6 @@
 	keepBackup = false
 [fetch]
 	prune = true
+	pruneTags = true
 [include]
 	path = ./local.git
