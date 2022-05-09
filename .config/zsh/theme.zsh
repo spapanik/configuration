@@ -42,13 +42,13 @@ else
 fi
 USER_INFO_SUFFIX="%f"
 
-VENV_PROMPT_PREFIX="%F{blue}%Bvenv:(%b%F{red}"
-VENV_PROMPT_SUFFIX="%F{blue})%B$%b%f"
+VENV_PROMPT_PREFIX="%F{blue}venv:(%F{red}"
+VENV_PROMPT_SUFFIX="%F{blue})$%f"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{blue}%Bgit:(%b%F{red}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%F{blue}%B)"
-ZSH_THEME_GIT_PROMPT_DIRTY="%F{blue}%B) %F{yellow}✗"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{blue}git:(%F{red}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{blue})"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{blue}) %F{yellow}✗"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
 
 PROMPT='$(venv_info)%F{cyan}${directory}%f $(git_prompt_info)
 $(user_info)${ret_status}${prompt_sign}%f '
