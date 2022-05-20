@@ -11,6 +11,8 @@ unbind '"'
 unbind %
 unbind &
 unbind s
+unbind d
+unbind C-z
 bind v split-window -h
 bind s split-window -v
 bind k confirm kill-window
