@@ -19,6 +19,9 @@
 # Zshell
 .config/zsh/local.zsh
 
+# iPython
+.ipython/profile_default/startup/README
+
 # jetbrains
 jetbrains_settings/*/settings.zip
 
