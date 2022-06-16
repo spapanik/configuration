@@ -1,22 +1,48 @@
 #!/usr/bin/env bash
 
-CLEAR=false
-while getopts c name; do
-	case $name in
-		c)
-			CLEAR=true;;
-	esac
+OPTIONS=f
+LONG_OPTIONS=force
+if [[ $(uname) == 'Darwin' ]]; then
+    GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
+else
+    GET_OPT=getopt
+fi
+PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTIONS --name "$0" -- "$@")
+eval set -- "$PARSED"
+
+FORCE=false
+while true; do
+    case "$1" in
+        -f|--force)
+            FORCE=true
+            shift
+            ;;
+        --)
+            shift
+            break
+            ;;
+    esac
 done
 
-dirpath=$(dirname $(realpath ${0}))
+if [[ $# -eq 0 ]]; then
+    echo No arguments found, aborting...
+    exit 1
+fi
 
-for arg in $@; do
-	SOURCE=${dirpath}/${arg}
-	TARGET=${HOME}/${arg}
-	if [[ -r "${SOURCE}" ]]; then
-		if ( ${CLEAR} ); then
-			rm -rf ${HOME}/${arg}
-		fi
-		ln -s ${dirpath}/${arg} ${HOME}/${arg}
-	fi
+for arg in "${@}"; do
+    SOURCE="${CONF}/${arg}"
+    if [[ ! -e ${SOURCE} ]]; then
+        echo "${SOURCE}" doesn\'t exist, aborting...
+        exit 1
+    fi
+
+    TARGET="${HOME}/${arg}"
+    if [[ ${FORCE} = true ]]; then
+        rm -rf "${TARGET}"
+    elif [[ -e ${TARGET} ]]; then
+        echo "${TARGET}" already exists, and removal isn\'t forced, aborting...
+        exit 1
+    fi
+
+    ln -s "${SOURCE}" "${TARGET}"
 done
