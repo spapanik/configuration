@@ -123,13 +123,15 @@ function outenv {
 
 function mkvenv {
 	local OPTIONS=iep:
-	local LONGOPTS=independent,environ-only,python:
-	if [[ $(uname) == 'Darwin' ]]; then
-		local GETOPT=/usr/local/opt/gnu-getopt/bin/getopt
-	else
-		local GETOPT=getopt
-	fi
-	local PARSED=$($GETOPT --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+	local LONG_OPTS=independent,environ-only,python:
+    local GET_OPT=getopt
+    if [[ $(uname) == 'Darwin' ]]; then
+        GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
+        if [[ ! -r GETOPT ]]; then
+            GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
+        fi
+    fi
+	local PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTS --name "$0" -- "$@")
 	eval set -- "$PARSED"
 
 	local VENV_BASE=~/.local/share/virtualenvs
@@ -238,13 +240,15 @@ function dvenv {
 
 function add_to_path {
 	local OPTIONS=p
-	local LONGOPTS=prepend
-	if [[ $(uname) == 'Darwin' ]]; then
-		local GETOPT=/usr/local/opt/gnu-getopt/bin/getopt
-	else
-		local GETOPT=getopt
-	fi
-	local PARSED=$($GETOPT --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+	local LONG_OPTS=prepend
+    local GET_OPT=getopt
+    if [[ $(uname) == 'Darwin' ]]; then
+        GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
+        if [[ ! -r GETOPT ]]; then
+            GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
+        fi
+    fi
+	local PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTS --name "$0" -- "$@")
 	eval set -- "$PARSED"
 
 	local PREPEND=false

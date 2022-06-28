@@ -2,10 +2,12 @@
 
 OPTIONS=f
 LONG_OPTIONS=force
+GET_OPT=getopt
 if [[ $(uname) == 'Darwin' ]]; then
-    GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
-else
-    GET_OPT=getopt
+    GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
+    if [[ ! -r GETOPT ]]; then
+        GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
+    fi
 fi
 PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTIONS --name "$0" -- "$@")
 eval set -- "$PARSED"
