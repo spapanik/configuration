@@ -15,60 +15,60 @@ pyenv() {
 }
 
 function show_term_colours {
-	tput setaf 0
-	echo -e "Black"
-	tput bold
-	echo -e "Black bold"
-	tput sgr0
-	tput setaf 1
-	echo -e "Red"
-	tput bold
-	echo -e "Red bold"
-	tput sgr0
-	tput setaf 2
-	echo -e "Green"
-	tput bold
-	echo -e "Green bold"
-	tput sgr0
-	tput setaf 3
-	echo -e "Yellow"
-	tput bold
-	echo -e "Yellow bold"
-	tput sgr0
-	tput setaf 4
-	echo -e "Blue"
-	tput bold
-	echo -e "Blue bold"
-	tput sgr0
-	tput setaf 5
-	echo -e "Magenta"
-	tput bold
-	echo -e "Magenta bold"
-	tput sgr0
-	tput setaf 6
-	echo -e "Cyan"
-	tput bold
-	echo -e "Cyan bold"
-	tput sgr0
-	tput setaf 7
-	echo -e "White"
-	tput bold
-	echo -e "White bold"
-	tput sgr0
+    tput setaf 0
+    echo -e "Black"
+    tput bold
+    echo -e "Black bold"
+    tput sgr0
+    tput setaf 1
+    echo -e "Red"
+    tput bold
+    echo -e "Red bold"
+    tput sgr0
+    tput setaf 2
+    echo -e "Green"
+    tput bold
+    echo -e "Green bold"
+    tput sgr0
+    tput setaf 3
+    echo -e "Yellow"
+    tput bold
+    echo -e "Yellow bold"
+    tput sgr0
+    tput setaf 4
+    echo -e "Blue"
+    tput bold
+    echo -e "Blue bold"
+    tput sgr0
+    tput setaf 5
+    echo -e "Magenta"
+    tput bold
+    echo -e "Magenta bold"
+    tput sgr0
+    tput setaf 6
+    echo -e "Cyan"
+    tput bold
+    echo -e "Cyan bold"
+    tput sgr0
+    tput setaf 7
+    echo -e "White"
+    tput bold
+    echo -e "White bold"
+    tput sgr0
 }
 
 function pb {
-	curl -F 'f:1=<-' ix.io
+    curl -F 'f:1=<-' ix.io
 }
 
 function clc {
-	printf "$(tail -n2 ~/.zsh_history | head -n1)" | xsel -b
+    printf "$(tail -n2 ~/.zsh_history | head -n1)" | xsel -b
 }
 
 
 function docker_supernuke {
-	docker system prune -af
-	docker container rm -f $(docker container ls -aq)
+    docker system prune -af
+    docker container rm -f $(docker container ls -aq)
 	docker image rm -f $(docker image ls -aq)
 	docker volume rm -f $(docker volume ls -q)
 	docker network rm $(docker network ls -q)

@@ -1,8 +1,8 @@
 #compdef _mkvenv mkvenv
 
 function _mkvenv {
-	_arguments -C -s -S \
-		'(H -i --independent)'{-i,--independent}'[flag:independent of current directory]' \
-		'(H -p --python)'{-p,--python}'[arg:python path(default: system default python)]:' \
-		"*::arg:->args"
+    _arguments -C -s -S \
+        '(H -i --independent)'{-i,--independent}'[flag:independent of current directory]' \
+        '(H -p --python)'{-p,--python}'[arg:python path(default: system default python)]:' \
+        "*::arg:->args"
 }

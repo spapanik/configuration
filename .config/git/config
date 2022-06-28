@@ -1,48 +1,48 @@
 [core]
-	editor = vi
+    editor = vi
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [push]
-	default = current
+    default = current
 [pull]
-	ff = only
+    ff = only
 [alias]
-	cm = checkout main
-	rem = rebase main
-	mm = merge main
-	st = status
-	stf = status --untracked-files
-	df = difftool
-	pr = pull --rebase
-	this = rev-parse --abbrev-ref HEAD
-	unstage = reset HEAD --
-	lt = tag --list --sort='v:refname' --format='%(refname:short)%09%09%(objectname)%09%(authordate:iso)%09%(committerdate:iso)%09%09%(subject)'
-	exec = "!exec "
-	ro = "!git rebase -i origin/$(git this)"
-	pushit = "!git push -u origin $(git this)"
-	track = "!git branch --set-upstream-to=origin/$(git this) $(git this)"
-	nuke = "!git reset --hard origin/$(git this)"
-	do = "!git diff origin/$(git this)"
-	dfo = "!git difftool origin/$(git this)"
-	dm = "!git diff $(git merge-base main $(git this))"
-	dfm = "!git difftool $(git merge-base main $(git this))"
-	da = "!f() { git diff $(git merge-base $1 $(git this)) ${@:2}; }; f"
-	dfa = "!f() { git difftool $(git merge-base $1 $(git this)) ${@:2}; }; f"
-	destroy = "!f() { git branch -D $1; git push origin --delete $1; }; f"
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	lb = "!f() { git for-each-ref --shell refs/heads --format='%(refname:short) %(upstream:track,nobracket) %(upstream:trackshort)' | awk -F\"'\" '{if ($4) {print $2 \" \\033[1;31m\" $4 \"\\033[0m\"} else if ($6) {print $2} else {print $2 \" \\033[1;31mlocal only\\033[0m\"}}'; }; f"
-	gone = "!f() { git for-each-ref --shell refs/heads --format='%(refname:short) %(upstream:track,nobracket)' | awk -F\"'\" '{if ($4 == \"gone\") print $2}'; }; f"
-	cg = "!f() { MATCHES=( $(git for-each-ref refs/heads/ --format='%(refname:short)' | grep ${@:-' '}) ); case ${#MATCHES[@]} in 0) echo \"No branches matched '$@'\";; 1) git checkout ${MATCHES[0]};; *) echo \"More than one branches matched '$@'\";; esac; }; f"
-	cgh = "!f() { git fetch origin pull/$1/head:pull-$1; git checkout pull-$1; }; f"
+    cm = checkout main
+    rem = rebase main
+    mm = merge main
+    st = status
+    stf = status --untracked-files
+    df = difftool
+    pr = pull --rebase
+    this = rev-parse --abbrev-ref HEAD
+    unstage = reset HEAD --
+    lt = tag --list --sort='v:refname' --format='%(refname:short)%09%09%(objectname)%09%(authordate:iso)%09%(committerdate:iso)%09%09%(subject)'
+    exec = "!exec "
+    ro = "!git rebase -i origin/$(git this)"
+    pushit = "!git push -u origin $(git this)"
+    track = "!git branch --set-upstream-to=origin/$(git this) $(git this)"
+    nuke = "!git reset --hard origin/$(git this)"
+    do = "!git diff origin/$(git this)"
+    dfo = "!git difftool origin/$(git this)"
+    dm = "!git diff $(git merge-base main $(git this))"
+    dfm = "!git difftool $(git merge-base main $(git this))"
+    da = "!f() { git diff $(git merge-base $1 $(git this)) ${@:2}; }; f"
+    dfa = "!f() { git difftool $(git merge-base $1 $(git this)) ${@:2}; }; f"
+    destroy = "!f() { git branch -D $1; git push origin --delete $1; }; f"
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lb = "!f() { git for-each-ref --shell refs/heads --format='%(refname:short) %(upstream:track,nobracket) %(upstream:trackshort)' | awk -F\"'\" '{if ($4) {print $2 \" \\033[1;31m\" $4 \"\\033[0m\"} else if ($6) {print $2} else {print $2 \" \\033[1;31mlocal only\\033[0m\"}}'; }; f"
+    gone = "!f() { git for-each-ref --shell refs/heads --format='%(refname:short) %(upstream:track,nobracket)' | awk -F\"'\" '{if ($4 == \"gone\") print $2}'; }; f"
+    cg = "!f() { MATCHES=( $(git for-each-ref refs/heads/ --format='%(refname:short)' | grep ${@:-' '}) ); case ${#MATCHES[@]} in 0) echo \"No branches matched '$@'\";; 1) git checkout ${MATCHES[0]};; *) echo \"More than one branches matched '$@'\";; esac; }; f"
+    cgh = "!f() { git fetch origin pull/$1/head:pull-$1; git checkout pull-$1; }; f"
 [diff]
-	tool = meld
+    tool = meld
 [merge]
-	tool = meld
+    tool = meld
 [mergetool]
-	keepBackup = false
+    keepBackup = false
 [fetch]
-	prune = true
-	pruneTags = true
+    prune = true
+    pruneTags = true
 [include]
-	path = ./local.git
+    path = ./local.git

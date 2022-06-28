@@ -15,5 +15,5 @@ if [[ -r "$HOME"/.config/zsh/local.zsh ]]; then
 fi
 
 if [ -z "${NOFORTUNE+1}" ]; then
-	fortune -s | cowsay -f tux
+    fortune -s | cowsay -f tux
 fi
