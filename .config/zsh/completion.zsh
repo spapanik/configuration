@@ -1,4 +1,4 @@
-fpath=("${HOME}"/.config/zsh/completions "${fpath}")
+fpath=("${HOME}"/.config/zsh/completions ${fpath})
 setopt completealiases
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' menu select
