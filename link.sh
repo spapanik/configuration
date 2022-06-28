@@ -5,7 +5,7 @@ LONG_OPTIONS=force
 GET_OPT=getopt
 if [[ $(uname) == 'Darwin' ]]; then
     GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
-    if [[ !  -r $GETOPT ]]; then
+    if [[ !  -r $GET_OPT ]]; then
         GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
     fi
 fi
