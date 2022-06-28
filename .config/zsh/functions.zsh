@@ -89,7 +89,7 @@ function ws {
 
 function inenv {
 	local VAR_NAME
-	for file in $@; do
+	for file in "$@"; do
 		while read line; do
 			if [[ $line != '#'* ]]; then
 				VAR_NAME=$(echo $line | cut -d= -f1)
@@ -105,7 +105,7 @@ function inenv {
 function outenv {
 	local VAR_NAME
 	local TEMP_NAME
-	for file in $@; do
+	for file in "$@"; do
 		while read line; do
 			if [[ $line != '#'* ]]; then
 				VAR_NAME=$(echo $line | cut -d= -f1)

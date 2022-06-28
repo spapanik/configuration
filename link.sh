@@ -15,14 +15,14 @@ eval set -- "$PARSED"
 FORCE=false
 while true; do
     case "$1" in
-        -f|--force)
-            FORCE=true
-            shift
-            ;;
-        --)
-            shift
-            break
-            ;;
+    -f | --force)
+        FORCE=true
+        shift
+        ;;
+    --)
+        shift
+        break
+        ;;
     esac
 done
 
