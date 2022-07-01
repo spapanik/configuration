@@ -19,6 +19,9 @@
 # Zshell
 .config/zsh/local.zsh
 
+# touchegg
+.config/touchegg/.touchegg:*.lock
+
 # iPython
 .ipython/profile_default/startup/README
 
