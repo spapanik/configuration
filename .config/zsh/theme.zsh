@@ -25,7 +25,10 @@ function venv_info() {
 }
 
 if [[ $(uname) == 'Darwin' ]]; then
-    DIRCOLORS=gdircolors
+    DIRCOLORS=/opt/homebrew/bin/gdircolors
+    if [[ !  -r $DIRCOLORS ]]; then
+        DIRCOLORS=/usr/local/bin/gdircolors
+    fi
 else
     DIRCOLORS=dircolors
 fi
