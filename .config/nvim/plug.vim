@@ -23,6 +23,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-speeddating'
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'zah/nim.vim'
 
 " Plugin extras
 Plug 'Xuyuanp/nerdtree-git-plugin'
