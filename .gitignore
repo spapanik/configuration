@@ -1,9 +1,10 @@
 # Emacs
-.emacs.d/local.el
-.emacs.d/ac-comphist.dat
-.emacs.d/tramp
-.emacs.d/auto-save-list/
-.emacs.d/elpa/
+.config/emacs/local.el
+.config/emacs/ac-comphist.dat
+.config/emacs/tramp
+.config/emacs/auto-save-list/
+.config/emacs/elpa/
+.config/emacs/transient/history.el
 
 # Vim
 .config/nvim/local.vim
