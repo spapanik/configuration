@@ -4,7 +4,9 @@
 (if (file-exists-p "~/.light")
     (setq-default frame-background-mode 'light)
   (setq-default frame-background-mode 'dark))
-(load-theme 'solarized t)
+(if (file-exists-p "~/.light")
+    (load-theme 'solarized-light t)
+  (load-theme 'solarized-dark t))
 
 ;; display
 (setq display-time-24hr-format t)

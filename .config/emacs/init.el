@@ -26,8 +26,7 @@
 (use-package auto-complete)
 (use-package whole-line-or-region)
 (use-package smart-tab)
-(use-package color-theme-solarized
-  :init (setq color-themes '())) ; Hack to silence compiler warning
+(use-package solarized-theme)
 
 ;; source config
 (load-file (concat (file-name-as-directory "~") ".config/emacs/core.el"))
