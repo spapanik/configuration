@@ -10,3 +10,5 @@
 (global-auto-complete-mode t)
 (whole-line-or-region-global-mode t)
 (xterm-mouse-mode t)
+(xterm-mouse-mode t)
+(editorconfig-mode 1)
