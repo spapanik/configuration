@@ -13,7 +13,8 @@
 (global-set-key (kbd "M-<down>") 'windmove-down)
 
 ;; comment line or region
-(global-set-key (kbd "s-/") 'comment-line)
+(global-set-key (kbd "C-x C-_") 'comment-line)
+(global-set-key (kbd "C-x C-/") 'comment-line)
 
 ;; project structure
 (global-set-key [f3] 'neotree-toggle)
