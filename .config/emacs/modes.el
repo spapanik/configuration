@@ -8,4 +8,4 @@
 (delete-selection-mode 1)
 (drag-stuff-global-mode 1)
 (global-auto-complete-mode t)
-(whole-line-or-region-mode t)
+(whole-line-or-region-global-mode t)
