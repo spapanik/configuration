@@ -19,7 +19,9 @@
 
 ;; backup
 (setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+    `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+    `((".*" ,temporary-file-directory t)))
 
 ;; tab-complete
 (setq ac-auto-start 3)
