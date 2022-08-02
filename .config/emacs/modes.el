@@ -9,3 +9,4 @@
 (drag-stuff-global-mode 1)
 (global-auto-complete-mode t)
 (whole-line-or-region-global-mode t)
+(xterm-mouse-mode t)
