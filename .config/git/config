@@ -1,5 +1,3 @@
-[core]
-    editor = vi
 [init]
     defaultBranch = main
 [push]
