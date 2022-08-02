@@ -2,6 +2,7 @@
 .config/emacs/local.el
 .config/emacs/ac-comphist.dat
 .config/emacs/tramp
+.config/emacs/projects
 .config/emacs/auto-save-list/
 .config/emacs/elpa/
 .config/emacs/transient/history.el
