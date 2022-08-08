@@ -66,12 +66,59 @@ function clc {
 }
 
 
-function docker_supernuke {
+function _docker_supernuke {
     docker system prune -af
-    docker container rm -f $(docker container ls -aq)
-    docker image rm -f $(docker image ls -aq)
-    docker volume rm -f $(docker volume ls -q)
-    docker network rm $(docker network ls -q)
+    docker container rm -f "$(docker container ls -aq)"
+    docker image rm -f "$(docker image ls -aq)"
+    docker volume rm -f "$(docker volume ls -q)"
+    docker network rm "$(docker network ls -q)"
+}
+
+function docker_supernuke {
+    local OPTIONS=s
+    local LONG_OPTS=sudo
+    local GET_OPT=getopt
+    if [[ $(uname) == 'Darwin' ]]; then
+        GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
+        if [[ !  -r $GET_OPT ]]; then
+            GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
+        fi
+    fi
+    local PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTS --name "$0" -- "$@")
+    eval set -- "$PARSED"
+
+    local RUN_AS_SUDO=false
+    while true; do
+        case "$1" in
+            -s|--run-as-sudo)
+                RUN_AS_SUDO=true
+                shift
+                ;;
+            --)
+                shift
+                break
+                ;;
+        esac
+    done
+
+    if [[ $# -gt 0 ]]; then
+        echo Unexpected arguments, aborting...
+        return 1
+    fi
+
+    if [[ "${RUN_AS_SUDO}" == "true" ]]; then
+        sudo docker system prune -af
+        sudo docker container rm -f "$(sudo docker container ls -aq)"
+        sudo docker image rm -f "$(sudo docker image ls -aq)"
+        sudo docker volume rm -f "$(sudo docker volume ls -q)"
+        sudo docker network rm "$(sudo docker network ls -q)"
+    else
+        docker system prune -af
+        docker container rm -f "$(docker container ls -aq)"
+        docker image rm -f "$(docker image ls -aq)"
+        docker volume rm -f "$(docker volume ls -q)"
+        docker network rm "$(docker network ls -q)"
+    fi
 }
 
 function ws {
