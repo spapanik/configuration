@@ -4,9 +4,9 @@ syntax on
 
 " choose background
 if filereadable($HOME . "/.light")
-	set background=light
+    set background=light
 else
-	set background=dark
+    set background=dark
 endif
 
 set history=700

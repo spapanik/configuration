@@ -19,5 +19,5 @@ runtime local.vim
 
 " source project config
 if filereadable(".local.vim")
-	source .local.vim
+    source .local.vim
 endif
