@@ -1,7 +1,0 @@
----
-all:
-  phony: true
-  commands:
-    - yam -d jetbrains_settings/pycharm/ all
-    - yam -d jetbrains_settings/datagrip/ all
-    - yam -d jetbrains_settings/idea/ all
