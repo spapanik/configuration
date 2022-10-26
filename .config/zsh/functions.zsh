@@ -229,6 +229,7 @@ function mkvenv {
         fi
     else
         mkdir -p ${VENV_DIR}
+        touch ${VENV_DIR}/environ-only
     fi
     if ( ${ASSOCIATED} ); then
         echo ${PWD} >> ${VENV_DIR}/.project
@@ -272,6 +273,8 @@ function avenv {
 
     if [[ -r ${VENV_DIR}/bin/activate ]]; then
         . ${VENV_DIR}/bin/activate
+    else
+        export VIRTUAL_ENV=${VENV_DIR}
     fi
 }
 
@@ -282,7 +285,11 @@ function dvenv {
         fi
     fi
 
-    deactivate
+    if [[ ! -r ${VIRTUAL_ENV}/environ-only ]]; then
+        deactivate
+    else
+        unset VIRTUAL_ENV
+    fi
 }
 
 function add_to_path {
