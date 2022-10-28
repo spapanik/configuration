@@ -240,6 +240,13 @@ function mkvenv {
     fi
 }
 
+function lsvenv {
+    local VENV_BASE=~/.local/share/virtualenvs
+    for VENV_NAME in $(find ${VENV_BASE} -mindepth 1 -maxdepth 1 -type d | sort); do
+        echo $(basename -- $VENV_NAME)
+    done
+}
+
 function rmvenv {
     local VENV_BASE=~/.local/share/virtualenvs
     for VENV_NAME in $@; do
