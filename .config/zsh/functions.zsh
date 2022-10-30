@@ -65,16 +65,8 @@ function clc {
     printf "$(tail -n2 ~/.zsh_history | head -n1)" | xsel -b
 }
 
-
-function _docker_supernuke {
-    docker system prune -af
-    docker container rm -f "$(docker container ls -aq)"
-    docker image rm -f "$(docker image ls -aq)"
-    docker volume rm -f "$(docker volume ls -q)"
-    docker network rm "$(docker network ls -q)"
-}
-
 function docker_supernuke {
+    local RUNNER=
     local OPTIONS=s
     local LONG_OPTS=sudo
     local GET_OPT=getopt
@@ -107,18 +99,31 @@ function docker_supernuke {
     fi
 
     if [[ "${RUN_AS_SUDO}" == "true" ]]; then
-        sudo docker system prune -af
-        sudo docker container rm -f "$(sudo docker container ls -aq)"
-        sudo docker image rm -f "$(sudo docker image ls -aq)"
-        sudo docker volume rm -f "$(sudo docker volume ls -q)"
-        sudo docker network rm "$(sudo docker network ls -q)"
-    else
-        docker system prune -af
-        docker container rm -f "$(docker container ls -aq)"
-        docker image rm -f "$(docker image ls -aq)"
-        docker volume rm -f "$(docker volume ls -q)"
-        docker network rm "$(docker network ls -q)"
+        RUNNER=sudo
     fi
+
+    echo "Removing containers..."
+    for id in $(${RUNNER} docker container ls -aq); do
+        ${RUNNER} docker container rm -f ${id}
+    done
+
+    echo "Removing images..."
+    for id in $(${RUNNER} docker image ls -aq); do
+        ${RUNNER} docker image rm -f ${id}
+    done
+
+    echo "Removing volumes..."
+    for id in $(${RUNNER} docker volume ls -q); do
+        ${RUNNER} docker volume rm -f ${id}
+    done
+
+    echo "Removing networks..."
+    for id in $(${RUNNER} docker network ls -q); do
+        ${RUNNER} docker network rm ${id}
+    done
+
+    echo "Pruning the system..."
+    ${RUNNER} docker system prune -af
 }
 
 function ws {
