@@ -1,6 +1,6 @@
 export LC_COLLATE=C
 
-if [[ -f ${HOME}/.editor && "$(cat ${HOME}/.editor)" == "emacs" ]]; then
+if [[ -f ${HOME}/.editor && $(cat "${HOME}"/.editor) == "emacs" ]]; then
     export VISUAL='emacs -nw'
 else
     export VISUAL='nvim'
@@ -9,7 +9,7 @@ export EDITOR="$VISUAL"
 
 export LESS='-FRXK'
 export PAGER="less -S"
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/rgrc"
+export RIPGREP_CONFIG_PATH="${HOME}"/.config/ripgrep/rgrc
 export GPG_TTY=$(tty)
 export PYENV_SHELL=zsh
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"

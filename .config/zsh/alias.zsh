@@ -1,6 +1,6 @@
 alias mc="mc -x"
 alias mcr="\mc"
-if [[ -f ${HOME}/.editor && "$(cat ${HOME}/.editor)" == "emacs" ]]; then
+if [[ -f ${HOME}/.editor && $(cat "${HOME}"/.editor) == "emacs" ]]; then
     alias e="emacs -nw"
 else
     alias e="nvim"
