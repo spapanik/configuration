@@ -139,40 +139,6 @@ function ws {
     fi
 }
 
-function inenv {
-    local VAR_NAME
-    for file in "$@"; do
-        while read line; do
-            if [[ $line != '#'* ]]; then
-                VAR_NAME=$(echo $line | cut -d= -f1)
-                if [[ -n "${VAR_NAME+1}" ]]; then
-                    export _OLD_${VAR_NAME}=${(P)VAR_NAME}
-                fi
-                export ${(e)line}
-            fi
-        done < $file
-    done
-}
-
-function outenv {
-    local VAR_NAME
-    local TEMP_NAME
-    for file in "$@"; do
-        while read line; do
-            if [[ $line != '#'* ]]; then
-                VAR_NAME=$(echo $line | cut -d= -f1)
-                TEMP_NAME=_OLD_${VAR_NAME}
-                if [[ -n "${TEMP_NAME+1}" ]]; then
-                    export ${VAR_NAME}=${(P)TEMP_NAME}
-                else
-                    unset VAR_NAME
-                fi
-                unset $_OLD_${VAR_NAME}
-            fi
-        done < $file
-    done
-}
-
 function mkvenv {
     local OPTIONS=iep:
     local LONG_OPTS=independent,environ-only,python:
@@ -272,7 +238,7 @@ function avenv {
     if [[ -r ${VENV_DIR}/.project ]]; then
         cd "$(cat ${VENV_DIR}/.project)"
         if [[ -r $(cat ${VENV_DIR}/.project)/.environ ]]; then
-            inenv $(cat ${VENV_DIR}/.project)/.environ
+            invenv -f $(cat ${VENV_DIR}/.project)/.environ
         fi
     fi
 
@@ -286,7 +252,7 @@ function avenv {
 function dvenv {
     if [[ -r ${VIRTUAL_ENV}/.project ]]; then
         if [[ -r $(cat ${VIRTUAL_ENV}/.project)/.environ ]]; then
-            outenv $(cat ${VIRTUAL_ENV}/.project)/.environ
+            outvenv
         fi
     fi
 
