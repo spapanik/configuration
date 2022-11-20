@@ -264,44 +264,25 @@ function dvenv {
 }
 
 function add_to_path {
-    local OPTIONS=p
-    local LONG_OPTS=prepend
-    local GET_OPT=getopt
-    if [[ $(uname) == 'Darwin' ]]; then
-        GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
-        if [[ !  -r $GET_OPT ]]; then
-            GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
-        fi
-    fi
-    local PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTS --name "$0" -- "$@")
-    eval set -- "$PARSED"
-
-    local PREPEND=false
-    while true; do
-        case "$1" in
-            -p|--prepend)
-                PREPEND=true
-                shift
-                ;;
-            --)
-                shift
-                break
-                ;;
-        esac
-    done
+    local PREPEND
+    zmodload zsh/zutil
+    zparseopts -D -F -K -- {p,-prepend}=PREPEND  || return 1
 
     if [[ $# -gt 1 ]]; then
         echo Only one directory allowed, aborting...
         return 1
     fi
 
-    if [[ -d $1 ]]; then
-        if [[ ${path[(i)$1]} -gt ${#path} ]]; then
-            if ( $PREPEND ); then
-                export PATH=$1:$PATH
-            else
-                export PATH=$PATH:$1
-            fi
+    if [[ $# -lt 1 ]]; then
+        echo Directory undefined, aborting...
+        return 1
+    fi
+
+    if [[ ${path[(i)$1]} -gt ${#path} ]]; then
+        if (( $#PREPEND )); then
+            export PATH=$1:$PATH
+        else
+            export PATH=$PATH:$1
         fi
     fi
 }
