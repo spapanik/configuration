@@ -67,38 +67,16 @@ function clc {
 
 function docker_supernuke {
     local RUNNER=
-    local OPTIONS=s
-    local LONG_OPTS=sudo
-    local GET_OPT=getopt
-    if [[ $(uname) == 'Darwin' ]]; then
-        GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
-        if [[ !  -r $GET_OPT ]]; then
-            GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
-        fi
-    fi
-    local PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTS --name "$0" -- "$@")
-    eval set -- "$PARSED"
-
-    local RUN_AS_SUDO=false
-    while true; do
-        case "$1" in
-            -s|--run-as-sudo)
-                RUN_AS_SUDO=true
-                shift
-                ;;
-            --)
-                shift
-                break
-                ;;
-        esac
-    done
+    local RUN_AS_SUDO
+    zmodload zsh/zutil
+    zparseopts -D -F -K -- {s,-run-as-sudo}=RUN_AS_SUDO  || return 1
 
     if [[ $# -gt 0 ]]; then
         echo Unexpected arguments, aborting...
         return 1
     fi
 
-    if [[ "${RUN_AS_SUDO}" == "true" ]]; then
+    if (( $#RUN_AS_SUDO )); then
         RUNNER=sudo
     fi
 

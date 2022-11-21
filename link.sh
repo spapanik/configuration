@@ -1,30 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-OPTIONS=f
-LONG_OPTIONS=force
-GET_OPT=getopt
-if [[ $(uname) == 'Darwin' ]]; then
-    GET_OPT=/opt/homebrew/opt/gnu-getopt/bin/getopt
-    if [[ !  -r $GET_OPT ]]; then
-        GET_OPT=/usr/local/opt/gnu-getopt/bin/getopt
-    fi
-fi
-PARSED=$($GET_OPT --options=$OPTIONS --longoptions=$LONG_OPTIONS --name "$0" -- "$@")
-eval set -- "$PARSED"
-
-FORCE=false
-while true; do
-    case "$1" in
-    -f | --force)
-        FORCE=true
-        shift
-        ;;
-    --)
-        shift
-        break
-        ;;
-    esac
-done
+zmodload zsh/zutil
+zparseopts -D -F -K -- {f,-force}=FORCE  || return 1
 
 if [[ $# -eq 0 ]]; then
     echo No arguments found, aborting...
@@ -39,7 +16,7 @@ for arg in "${@}"; do
     fi
 
     TARGET="${HOME}/${arg}"
-    if [[ ${FORCE} = true ]]; then
+    if (( $#FORCE )); then
         rm -rf "${TARGET}"
     elif [[ -e ${TARGET} ]]; then
         echo "${TARGET}" already exists, and removal isn\'t forced, aborting...
