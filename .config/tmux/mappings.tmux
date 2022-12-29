@@ -7,6 +7,7 @@ bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xsel -
 
 setw -g xterm-keys on
 setw -g mode-keys vi
+set -g status-keys emacs
 unbind '"'
 unbind %
 unbind &
