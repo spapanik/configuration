@@ -31,6 +31,6 @@
 jetbrains_settings/*/settings.zip
 
 # vscode
-.config/Code - OSS/User/History/
-.config/Code - OSS/User/globalStorage/
-.config/Code - OSS/User/workspaceStorage/
+.config/Code/User/History/
+.config/Code/User/globalStorage/
+.config/Code/User/workspaceStorage/
