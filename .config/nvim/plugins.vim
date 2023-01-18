@@ -58,7 +58,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " vim-airline-themes
-let g:airline_theme='solarized'
+if filereadable($HOME . "/.light")
+    let g:airline_theme='base16_gruvbox_light_medium'
+else
+    let g:airline_theme='base16_gruvbox_dark_medium'
+endif
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0

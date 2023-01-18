@@ -6,9 +6,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'bogado/file-line'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'jparise/vim-graphql'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'preservim/nerdtree'
-Plug 'altercation/vim-colors-solarized'
 Plug 'lambdalisue/suda.vim'
 Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
