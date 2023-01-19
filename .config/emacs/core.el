@@ -5,8 +5,8 @@
     (setq-default frame-background-mode 'light)
   (setq-default frame-background-mode 'dark))
 (if (file-exists-p "~/.light")
-    (load-theme 'solarized-light t)
-  (load-theme 'solarized-dark t))
+    (load-theme 'gruvbox-light-medium t)
+  (load-theme 'gruvbox-dark-medium t))
 
 ;; display
 (setq display-time-24hr-format t)

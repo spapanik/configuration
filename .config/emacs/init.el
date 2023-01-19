@@ -27,7 +27,7 @@
 (use-package auto-complete)
 (use-package whole-line-or-region)
 (use-package smart-tab)
-(use-package solarized-theme)
+(use-package gruvbox-theme)
 
 ;; source config
 (load-file (concat (file-name-as-directory "~") ".config/emacs/core.el"))
