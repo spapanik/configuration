@@ -5,9 +5,10 @@
 [pull]
     ff = only
 [alias]
-    cm = checkout main
-    rem = rebase main
-    mm = merge main
+    default = "!git rev-parse --abbrev-ref origin/HEAD | cut -d/ -f2-"
+    cd = "!git checkout $(git default)"
+    rd = "!git rebase $(git default)"
+    md = "!git merge $(git default)"
     st = status
     stf = status --untracked-files
     df = difftool
