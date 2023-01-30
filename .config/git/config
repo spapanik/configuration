@@ -43,5 +43,7 @@
 [fetch]
     prune = true
     pruneTags = true
+[commit]
+    gpgSign = true
 [include]
     path = ./local.git
