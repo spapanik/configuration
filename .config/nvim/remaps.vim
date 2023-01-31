@@ -16,21 +16,15 @@ vnoremap <M-k> $
 " bigger movement
 nnoremap <C-up>    {
 nnoremap <C-down>  }
-nnoremap <C-left>  b
-nnoremap <C-right> e
 inoremap <C-up>    <C-o>{
 inoremap <C-down>  <C-o>}
-inoremap <C-left>  <C-o>b
-inoremap <C-right> <C-o>e
 vnoremap <C-up>    {
 vnoremap <C-down>  }
-vnoremap <C-left>  b
-vnoremap <C-right> e
 
 " move in buffer
 nnoremap <leader><space> :Buffers<CR>
-nnoremap <M-S-left>      :bp<CR>
-nnoremap <M-S-right>     :bn<CR>
+nnoremap <C-S-left>      :bp<CR>
+nnoremap <C-S-right>     :bn<CR>
 
 " visual line movement
 nnoremap <C-p> gk
@@ -63,32 +57,22 @@ imap <S-left>    <Esc>`^v<left>
 imap <S-right>   <Esc>`^v<right>
 
 " bigger selects
-nmap <C-S-up>    v<C-up>
-nmap <C-S-down>  v<C-down>
-nmap <C-S-left>  v<C-left>
-nmap <C-S-right> v<C-right>
-vmap <C-S-up>    <C-up>
-vmap <C-S-down>  <C-down>
-vmap <C-S-left>  <C-left>
-vmap <C-S-right> <C-right>
-imap <C-S-up>    <Esc>`^v<C-up>
-imap <C-S-down>  <Esc>`^v<C-down>
-imap <C-S-left>  <Esc>`^v<C-left>
-imap <C-S-right> <Esc>`^v<C-right>
+nmap <M-S-left>  v<C-left>
+nmap <M-S-right> v<C-right>
+vmap <M-S-left>  <C-left>
+vmap <M-S-right> <C-right>
+imap <M-S-left>  <Esc>`^v<C-left>
+imap <M-S-right> <Esc>`^v<C-right>
 
 " move in splits
-nnoremap <M-left>  <C-w><C-h>
-nnoremap <M-down>  <C-w><C-j>
-nnoremap <M-up>    <C-w><C-k>
-nnoremap <M-right> <C-w><C-l>
-inoremap <M-left>  <Esc><C-w><C-h>
-inoremap <M-down>  <Esc><C-w><C-j>
-inoremap <M-up>    <Esc><C-w><C-k>
-inoremap <M-right> <Esc><C-w><C-l>
-vnoremap <M-left>  <Esc><C-w><C-h>
-vnoremap <M-down>  <Esc><C-w><C-j>
-vnoremap <M-up>    <Esc><C-w><C-k>
-vnoremap <M-right> <Esc><C-w><C-l>
+nnoremap <leader><left>  <C-w>h
+nnoremap <leader><down>  <C-w>j
+nnoremap <leader><up>    <C-w>k
+nnoremap <leader><right> <C-w>l
+vnoremap <leader><left>  <Esc><C-w>h
+vnoremap <leader><down>  <Esc><C-w>j
+vnoremap <leader><up>    <Esc><C-w>k
+vnoremap <leader><right> <Esc><C-w>l
 
 " delete and paste
 vnoremap <leader>c "_c
@@ -102,8 +86,11 @@ nmap <silent> <leader>fn :let @+ = expand("%:t")<CR>
 nmap <silent> <leader>fp :let @+ = expand("%:p")<CR>
 
 " comments
+nmap <C-/> gcc
 nmap <C-_> gcc
+imap <C-/> <C-o>gcc
 imap <C-_> <C-o>gcc
+vmap <C-/> gc
 vmap <C-_> gc
 
 " yank without cursor moving
