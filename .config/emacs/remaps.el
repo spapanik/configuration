@@ -3,8 +3,8 @@
 (global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
 
 ;; move lines
-(global-set-key (kbd "M-S-<up>") 'drag-stuff-up)
-(global-set-key (kbd "M-S-<down>") 'drag-stuff-down)
+(global-set-key (kbd "C-S-<up>") 'drag-stuff-up)
+(global-set-key (kbd "C-S-<down>") 'drag-stuff-down)
 
 ;; move between windows
 (global-set-key (kbd "M-<left>") 'windmove-left)
