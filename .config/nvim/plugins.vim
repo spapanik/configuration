@@ -31,7 +31,7 @@ let g:LanguageClient_serverCommands.c = ['clangd']
 let g:LanguageClient_serverCommands.cpp = ['clangd']
 let g:LanguageClient_serverCommands.fortran = ['fortls']
 let g:LanguageClient_serverCommands.nim = ['nimlsp']
-let g:LanguageClient_serverCommands.python = ['pyls']
+let g:LanguageClient_serverCommands.python = ['pylsp']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 let g:LanguageClient_serverCommands.tex = ['texlab']
 
