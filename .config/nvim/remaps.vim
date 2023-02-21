@@ -35,12 +35,12 @@ vnoremap <C-p> gk
 vnoremap <C-n> gj
 
 " move lines
-nnoremap <C-S-up>   :m .-2<CR>==
-nnoremap <C-S-down> :m .+1<CR>==
-inoremap <C-S-up>   <Esc>:m .-2<CR>==gi
-inoremap <C-S-down> <Esc>:m .+1<CR>==gi
-vnoremap <C-S-up>   :m '<-2<CR>gv=gv
-vnoremap <C-S-down> :m '>+1<CR>gv=gv
+nnoremap <M-S-up>   :m .-2<CR>==
+nnoremap <M-S-down> :m .+1<CR>==
+inoremap <M-S-up>   <Esc>:m .-2<CR>==gi
+inoremap <M-S-down> <Esc>:m .+1<CR>==gi
+vnoremap <M-S-up>   :m '<-2<CR>gv=gv
+vnoremap <M-S-down> :m '>+1<CR>gv=gv
 
 " select with shift
 nmap <S-up>      v<up>
@@ -57,32 +57,22 @@ imap <S-left>    <Esc>`^v<left>
 imap <S-right>   <Esc>`^v<right>
 
 " bigger selects
-nmap <M-S-up>    v<C-up>
-nmap <M-S-down>  v<C-down>
 nmap <M-S-left>  v<C-left>
 nmap <M-S-right> v<C-right>
-vmap <M-S-up>    <C-up>
-vmap <M-S-down>  <C-down>
 vmap <M-S-left>  <C-left>
 vmap <M-S-right> <C-right>
-imap <M-S-up>    <Esc>`^v<C-up>
-imap <M-S-down>  <Esc>`^v<C-down>
 imap <M-S-left>  <Esc>`^v<C-left>
 imap <M-S-right> <Esc>`^v<C-right>
 
 " move in splits
-nnoremap <C-M-left>  <C-w>h
-nnoremap <C-M-down>  <C-w>j
-nnoremap <C-M-up>    <C-w>k
-nnoremap <C-M-right> <C-w>l
-inoremap <C-M-left>  <Esc><C-w>h
-inoremap <C-M-down>  <Esc><C-w>j
-inoremap <C-M-up>    <Esc><C-w>k
-inoremap <C-M-right> <Esc><C-w>l
-vnoremap <C-M-left>  <Esc><C-w>h
-vnoremap <C-M-down>  <Esc><C-w>j
-vnoremap <C-M-up>    <Esc><C-w>k
-vnoremap <C-M-right> <Esc><C-w>l
+nnoremap <leader><left>  <C-w>h
+nnoremap <leader><down>  <C-w>j
+nnoremap <leader><up>    <C-w>k
+nnoremap <leader><right> <C-w>l
+vnoremap <leader><left>  <Esc><C-w>h
+vnoremap <leader><down>  <Esc><C-w>j
+vnoremap <leader><up>    <Esc><C-w>k
+vnoremap <leader><right> <Esc><C-w>l
 
 " delete and paste
 vnoremap <leader>c "_c
