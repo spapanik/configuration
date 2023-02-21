@@ -1,2 +1,2 @@
 cd $HOME
-. .config/zsh/init.zsh
+. "$HOME"/.config/zsh/init.zsh
