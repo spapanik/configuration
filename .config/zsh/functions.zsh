@@ -134,9 +134,33 @@ function add_to_path {
 
     if [[ ${path[(i)$1]} -gt ${#path} ]]; then
         if (( $#PREPEND )); then
-            export PATH=$1:$PATH
+            export PATH="$1":"$PATH"
         else
-            export PATH=$PATH:$1
+            export PATH="$PATH":"$1"
+        fi
+    fi
+}
+
+function add_to_fpath {
+    local PREPEND
+    zmodload zsh/zutil
+    zparseopts -D -F -K -- {p,-prepend}=PREPEND  || return 1
+
+    if [[ $# -gt 1 ]]; then
+        echo Only one directory allowed, aborting...
+        return 1
+    fi
+
+    if [[ $# -lt 1 ]]; then
+        echo Directory undefined, aborting...
+        return 1
+    fi
+
+    if [[ ${fpath[(i)$1]} -gt ${#fpath} ]]; then
+        if (( $#PREPEND )); then
+            export FPATH="$1":"$FPATH"
+        else
+            export FPATH="$FPATH":"$1"
         fi
     fi
 }
