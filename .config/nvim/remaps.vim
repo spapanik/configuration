@@ -87,8 +87,11 @@ nmap <silent> <leader>fp :let @+ = expand("%:p")<CR>
 
 " comments
 nmap <C-/> gcc
+nmap <C-_> gcc
 imap <C-/> <C-o>gcc
+imap <C-_> <C-o>gcc
 vmap <C-/> gc
+vmap <C-_> gc
 
 " yank without cursor moving
 vmap y ygv<Esc>
