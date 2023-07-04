@@ -43,6 +43,8 @@
 [fetch]
     prune = true
     pruneTags = true
+[advice]
+    skippedCherryPicks = false
 [commit]
     gpgSign = true
 [include]
