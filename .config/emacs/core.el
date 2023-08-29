@@ -1,12 +1,8 @@
 (setq inhibit-startup-message t)
 
 ;; theme
-(if (file-exists-p "~/.light")
-    (setq-default frame-background-mode 'light)
-  (setq-default frame-background-mode 'dark))
-(if (file-exists-p "~/.light")
-    (load-theme 'gruvbox-light-medium t)
-  (load-theme 'gruvbox-dark-medium t))
+(setq-default frame-background-mode 'dark)
+(load-theme 'gruvbox-dark-medium t)
 
 ;; display
 (setq display-time-24hr-format t)

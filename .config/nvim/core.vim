@@ -2,14 +2,8 @@
 filetype plugin indent on
 syntax on
 
-" choose background
-if filereadable($HOME . "/.light")
-    set background=light
-else
-    set background=dark
-endif
-
 set history=700
+set background=dark
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set mouse=a

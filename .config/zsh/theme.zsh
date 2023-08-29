@@ -25,13 +25,8 @@ function venv_info() {
 }
 
 # prompt variables
-if [[ -e $HOME/.light ]]; then
-    export BAT_THEME="gruvbox-light"
-    USER_INFO_PREFIX=%F{black}
-else
-    export BAT_THEME="gruvbox-dark"
-    USER_INFO_PREFIX=%F{white}
-fi
+export BAT_THEME="gruvbox-dark"
+USER_INFO_PREFIX=%F{white}
 USER_INFO_SUFFIX="%f"
 
 VENV_PROMPT_PREFIX="%F{blue}venv:(%F{red}"
