@@ -2,7 +2,6 @@
 (display-time-mode 1)
 (electric-pair-mode t) ;; easily insert matching delimiters
 (auto-fill-mode -1)  ;; don't automatically split new lines
-(global-linum-mode 1)
 (setq-default indent-tabs-mode nil)  ;; don't automatically add tabs
 (popwin-mode 1)  ;; use pop-ups
 (delete-selection-mode 1)  ;; delete selection when typing
