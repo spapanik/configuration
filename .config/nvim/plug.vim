@@ -2,12 +2,12 @@
 Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'github/copilot.vim'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'bogado/file-line'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'jparise/vim-graphql'
-Plug 'ellisonleao/gruvbox.nvim'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'preservim/nerdtree'
 Plug 'lambdalisue/suda.vim'

@@ -2,7 +2,8 @@
 
 ;; theme
 (setq-default frame-background-mode 'dark)
-(load-theme 'gruvbox-dark-medium t)
+(load-theme 'catppuccin :no-confirm)
+(setq catppuccin-flavor 'frappe)
 
 ;; display
 (setq display-time-24hr-format t)

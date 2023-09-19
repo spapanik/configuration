@@ -58,7 +58,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " vim-airline-themes
-let g:airline_theme='base16_gruvbox_dark_medium'
+let g:airline_theme="catppuccin"
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0

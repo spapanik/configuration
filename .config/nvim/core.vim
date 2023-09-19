@@ -35,4 +35,4 @@ set whichwrap+=<,>,[,]
 set wildignore+=*.pyc,*.pyo,*/__pycache__/*,*.o,*/out/*
 
 " colorscheme
-color gruvbox
+color catppuccin-frappe

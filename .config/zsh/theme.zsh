@@ -25,7 +25,7 @@ function venv_info() {
 }
 
 # prompt variables
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Catppuccin-frappe"
 USER_INFO_PREFIX=%F{white}
 USER_INFO_SUFFIX="%f"
 
