@@ -18,6 +18,10 @@
 .config/git/ignore
 .config/git/local.git
 
+# autostart
+.config/autostart/*
+!.config/autostart/ssh-add.desktop
+
 # tmux
 .config/tmux/tpm/
 .config/tmux/plugins/
