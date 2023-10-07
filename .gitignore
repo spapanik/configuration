@@ -39,3 +39,7 @@
 # systemd
 .config/systemd/user/*.target.wants/
 .config/systemd/user/git-maintenance@*
+
+# autostart
+.config/autostart/*
+!.config/autostart/ssh-add.desktop
