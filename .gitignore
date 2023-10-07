@@ -22,6 +22,9 @@
 .config/autostart/*
 !.config/autostart/ssh-add.desktop
 
+# systemd
+.config/systemd/user/*.target.wants/
+
 # tmux
 .config/tmux/tpm/
 .config/tmux/plugins/
