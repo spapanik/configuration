@@ -9,6 +9,7 @@
 . "$HOME"/.config/zsh/completion.zsh
 . "$HOME"/.config/zsh/autocorrect.zsh
 . "$HOME"/.config/zsh/theme.zsh
+. "$HOME"/.config/zsh/eval.zsh
 
 if [[ -r "$HOME"/.config/zsh/local.zsh ]]; then
     . "$HOME"/.config/zsh/local.zsh
