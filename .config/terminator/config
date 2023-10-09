@@ -56,14 +56,15 @@
   layout_launcher = None
 [profiles]
   [[default]]
-    allow_bold = False
     icon_bell = False
-    background_color = "#282828"
-    font = Hack 14
-    foreground_color = "#ebdbb2"
+    cursor_color = "#f2d5cf"
+    background_color = "#303446"
+    background_image = None
+    font = Hack Nerd Font Propo 14
+    foreground_color = "#c6d0f5"
     show_titlebar = False
     scrollback_infinite = True
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#51576d:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#b5bfe2:#626880:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#a5adce"
     use_system_font = False
 [layouts]
   [[default]]
