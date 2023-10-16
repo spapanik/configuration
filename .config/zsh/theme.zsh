@@ -7,8 +7,8 @@ local ret_status="%(?.%F{green}.%F{red})"
 
 function user_info() {
     if [[ -n ${HIDE_USER} ]]; then
-        local user="********"
-        local server="********"
+        local user="user"
+        local server="localhost"
     else
         local user="%n"
         local server="%m"
