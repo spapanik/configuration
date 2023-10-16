@@ -1,7 +1,7 @@
+. "$HOME"/.config/zsh/constants.zsh
 . "$HOME"/.config/zsh/alias.zsh
 . "$HOME"/.config/zsh/pip.zsh
 . "$HOME"/.config/zsh/git.zsh
-. "$HOME"/.config/zsh/constants.zsh
 . "$HOME"/.config/zsh/functions.zsh
 . "$HOME"/.config/zsh/path.zsh
 . "$HOME"/.config/zsh/history.zsh

@@ -1,10 +1,6 @@
 alias mc="mc -x"
 alias mcr="\mc"
-if [[ -f ${HOME}/.editor && $(cat "${HOME}"/.editor) == "emacs" ]]; then
-    alias e="emacs -nw"
-else
-    alias e="nvim"
-fi
+alias e="$EDITOR"
 if [[ $(uname) == 'Darwin' ]]; then
     alias ls="gls --color=auto --group-directories-first -N"
 else
