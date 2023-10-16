@@ -57,6 +57,19 @@ function show_term_colours {
     tput sgr0
 }
 
+function show_unicode_support {
+    echo "red dot: 🔴"
+    echo "greek: ιίϊΐ"
+    echo "cjk: 조선글漢嗰"
+    echo "cyrillic: Ж ж"
+    echo "smiley: 🙂"
+    echo "canadian flag: 🇨🇦"
+    echo "pride flag: 🏳️‍🌈"
+    echo "party head: 🥳"
+    echo "star-struck: 🤩"
+    echo "guide dog: 🦮"
+}
+
 function pb {
     curl -F 'f:1=<-' ix.io
 }
