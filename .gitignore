@@ -38,3 +38,4 @@
 
 # systemd
 .config/systemd/user/*.target.wants/
+.config/systemd/user/git-maintenance@*
