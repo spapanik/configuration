@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'jparise/vim-graphql'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'preservim/nerdtree'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lambdalisue/suda.vim'
 Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
