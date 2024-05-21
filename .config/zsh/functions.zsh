@@ -70,6 +70,28 @@ function show_unicode_support {
     echo "guide dog: 🦮"
 }
 
+function show_commit_emojis {
+    echo "🎉 Initial commit"
+    echo "🚀 Deployment"
+    echo "🔖 Version change"
+    echo "📚 Documentation"
+    echo "🐛 Bugfix"
+    echo "🔧 Configuration"
+    echo "♻️ Refactor"
+    echo "🎨 Styling"
+    echo "🔒 Security"
+    echo "🚧 Work in progress"
+    echo "👷 CI/CD"
+    echo "🚦 Tests"
+    echo "🌍 I18n"
+    echo "✏️ Typo"
+    echo "⏫ Upgrade dependencies"
+    echo "🗑️ Remove code"
+    echo "🚫 Deprecation"
+    echo "✨ Add functionality"
+    echo "🔄 Change functionality"
+}
+
 function pb {
     curl -F 'f:1=<-' ix.io
 }
