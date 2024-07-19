@@ -45,3 +45,7 @@
 # autostart
 .config/autostart/*
 !.config/autostart/ssh-add.desktop
+
+# konsole
+.local/share/konsole/*.profile
+.local/share/konsole/konsolestaterc
