@@ -35,11 +35,3 @@
 # iPython
 .ipython/profile_default/history.sqlite
 .ipython/profile_default/startup/README
-
-# jetbrains
-jetbrains_settings/*/settings.zip
-
-# vscode
-.config/Code/User/History/
-.config/Code/User/globalStorage/
-.config/Code/User/workspaceStorage/
