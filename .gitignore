@@ -18,6 +18,13 @@
 .config/git/ignore
 .config/git/local.git
 
+# gnupg
+.gnupg/crls.d/
+.gnupg/private-keys-v1.d/
+.gnupg/pubring.kbx
+.gnupg/pubring.kbx~
+.gnupg/trustdb.gpg
+
 # tmux
 .config/tmux/tpm/
 .config/tmux/plugins/
