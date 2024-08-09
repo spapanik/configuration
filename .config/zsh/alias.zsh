@@ -1,3 +1,4 @@
+alias lg=lazygit
 alias mc="mc -x"
 alias mcr="\mc"
 alias e="$EDITOR"
