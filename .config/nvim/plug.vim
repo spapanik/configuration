@@ -4,6 +4,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'github/copilot.vim'
+Plug 'chrisbra/csv.vim'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'bogado/file-line'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
