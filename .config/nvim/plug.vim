@@ -13,7 +13,6 @@ Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh
 Plug 'preservim/nerdtree'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lambdalisue/suda.vim'
-Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
 Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
