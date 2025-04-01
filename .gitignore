@@ -23,6 +23,7 @@
 .gnupg/private-keys-v1.d/
 .gnupg/pubring.kbx
 .gnupg/pubring.kbx~
+.gnupg/tofu.db
 .gnupg/trustdb.gpg
 
 # tmux
