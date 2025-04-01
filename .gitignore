@@ -1,4 +1,5 @@
 # Emacs
+.config/emacs/eln-cache/
 .config/emacs/local.el
 .config/emacs/ac-comphist.dat
 .config/emacs/tramp
