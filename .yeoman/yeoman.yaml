@@ -1,0 +1,13 @@
+silos:
+  common:
+    - .config
+  linux:
+    - .config
+  kde:
+    - .config
+    - .local:
+        - share
+  gnome:
+    - .config
+  macos:
+    - .config
