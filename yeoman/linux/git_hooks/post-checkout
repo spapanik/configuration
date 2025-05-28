@@ -1,8 +1,0 @@
-echo "Cleaning python compiled files..."
-find . -type f -name "*.py[co]" -delete
-
-echo "Cleaning remnants of merge conflicts ..."
-find . -type f -name "*.orig" -delete
-
-echo "Cleaning empty directories ..."
-find . -type d -empty -not -path "*/.git/*" -delete
