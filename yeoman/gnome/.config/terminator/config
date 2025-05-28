@@ -1,0 +1,77 @@
+[global_config]
+[keybindings]
+  cycle_next = None
+  cycle_prev = None
+  go_next = None
+  go_prev = None
+  go_up = <Alt><Super>Up
+  go_down = <Alt><Super>Down
+  go_left = <Alt><Super>Left
+  go_right = <Alt><Super>Right
+  rotate_cw = None
+  rotate_ccw = None
+  split_horiz = <Primary><Shift>o
+  split_vert = <Primary><Shift>e
+  toggle_scrollbar = None
+  page_up = <Shift>Page_Up
+  page_down = <Shift>Page_Down
+  page_up_half = <Primary>Page_Up
+  page_down_half = <Primary>Page_Down
+  line_up = None
+  line_down = None
+  resize_up = <Alt><Shift><Super>Up
+  resize_down = <Alt><Shift><Super>Down
+  resize_left = <Alt><Shift><Super>Left
+  resize_right = <Alt><Shift><Super>Right
+  move_tab_right = <Super>period
+  move_tab_left = <Super>comma
+  scaled_zoom = None
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  switch_to_tab_1 = <Primary><Alt>1
+  switch_to_tab_2 = <Primary><Alt>2
+  switch_to_tab_3 = <Primary><Alt>3
+  switch_to_tab_4 = <Primary><Alt>4
+  switch_to_tab_5 = <Primary><Alt>5
+  switch_to_tab_6 = <Primary><Alt>6
+  switch_to_tab_7 = <Primary><Alt>7
+  switch_to_tab_8 = <Primary><Alt>8
+  switch_to_tab_9 = <Primary><Alt>9
+  switch_to_tab_10 = <Primary><Alt>0
+  hide_window = None
+  group_all = None
+  ungroup_all = None
+  group_tab = None
+  ungroup_tab = None
+  new_window = None
+  new_terminator = None
+  broadcast_off = None
+  broadcast_group = None
+  broadcast_all = None
+  insert_number = None
+  insert_padded = None
+  edit_window_title = None
+  edit_tab_title = None
+  edit_terminal_title = None
+  layout_launcher = None
+[profiles]
+  [[default]]
+    icon_bell = False
+    cursor_color = "#f2d5cf"
+    background_color = "#303446"
+    background_image = None
+    font = Hack Nerd Font Propo 14
+    foreground_color = "#c6d0f5"
+    show_titlebar = False
+    scrollback_infinite = True
+    palette = "#51576d:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#b5bfe2:#626880:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#a5adce"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
