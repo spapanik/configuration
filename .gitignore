@@ -1,39 +1,47 @@
-# Emacs
-.config/emacs/eln-cache/
-.config/emacs/local.el
-.config/emacs/ac-comphist.dat
-.config/emacs/tramp
-.config/emacs/projects
-.config/emacs/auto-save-list/
-.config/emacs/elpa/
-.config/emacs/transient/history.el
+# emacs
+yeoman/*/.config/emacs/eln-cache/
+yeoman/*/.config/emacs/local.el
+yeoman/*/.config/emacs/ac-comphist.dat
+yeoman/*/.config/emacs/tramp
+yeoman/*/.config/emacs/projects
+yeoman/*/.config/emacs/auto-save-list/
+yeoman/*/.config/emacs/elpa/
+yeoman/*/.config/emacs/transient/history.el
 
-# Vim
-.config/nvim/local.vim
-.config/nvim/local.plug.vim
-.config/nvim/swap/
-.config/nvim/plugged/
-.config/nvim/spell/
+# neovim
+yeoman/*/.config/nvim/local.vim
+yeoman/*/.config/nvim/local.plug.vim
+yeoman/*/.config/nvim/swap/
+yeoman/*/.config/nvim/plugged/
+yeoman/*/.config/nvim/spell/
 
 # git
-.config/git/ignore
-.config/git/local.git
+yeoman/*/.config/git/ignore
+yeoman/*/.config/git/local.git
 
 # gnupg
-.gnupg/crls.d/
-.gnupg/private-keys-v1.d/
-.gnupg/pubring.kbx
-.gnupg/pubring.kbx~
-.gnupg/tofu.db
-.gnupg/trustdb.gpg
+yeoman/*/.gnupg/crls.d/
+yeoman/*/.gnupg/openpgp-revocs.d/
+yeoman/*/.gnupg/private-keys-v1.d/
+yeoman/*/.gnupg/pubring.kbx
+yeoman/*/.gnupg/pubring.kbx~
+yeoman/*/.gnupg/tofu.db
+yeoman/*/.gnupg/trustdb.gpg
 
 # tmux
-.config/tmux/tpm/
-.config/tmux/plugins/
+yeoman/*/.config/tmux/tpm/
+yeoman/*/.config/tmux/plugins/
 
-# Zshell
-.config/zsh/local.zsh
+# zshell
+yeoman/*/.config/zsh/local.zsh
 
-# iPython
-.ipython/profile_default/history.sqlite
-.ipython/profile_default/startup/README
+# ipython
+yeoman/*/.ipython/profile_default/history.sqlite
+yeoman/*/.ipython/profile_default/startup/*
+!yeoman/*/.ipython/profile_default/startup/00-clip.ipy
+!yeoman/*/.ipython/profile_default/startup/01-autoreload.ipy
+!yeoman/*/.ipython/profile_default/startup/02-utils-load.ipy
+
+# ssh
+yeoman/*/.ssh/*
+!yeoman/*/.ssh/config
