@@ -1,0 +1,1 @@
+../../../linux/.config/zsh/alias.zsh

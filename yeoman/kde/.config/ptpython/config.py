@@ -1,0 +1,1 @@
+../../../linux/.config/ptpython/config.py

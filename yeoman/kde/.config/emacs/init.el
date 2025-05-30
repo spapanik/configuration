@@ -1,0 +1,1 @@
+../../../linux/.config/emacs/init.el

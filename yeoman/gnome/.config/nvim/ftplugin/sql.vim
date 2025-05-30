@@ -1,0 +1,1 @@
+../../../../linux/.config/nvim/ftplugin/sql.vim
