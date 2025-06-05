@@ -148,6 +148,16 @@ function ws {
     fi
 }
 
+function fh {
+    local cmd
+    cmd=$(fc -ln 1 | tail -r | fzf)
+    if [[ -n $cmd ]]; then
+        echo Executing '`'"$cmd"'`'
+        eval "$cmd"
+        print -s "$cmd"
+    fi
+}
+
 function add_to_path {
     local PREPEND
     zmodload zsh/zutil
