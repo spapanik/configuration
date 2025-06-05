@@ -6,6 +6,7 @@ yeoman/*/.config/emacs/tramp
 yeoman/*/.config/emacs/projects
 yeoman/*/.config/emacs/auto-save-list/
 yeoman/*/.config/emacs/elpa/
+yeoman/*/.config/emacs/url/
 yeoman/*/.config/emacs/transient/history.el
 
 # neovim
