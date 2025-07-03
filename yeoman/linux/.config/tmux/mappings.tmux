@@ -1,1 +1,0 @@
-../../../common/.config/tmux/mappings.tmux

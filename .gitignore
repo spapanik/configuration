@@ -29,10 +29,6 @@ yeoman/*/.gnupg/pubring.kbx~
 yeoman/*/.gnupg/tofu.db
 yeoman/*/.gnupg/trustdb.gpg
 
-# tmux
-yeoman/*/.config/tmux/tpm/
-yeoman/*/.config/tmux/plugins/
-
 # zshell
 yeoman/*/.config/zsh/local.zsh
 
