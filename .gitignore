@@ -1,4 +1,5 @@
 # emacs
+yeoman/*/.config/emacs/straight/
 yeoman/*/.config/emacs/eln-cache/
 yeoman/*/.config/emacs/local.el
 yeoman/*/.config/emacs/ac-comphist.dat
