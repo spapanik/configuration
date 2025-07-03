@@ -1,0 +1,15 @@
+;; Basic packages
+(straight-use-package 'catppuccin-theme)
+(straight-use-package 'drag-stuff)
+(straight-use-package 'editorconfig)
+(straight-use-package 'embrace)
+(straight-use-package 'expand-region)
+(straight-use-package 'magit)
+(straight-use-package 'multiple-cursors)
+(straight-use-package 'popwin)
+(straight-use-package 'undo-fu)
+(straight-use-package 'whole-line-or-region)
+
+;; (use-package neotree)
+;; (use-package auto-complete)
+;; (use-package smart-tab)
