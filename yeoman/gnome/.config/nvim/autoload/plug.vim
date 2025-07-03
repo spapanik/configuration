@@ -1,1 +1,0 @@
-../../../../linux/.config/nvim/autoload/plug.vim

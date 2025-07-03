@@ -1,12 +1,6 @@
 export LC_COLLATE=C
-
-if [[ -f ${HOME}/.editor && $(cat "${HOME}"/.editor) == "emacs" ]]; then
-    export EDITOR='emacs -nw'
-else
-    export EDITOR='nvim'
-fi
+export EDITOR='emacs -nw'
 export VISUAL="$EDITOR"
-
 export LESS='-FRXK'
 export PAGER="less -S"
 export RIPGREP_CONFIG_PATH="${HOME}"/.config/ripgrep/rgrc
