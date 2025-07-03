@@ -1,10 +1,6 @@
 export LC_COLLATE=C
 
-if [[ -f ${HOME}/.editor && $(cat "${HOME}"/.editor) == "emacs" ]]; then
-    export EDITOR='emacs -nw'
-else
-    export EDITOR='nvim'
-fi
+export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
 export LESS='-FRXK'

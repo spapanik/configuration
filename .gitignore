@@ -1,15 +1,3 @@
-# emacs
-yeoman/*/.config/emacs/straight/
-yeoman/*/.config/emacs/eln-cache/
-yeoman/*/.config/emacs/local.el
-yeoman/*/.config/emacs/ac-comphist.dat
-yeoman/*/.config/emacs/tramp
-yeoman/*/.config/emacs/projects
-yeoman/*/.config/emacs/auto-save-list/
-yeoman/*/.config/emacs/elpa/
-yeoman/*/.config/emacs/url/
-yeoman/*/.config/emacs/transient/history.el
-
 # neovim
 yeoman/*/.config/nvim/local.vim
 yeoman/*/.config/nvim/local.plug.vim
