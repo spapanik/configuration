@@ -1,1 +1,0 @@
-../../../linux/.config/nvim/init.vim
