@@ -1,14 +1,3 @@
-"""
-Configuration example for ``ptpython``.
-
-Copy this file to $XDG_CONFIG_HOME/ptpython/config.py
-On Linux, this is: ~/.config/ptpython/config.py
-"""
-from prompt_toolkit.filters import ViInsertMode
-from prompt_toolkit.key_binding.key_processor import KeyPress
-from prompt_toolkit.keys import Keys
-from prompt_toolkit.styles import Style
-
 from ptpython.layout import CompletionVisualisation
 
 __all__ = ["configure"]
@@ -24,7 +13,7 @@ def configure(repl):
     repl.show_signature = True
 
     # Show docstring (bool).
-    repl.show_docstring = True
+    repl.show_docstring = False
 
     # Show the "[Meta+Enter] Execute" message when pressing [Enter] only
     # inserts a newline instead of executing the code.
@@ -49,7 +38,7 @@ def configure(repl):
     # Swap light/dark colors on or off
     repl.swap_light_and_dark = False
 
-    # Highlight matching parethesis.
+    # Highlight matching parentheses.
     repl.highlight_matching_parenthesis = True
 
     # Line wrapping. (Instead of horizontal scrolling.)
@@ -68,6 +57,9 @@ def configure(repl):
 
     # Vi mode.
     repl.vi_mode = False
+
+    # Enable the modal cursor (when using Vi mode). Other options are 'Block', 'Underline',  'Beam',  'Blink under', 'Blink block', and 'Blink beam'
+    repl.cursor_shape_config = "Modal (vi)"
 
     # Paste mode. (When True, don't insert whitespace after new line.)
     repl.paste_mode = False
@@ -106,15 +98,20 @@ def configure(repl):
     repl.enable_input_validation = True
 
     # Use this colorscheme for the code.
-    repl.use_code_colorscheme("default")
-    # repl.use_code_colorscheme("pastie")
+    # Ptpython uses Pygments for code styling, so you can choose from Pygments'
+    # color schemes. See:
+    # https://pygments.org/docs/styles/
+    # https://pygments.org/demo/
+    repl.use_code_colorscheme("dracula")
+    # A colorscheme that looks good on dark backgrounds is 'native':
+    # repl.use_code_colorscheme("native")
 
     # Set color depth (keep in mind that not all terminals support true color).
 
     # repl.color_depth = "DEPTH_1_BIT"  # Monochrome.
     # repl.color_depth = "DEPTH_4_BIT"  # ANSI colors only.
-    repl.color_depth = "DEPTH_8_BIT"  # The default, 256 colors.
-    # repl.color_depth = "DEPTH_24_BIT"  # True color.
+    # repl.color_depth = "DEPTH_8_BIT"  # The default, 256 colors.
+    repl.color_depth = "DEPTH_24_BIT"  # True color.
 
     # Min/max brightness
     repl.min_brightness = 0.0  # Increase for dark terminal backgrounds.
