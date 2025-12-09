@@ -1,1 +1,0 @@
-../../../../common/.config/nvim/ftplugin/fortran.lua
