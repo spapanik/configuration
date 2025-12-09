@@ -1,1 +1,0 @@
-../../../../../common/.config/nvim/lua/config/core.lua

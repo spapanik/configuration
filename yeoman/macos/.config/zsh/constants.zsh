@@ -1,1 +1,0 @@
-../../../common/.config/zsh/constants.zsh

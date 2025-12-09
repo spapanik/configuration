@@ -1,7 +1,0 @@
-silos:
-  linux:
-    - .config
-    - .local:
-        - share
-  macos:
-    - .config

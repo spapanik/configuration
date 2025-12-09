@@ -1,1 +1,0 @@
-../../../common/.config/ptpython/config.py

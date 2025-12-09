@@ -1,0 +1,12 @@
+from IPython.core.magic import register_line_magic
+
+
+@register_line_magic
+def clip(line):
+    from subprocess import Popen, PIPE
+
+    output = eval(line)
+    Popen(__CLIPBOARD_APP, stdin=PIPE).communicate(input=str(output).encode())
+
+
+del clip
