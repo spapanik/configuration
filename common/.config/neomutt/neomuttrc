@@ -1,0 +1,21 @@
+set folder = "~/.local/var/mail"
+
+set mbox_type = Maildir
+set spoolfile = "/var/mail/$USER"
+set mbox = +Inbox
+set move = yes
+set trash = +Trash
+
+mailboxes +Inbox +Archive +Trash
+
+set sort = 'threads'
+set sort_aux = 'reverse-date-received'
+set date_format = "!%Y-%m-%d %H:%M"
+set index_format = "%4C  %Z  %-20.20f  %D   %s"
+set pager_index_lines = 6
+
+set resolve = yes
+set wait_key = yes
+
+unset record
+unset postponed
