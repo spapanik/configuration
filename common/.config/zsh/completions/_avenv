@@ -2,5 +2,5 @@
 
 function _avenv {
     _arguments -C \
-        "1: :_files -W ~/.local/share/virtualenvs -/"
+        "1: :_files -W ~/.local/share/pvenv/virtualenvs -/"
 }

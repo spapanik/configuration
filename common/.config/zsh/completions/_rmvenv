@@ -2,5 +2,5 @@
 
 function _rmvenv {
     _arguments -C \
-        "*: :_files -W ~/.local/share/virtualenvs -/"
+        "*: :_files -W ~/.local/share/pvenv/virtualenvs -/"
 }
