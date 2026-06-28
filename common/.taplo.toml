@@ -1,0 +1,6 @@
+[formatting]
+array_auto_collapse = false
+array_auto_expand = true
+allowed_blank_lines = 1
+column_width = 1
+indent_string = "    "
