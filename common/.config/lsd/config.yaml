@@ -10,7 +10,7 @@ blocks:
 
 color:
   when: auto
-  theme: default
+  theme: custom
 
 date: "+%Y-%m-%dT%H:%M:%S"
 

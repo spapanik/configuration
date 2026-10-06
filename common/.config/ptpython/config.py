@@ -1,4 +1,5 @@
 from ptpython.layout import CompletionVisualisation
+from prompt_toolkit.styles import Style
 
 __all__ = ["configure"]
 
@@ -102,7 +103,10 @@ def configure(repl):
     # color schemes. See:
     # https://pygments.org/docs/styles/
     # https://pygments.org/demo/
-    repl.use_code_colorscheme("dracula")
+    repl.install_code_colorscheme("catppuccin-mocha", Style.from_dict(_mocha_code_style))
+    repl.use_code_colorscheme("catppuccin-mocha")
+    repl.install_ui_colorscheme("catppuccin-mocha", Style.from_dict(_mocha_ui_style))
+    repl.use_ui_colorscheme("catppuccin-mocha")
     # A colorscheme that looks good on dark backgrounds is 'native':
     # repl.use_code_colorscheme("native")
 
@@ -184,6 +188,71 @@ def configure(repl):
     repl.title = "My custom prompt."
     """
 
+
+# Mocha token colors follow https://github.com/catppuccin/python.
+_mocha_code_style = {
+    "": "#cdd6f4",
+    "pygments.comment": "#9399b2",
+    "pygments.comment.preproc": "#f5c2e7",
+    "pygments.keyword": "#cba6f7",
+    "pygments.keyword.declaration": "#cba6f7 italic",
+    "pygments.keyword.pseudo": "#f5c2e7",
+    "pygments.keyword.type": "#f9e2af",
+    "pygments.name.attribute": "#a6e3a1",
+    "pygments.name.builtin": "#f38ba8 italic",
+    "pygments.name.builtin.pseudo": "#f38ba8 noitalic",
+    "pygments.name.class": "#f9e2af",
+    "pygments.name.exception": "#f9e2af",
+    "pygments.name.function": "#89b4fa",
+    "pygments.name.label": "#94e2d5 italic",
+    "pygments.name.tag": "#89b4fa",
+    "pygments.name.variable": "#cdd6f4 italic",
+    "pygments.name.variable.class": "#f9e2af italic",
+    "pygments.literal.number": "#fab387",
+    "pygments.operator": "#89dceb",
+    "pygments.operator.word": "#cba6f7",
+    "pygments.punctuation": "#9399b2",
+    "pygments.literal.string": "#a6e3a1",
+    "pygments.literal.string.escape": "#f5c2e7",
+    "pygments.literal.string.regex": "#f5c2e7",
+    "pygments.literal.string.symbol": "#f38ba8",
+    "pygments.generic.deleted": "#f38ba8",
+    "pygments.generic.emph": "#cdd6f4 underline",
+    "pygments.generic.heading": "#cdd6f4 bold",
+    "pygments.generic.inserted": "#cdd6f4 bold",
+    "pygments.generic.output": "#6c7086",
+    "pygments.generic.subheading": "#cdd6f4 bold",
+}
+
+_mocha_ui_style = {
+    "": "#cdd6f4",
+    "prompt": "#89b4fa bold",
+    "in": "#a6e3a1 bold",
+    "out": "#fab387",
+    "completion-menu": "bg:#313244 #cdd6f4",
+    "completion-menu.completion.current": "bg:#45475a #cdd6f4",
+    "completion.param": "#94e2d5 italic",
+    "completion.keyword": "#cba6f7",
+    "signature-toolbar": "bg:#313244 #cdd6f4",
+    "signature-toolbar current-name": "#89b4fa bold",
+    "docstring": "#9399b2",
+    "validation-toolbar": "bg:#f38ba8 #1e1e2e",
+    "status-toolbar": "bg:#181825 #a6adc8",
+    "status-toolbar.title": "underline",
+    "status-toolbar.inputmode": "#f9e2af",
+    "status-toolbar.key": "#89b4fa",
+    "status-toolbar.pythonversion": "#cdd6f4 bold",
+    "sidebar": "bg:#313244 #cdd6f4",
+    "sidebar.title": "#89b4fa bold",
+    "sidebar.label selected": "bg:#45475a #cdd6f4",
+    "sidebar.status selected": "bg:#45475a #a6e3a1 bold",
+    "sidebar.key": "#89b4fa bold",
+    "sidebar.helptext": "bg:#181825 #a6adc8",
+    "window-border": "#6c7086",
+    "window-title": "bg:#313244 #cdd6f4",
+    "accept-message": "bg:#a6e3a1 #1e1e2e",
+    "exit-confirmation": "bg:#f38ba8 #1e1e2e",
+}
 
 # Custom colorscheme for the UI. See `ptpython/layout.py` and
 # `ptpython/style.py` for all possible tokens.

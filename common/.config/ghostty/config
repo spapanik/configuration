@@ -1,9 +1,10 @@
 # Config
 # ======
 font-family = MesloLGS Nerd Font Mono
-font-size = 18
+font-size = 16
 macos-option-as-alt = left
-theme = TokyoNight Storm
+cursor-style = bar
+theme = Catppuccin Mocha
 
 
 # keybindings

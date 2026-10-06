@@ -29,7 +29,7 @@ function venv_info() {
 }
 
 # prompt variables
-export BAT_THEME="Catppuccin-frappe"
+export BAT_THEME="Catppuccin Mocha"
 USER_INFO_PREFIX=%F{white}
 USER_INFO_SUFFIX="%f"
 
